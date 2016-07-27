@@ -1,3 +1,5 @@
+\section{Data Gathering}
+
 \subsection{Gathering Data from the Apple iTunes Store}
 
 Searching the Apple iTunes store is typically done manually via the iTunes Application from which text and data cannot be automatically extracted. Therefore, searching for and gathering data about IOS Applications is not easy. However, Apple does provide an rss feed that can be used to list Apps in specific categories and ordered according to how new, or how popular they are and if they are free or not. The rss feed is limited to 100 items per category. The data provided by the rss feed is minimal, not much more than title and a text description of the app. There are no sub-genres or tags than can be used to further differentiate the apps.
@@ -13,10 +15,12 @@ This combined results included data about 255 IOS apps. The title and descriptio
 \subsection{Gathering App Data from the Google Play Store}
 
 In order to gather data from the Goole app store a script was programmed that could extract lists of apps from a specific url. The following urls were scanned:
+\noindent
+\begin{itemize}
+\item Top Paid Medical Apps : https://play.google.com/store/apps/category/MEDICAL/collection/topselling\_paid
 
-Top Paid Medical Apps : https://play.google.com/store/apps/category/MEDICAL/collection/topselling_paid
-
-Top Free Medical Apps : https://play.google.com/store/apps/category/MEDICAL/collection/topselling_free
+\item Top Free Medical Apps : https://play.google.com/store/apps/category/MEDICAL/collection/topselling\_free
+\end{itemize}
 
 For each app listed the script would extract the url of the app's detail page. From the detail page more imformation would be gathered and stored in a database. The data set is similar to that of the itunes rss feed. The title and description text were imported, other fields such as pricing and copyright were ignored.
 
