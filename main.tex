@@ -1,0 +1,73 @@
+\documentclass{report}
+\usepackage[utf8]{inputenc}
+\usepackage{times}
+\usepackage{cite}
+\usepackage{hyperref}
+\usepackage{tablefootnote}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{listings}
+\usepackage{xcolor}
+
+\input{codestyle}
+
+\hypersetup{
+    colorlinks,
+    citecolor=black,
+    filecolor=black,
+    linkcolor=black,
+    urlcolor=black
+}
+
+\title{Smartphone App Concept for Medical Applications.}
+\author{Alexander Gustafson\\
+  University of Applied Sciences,\\
+  Zürich,\\
+  Switzerland,\\
+  alex\_gustafson@yahoo.de}
+\date{\parbox{\linewidth}{\centering%
+  \today\endgraf\bigskip
+  Dozent: Reto Knaack (knaa@zhaw.ch)\endgraf\bigskip
+  School of Engineering, Abteilung Zürich \endgraf
+  Studiengang Informatik\endgraf
+  }}
+
+\begin{document}
+\maketitle
+
+
+
+\chapter*{Abstract}
+\input{chapters/en/abstract}
+
+
+\tableofcontents
+
+\chapter{Introduction}
+
+
+\chapter{Project Goals}
+
+\chapter{Market Research}
+\input{chapters/market_research/index}
+
+
+\chapter{Image Data Sources}
+\input{chapters/sources_of_image_data/index}
+
+\chapter{Image Feature Extraction}
+\input{chapters/image_feature_extraction/index}
+
+
+
+\bibliography{references}{}
+\bibliographystyle{plain}
+
+\chapter{Appendix}
+
+\chapter{Notes}
+\input{chapters/en/notes}
+
+
+
+\end{document}

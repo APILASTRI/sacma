@@ -1,0 +1,36 @@
+\section{Notes}
+
+Research the medical app market:
+
+\noindent
+itunes store search api:
+
+\begin{itemize}
+\item official api :
+\\ https://affiliate.itunes.apple.com/resources/documentation/itunes-store-web-service-search-api/
+\\ limited to 200 results, no posibility to get next 200.
+\item python wrapper
+\\ https://github.com/ocelma/python-itunes
+\\ too limited, better to use the python "requests" library
+\\ still depends on official api so same limitations
+\item rss feed with additional filters : https://rss.itunes.apple.com/us/?urlDesc=\%2Fgenerator
+\\ can filter free or paid applications, can rank by user feedback and gross
+
+\end{itemize}
+
+\noindent
+android seach api:
+\begin{itemize}
+\item no official api
+\item unofficial : https://github.com/egirault/googleplay-api
+\\ hackey, pretends to be an android device
+\end{itemize}
+
+\noindent
+FDA (U.S. Food and Drug Administration) Mobile Medical App Submissions
+\begin{itemize}
+\item API : https://open.fda.gov/device/510k/ example : https://api.fda.gov/device/510k.json?limit=20\&search=tumor\%20skin\%20app
+\item reference : https://open.fda.gov/device/510k/reference/
+\\ API is useable but might have too much information (not just for mobile apps).
+\\ I need to reasearch if there are adequate filtering possibilities to narrow down results
+\end{itemize}
