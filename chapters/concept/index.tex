@@ -1,7 +1,7 @@
 \section{Use Cases}
 
 \begin{table}[H]
-    \begin{tabular}{ | l | p{7cm} |}
+    \begin{tabular}{ | >{\bfseries}l | p{9.5cm} |}
     \hline
     ID &  Short Identifier \\ \hline
     Name & Descriptive Title \\ \hline
@@ -13,16 +13,96 @@
     Alternate Flow & Alternative sequence of events that might occur. \\ \hline
     Results & triggers \\ \hline
     Comments & Other infos \\ \hline
-
-
     \end{tabular}
 
     \caption{Use Case Template}
-
-    \label{fig:android_apps}
+    \label{fig:uc_template}
 \end{table}
 
+\begin{table}[H]
+    \begin{tabular}{ | >{\bfseries}l | p{9.5cm} |}
+    \hline
+    ID
+    &  UC-1 \\ \hline
+    Name
+    & Capture Image \\ \hline
+    Description
+    &  As a user I can capture an image of the skin lesion that I would like to have analysed. \\ \hline
+    Dependencies
+    & None \\ \hline
+    Trigger
+    & The user activated the application and selected the "image capture" navigation item. \\ \hline
+    Preconditions
+    & The system state which must be active before the Use Case can occur \\ \hline
+    Normal Flow
+    &
 
+    \begin{description}[align=left]
+    \item [1.]Point the camera at the skin lesion.
+    \item [2.]Rotate and move the camera until the skin lesion is centered and optimally sized.
+    \item [3.]The user touches the screen to capture the image.
+    \item [4.]The user is notified ( beep ) that the image has been captured
+    \item [5.]The user can repeat from the begining
+    \end{description}
+
+    \\ \hline
+    Alternate Flow & None \\ \hline
+    Results
+    & The captured images are placed by the system in a processing queue to calculate the lesion's border. \\ \hline
+    Comments
+    & It is important that a user can capture the image with just one hand. If a lesion is located on a user's hand or arm, it's not possible to use two hands. \\ \hline
+    \end{tabular}
+
+    \caption{Use Case 1}
+    \label{fig:uc_1}
+\end{table}
+
+\begin{table}[H]
+    \begin{tabular}{ | >{\bfseries}l | p{9.5cm} |}
+    \hline
+    ID
+    &  UC-2 \\ \hline
+    Name
+    & Confirm correct calculation of skin lesion's border \\ \hline
+    Description
+    &  As a user I want to confirm that the skin lesion's borders have been properly calculated. \\ \hline
+    Dependencies
+    & UC-1 \\ \hline
+    Trigger
+    & The user selected the "confirm border" navigation item. \\ \hline
+    Preconditions
+    & At least one image has been queued for border calculation. \\ \hline
+    Normal Flow
+    &
+    \begin{description}[align=left]
+    \item [1.]The user is presented with a list of images.
+    \item [2.]The following step is repeated for each image in the list.
+    \item [3.]The user confirms that the border of the lesion has been precisely calculated.
+    \end{description}
+    \\ \hline
+    Alternate Flow
+    &
+    \begin{description}[align=left]
+    \item [A1.] Border calculation for image has not completed.
+    \item [A1.3] The user can refresh the image preview until the results of the border are visible.
+    \item [A1.4] The user confirms that the border of the lesion has been precisely calculated.
+    \end{description}
+    \begin{description}[align=left]
+    \item [A2] Border calculation is not precise or has failed.
+    \item [A2.3] The user confirms that the border of the lesion has not been precisely calculated.
+    \item [A2.4] The image is deleted.
+    \end{description}
+    \\ \hline
+    Results
+    & After positiv confirmation, images are placed by the system in the risk assessment calculation queue.
+If no images can be positively confirmed, the user can recapture new images ( UC-1 ) \\ \hline
+    Comments
+    & It is important that a user can capture the image with just one hand. If a lesion is located on a user's hand or arm, it's not possible to use two hands. \\ \hline
+    \end{tabular}
+
+    \caption{Use Case 2}
+    \label{fig:uc_2}
+\end{table}
 
 \section{Requirements}
 \section{Prioritisation}
