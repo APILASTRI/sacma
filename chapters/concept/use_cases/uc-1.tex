@@ -1,0 +1,37 @@
+\begin{table}[H]
+    \begin{tabular}{ | >{\bfseries}l | p{9.5cm} |}
+    \hline
+    ID
+    &  UC-1 \\ \hline
+    Name
+    & Capture Image \\ \hline
+    Description
+    &  As a user I can capture an image of the skin lesion that I would like to have analysed. \\ \hline
+    Dependencies
+    & None \\ \hline
+    Trigger
+    & The user activated the application and selected the "image capture" navigation item. \\ \hline
+    Preconditions
+    & The system state which must be active before the Use Case can occur \\ \hline
+    Normal Flow
+    &
+
+    \begin{description}[align=left]
+    \item [1.]Point the camera at the skin lesion.
+    \item [2.]Rotate and move the camera until the skin lesion is centered and optimally sized.
+    \item [3.]The user touches the screen to capture the image.
+    \item [4.]The user is notified ( beep ) that the image has been captured
+    \item [5.]The user can repeat from the begining
+    \end{description}
+
+    \\ \hline
+    Alternate Flow & None \\ \hline
+    Results
+    & The captured images are placed by the system in a processing queue to calculate the lesion's border. \\ \hline
+    Comments
+    & It is important that a user can capture the image with just one hand. If a lesion is located on a user's hand or arm, it's not possible to use two hands. \\ \hline
+    \end{tabular}
+
+    \caption{Use Case 1}
+    \label{fig:uc_1}
+\end{table}

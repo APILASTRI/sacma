@@ -1,0 +1,46 @@
+\begin{table}[H]
+    \begin{tabular}{ | >{\bfseries}l | p{9.5cm} |}
+    \hline
+    ID
+    &  UC-2 \\ \hline
+    Name
+    & Confirm correct calculation of skin lesion's border \\ \hline
+    Description
+    &  As a user I want to confirm that the skin lesion's borders have been properly calculated. \\ \hline
+    Dependencies
+    & UC-1 \\ \hline
+    Trigger
+    & The user selected the "confirm border" navigation item. \\ \hline
+    Preconditions
+    & At least one image has been queued for border calculation. \\ \hline
+    Normal Flow
+    &
+    \begin{description}[align=left]
+    \item [1.]The user is presented with a list of images.
+    \item [2.]The following step is repeated for each image in the list.
+    \item [3.]The user confirms that the border of the lesion has been precisely calculated.
+    \end{description}
+    \\ \hline
+    Alternate Flow
+    &
+    \begin{description}[align=left]
+    \item [A1.] Border calculation for image has not completed.
+    \item [A1.3] The user can refresh the image preview until the results of the border are visible.
+    \item [A1.4] The user confirms that the border of the lesion has been precisely calculated.
+    \end{description}
+    \begin{description}[align=left]
+    \item [A2] Border calculation is not precise or has failed.
+    \item [A2.3] The user confirms that the border of the lesion has not been precisely calculated.
+    \item [A2.4] The image is deleted.
+    \end{description}
+    \\ \hline
+    Results
+    & After positiv confirmation, images are placed by the system in the risk assessment calculation queue.
+If no images can be positively confirmed, the user can recapture new images ( UC-1 ) \\ \hline
+    Comments
+    & It is important that a user can capture the image with just one hand. If a lesion is located on a user's hand or arm, it's not possible to use two hands. \\ \hline
+    \end{tabular}
+
+    \caption{Use Case 2}
+    \label{fig:uc_2}
+\end{table}
