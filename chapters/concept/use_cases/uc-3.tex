@@ -1,0 +1,40 @@
+\begin{table}[H]
+    \begin{tabular}{ | >{\bfseries}l | p{9.5cm} |}
+    \hline
+    ID
+    &  UC-3 \\ \hline
+    Name
+    & View risk assessment \\ \hline
+    Description
+    &  As a user I want to view the results of the risk assessment calculation. \\ \hline
+    Dependencies
+    & UC-2 \\ \hline
+    Trigger
+    & The user selected the "risk assessment results" navigation item. \\ \hline
+    Preconditions
+    & The system was able to complete the risk assessment calculation \\ \hline
+    Normal Flow
+    &
+    \begin{description}[align=left]
+    \item [1.]The user is presented with a list of images.
+    \item [2.]The following step is repeated for each image in the list.
+    \item [3.]The user can select and view and image and corresponding results in detail.
+    \end{description}
+    \\ \hline
+    Alternate Flow
+    &
+    \begin{description}[align=left]
+    \item [A1.] Risk assessment calculation for image has not completed.
+    \item [A1.3] The user can refresh the results details until the results of a risk assessment is available.
+    \end{description}
+
+    \\ \hline
+    Results
+    &  \\ \hline
+    Comments
+    &  \\ \hline
+    \end{tabular}
+
+    \caption{Use Case 3}
+    \label{fig:uc_3}
+\end{table}

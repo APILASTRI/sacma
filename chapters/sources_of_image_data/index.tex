@@ -1,3 +1,89 @@
 \section{Dermofit}
+
+High quality clinical images with corresponding masks. Great for training and testing.
+
+\begin{table}[H]
+\small
+    \begin{tabular}{ | l | p{3.5cm} | l | p{3.5cm} |}
+    \hline
+    Image Type &  Description & Amount & Comment\\ \hline
+    Actinic Keratosis &  Pre-cancerous patches of flakey or crusty skin, can develop into Squamous Cell Carcinoma
+        & 45 & Not useful as comparison against melanoma \\ \hline
+    Basal Cell Carcinoma &  Abnormal, uncontrolled growths of the skin's basal cells.
+        & 239 & Not useful as comparison against melanoma \\ \hline
+    Dermatofibroma &  Common and benign skin tumour.
+        & 65 & Useful as comparison, some extreme cases might have to be left out of the training set. \\ \hline
+    Haemangioma &  A collection of small blood vessels that form a lump under the skin.
+        & 97 & Useful as comparison, some extreme cases might have to be left out of the training set \\ \hline
+    Intraepithelial Carcinoma &  A type of squamous cell skin cancer limited to the upper layer of the skin.
+        & 97 & Not useful \\ \hline
+    Malignant Melanoma &  A type of cancer that develops from the pigment-containing cells known as melanocytes.
+        & 76 & This is our baseline set, half will be used for training, the other half for testing \\ \hline
+    Melanocytic Nevus &  Typical mole, benign.
+        & 331 & Very usefull as comparison to Melanoma \\ \hline
+    Pyogenic Granuloma &  Common skin growth, small, round and red in color due to large number of blood vessels.
+        & 24 & Not usefull \\ \hline
+    Seborrhoeic Keratosis &  Common non-cancerous skin growth.
+        & 257 & Maybe usefull \\ \hline
+    Squamous Cell Carcinoma &  Abnormal and uncontrolled growth of squamous cells in the epidermis.
+        & 88 & Not usefull \\ \hline
+
+    \end{tabular}
+
+    \caption{Dermofit Image Categories}
+    \label{fig:derm_cat}
+
+\end{table}
+
 \section{DermQuest}
+
+Online teaching and learning resource with large image database.
+
+Image were selected based on their usefullness for this project. Usefullness is based on quality and type of image. Dermoscopic images were not selected. Instead images were taken that appeared to be taken with a standard camera. The images only contained the mole to be examined and the surrounding skin area. No other details like eyelids, ears, or dark shadows.
+
+Subgroups of Melanocytic Nevus were chosen. Dysplastic and Intradermal Nevus for the non-cancerous cases, and Malignant Melanoma as the cancerous cases.
+
+\begin{table}[H]
+\small
+    \begin{tabular}{ | l | p{3.5cm} | l | p{3.5cm} |}
+    \hline
+    Image Type &  Description & Amount & Comment\\ \hline
+    Benign Keratosis &
+        & 5 &  \\ \hline
+    Malignant Melanoma & A type of cancer that develops from the pigment-containing cells known as melanocytes.
+        & 39 & This is our baseline set, half will be used for training, the other half for testing \\ \hline
+    Melanocytic Nevus & Typical mole, benign.
+        & 51 & Very usefull as comparison to Melanoma \\ \hline
+
+    \end{tabular}
+
+    \caption{DermQuest Image Categories}
+    \label{fig:dquest_cat}
+
+\end{table}
+
 \section{PH2Dataset}
+
+Demascopic Images
+
+Many of the mole images extend almost to or even beyond the image border. This makes some of the processing difficult. However the images include an excel spreadsheet which clearly designates what type of mole, including some scoring info such as Asymmetry and Color information.
+Includes border mask images.
+
+\begin{table}[H]
+\small
+    \begin{tabular}{ | l | p{3.5cm} | l | p{3.5cm} |}
+    \hline
+    Image Type &  Description & Amount & Comment\\ \hline
+    Common Nevus &
+        & 79 &  \\ \hline
+    Atypical Nevus &
+        & 79 &  \\ \hline
+    Melanoma &
+        & 39 & Baseline set for training \\ \hline
+
+    \end{tabular}
+
+    \caption{PH2 Image Categories}
+    \label{fig:ph2_cat}
+
+\end{table}
