@@ -1,1 +1,39 @@
-\section{Section Title}
+\begin{table}[H]
+    \begin{tabular}{ | >{\bfseries}l | p{9.5cm} |}
+    \hline
+    ID
+    &  UC-4 \\ \hline
+    Name
+    & Save image and results \\ \hline
+    Description
+    &  As a user I want to save the image and the results of the risk assessment. \\ \hline
+    Dependencies
+    & UC-3 \\ \hline
+    Trigger
+    & The user selects the "save" navigation item. \\ \hline
+    Preconditions
+    & The system was able to complete the risk assessment calculation. \\ \hline
+    Normal Flow
+    &
+    \begin{description}[align=left]
+    \item [1.]The user is presented with a list of images.
+    \item [2.]The can select one or more images with the corresponding risk assessment results.
+    \item [3.]The user can add a title and comment.
+    \item [4.]The user is presented with a confirmation that the package has been saved.
+    \end{description}
+    \\ \hline
+    Alternate Flow
+    &
+
+    \\ \hline
+    Results
+    &
+    A package of images and corresponding risk assessment data is stored in the archive with some metadata (title and comment).
+    \\ \hline
+    Comments
+    &  \\ \hline
+    \end{tabular}
+
+    \caption{Use Case 4}
+    \label{fig:uc_4}
+\end{table}

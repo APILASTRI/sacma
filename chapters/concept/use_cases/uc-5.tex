@@ -1,1 +1,38 @@
-\section{Section Title}
+\begin{table}[H]
+    \begin{tabular}{ | >{\bfseries}l | p{9.5cm} |}
+    \hline
+    ID
+    &  UC-5 \\ \hline
+    Name
+    & View archived images and data. \\ \hline
+    Description
+    &  As a user I want to view previously saved images and the corresponding risk assessment data. \\ \hline
+    Dependencies
+    & UC-4 \\ \hline
+    Trigger
+    & The user selects the "archive" navigation item. \\ \hline
+    Preconditions
+    & The system was able to complete the risk assessment calculation. \\ \hline
+    Normal Flow
+    &
+    \begin{description}[align=left]
+    \item [1.]The user is presented with a list of archived packages.
+    \item [2.]The user can select an item in the list
+    \item [3.]The user is presented with the images, corresponding risk assessment data and metadata for the selected item.
+    \end{description}
+    \\ \hline
+    Alternate Flow
+    &
+
+    \\ \hline
+    Results
+    &
+    A package of images and corresponding risk assessment data is stored in the archive with some metadata (title and comment).
+    \\ \hline
+    Comments
+    &  \\ \hline
+    \end{tabular}
+
+    \caption{Use Case 5}
+    \label{fig:uc_5}
+\end{table}
