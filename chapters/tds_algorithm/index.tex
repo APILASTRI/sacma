@@ -12,14 +12,35 @@ The final TDS Score is the weighted sum of the ABCD Values.
 TDS = A * 1.3 + B * 0.1 + C * 0.5 + D * 0.5
 \end{equation}
 
+The final TDS score can have a value between 1.0 and 8.9 .
+
+\begin{table}[H]
+\small
+    \begin{tabular}{ | l | p{3.5cm} | l | p{3.5cm} |}
+    \hline
+    Evaluation & TDS Score \\ \hline
+    Benign & < 4.75  \\ \hline
+    Suspicious & 4.75 to 5.45  \\ \hline
+    Malignant & > 5.45  \\ \hline
+
+    \end{tabular}
+
+    \caption{TDS Evaluation}
+    \label{fig:tds_eval}
+
+\end{table}
+
+
 \section{Automatic Calculation of ABCD Values}
 
-The ABCD Rule is used by Dermatologists to differentiate benign from malignant melanocytic tumors. Because it is a clearly defined rule based on easily recognizable visual features it is easy to apply. Clinicians with limited dermoscopy experience achieve better results using the ABCD rule than other methods \cite{Weigert_2012}.
+The ABCD Rule is used by Dermatologists to differentiate benign from malignant melanocytic tumors. Because it is a clearly defined rule based on easily recognizable visual features it is easy to apply. Clinicians with limited dermoscopy experience achieve better results using the ABCD rule than other methods \cite{Weigert_2012}. The following sections detail methods to automate the calculation of the ABCD scores.
 
 \subsection{Asymmetry}
 
 \subsection{Border}
+
 \subsection{Color}
+
 \subsection{Differential}
 
 \section{Two Examples}
