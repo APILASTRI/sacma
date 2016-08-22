@@ -9,6 +9,7 @@ Asymmetry can have a value of 0, 1 or 2 depending on the symmetry of the lesion.
 The final TDS Score is the weighted sum of the ABCD Values and is in the range 1.0 to 8.9.
 
 \begin{equation}
+\label{eq:tds_formula}
 TDS = A * 1.3 + B * 0.1 + C * 0.5 + D * 0.5
 \end{equation}
 
@@ -31,52 +32,49 @@ A diagnosis can be made based on the TDS Score according to the following table:
 
 \end{table}
 
+\subsection{Adaptation for use in a smart phone application}
 
-\section{Automatic Calculation of ABCD Values}
+The ABCD Rule, also known as the Total \textbf{\textit{Dermoscopy}} Score, is really only applicable to images captured using a dermatoscope. Especially the differential structures are only visible on dermatoscopic images where the subsurface structures are made visible\cite{Fernandez_Alcon_2009}.
 
-The ABCD Rule is used by Dermatologists to differentiate benign from malignant melanocytic tumors. Because it is a clearly defined rule based on easily recognizable visual features it is easy to apply. Clinicians with limited dermoscopy experience achieve better results using the ABCD rule than other methods \cite{Weigert_2012}. The following sections detail methods to automate the calculation of the ABCD scores.
+Since the D component is not applicable to images captured with a smart phone this project will use a modified TDS without the D component. The original TDS formula \ref{eq:tds_formula} can have values ranging from 1 to 8.9 and D can be 0.5 to 2.5. Without D  the TDS can have values between 0.5 and 6.4.
 
-\subsection{Asymmetry}
+\begin{equation}
+\label{eq:tds_modified}
+TDS_{mod} = A * 1.3 + B * 0.1 + C * 0.5
+\end{equation}
 
-The "Center of mass" method of measuring asymmetry is relatively easy to calculate and is more accurate compared to other complex algorithms \cite{Premaladha_2014}.
-
-This algorithm begins by calculating an array of radii from the lesion's center of mass to border for each of 360 degrees. The coordinates for the center of mass are calculated from the sum of all x and y coordinates of pixels within the lesion's border each divided by the sum of pixels.
-
-For each of the 360 radii $r_i$ a score is calculated by comparing the lengths of pairs of radii that are symmetric across $r_i$. If the lengths of the pair of symmetric radii have a difference of less than 10\% then a point is given. The sum of points is the $SFA_i$ (Score For Axis) for $r_i$.
-
-\begin{figure}[H]
-    \centering
-    \includegraphics[height=6cm,keepaspectratio]{assets/assymertry/asymmetry_01.pdf}
-    \caption{Calculate SFA for $r_i$}
-    \label{fig:sfa}
-\end{figure}
-
-
- The radius with the heighest SFA score is defined as the major axis of symmetry. The SFA of the major axis as well as the perpendicular are stored. The Asymmetry score is evaluated as follows:
-
+This results in a bening cuttoff score of 3.2 and malignagnt cuttoff of 3.7.
 
 \begin{table}[H]
 \centering
 \small
     \begin{tabular}{ | l | p{3.5cm} | l | p{3.5cm} |}
     \hline
-    SFA Results & Description & Asymmetry Score \\ \hline
-    \specialcell[t]{major axis $\geq$ 140 \\ minor axis $\geq$ 140} & Symmetric across both axis & 0  \\ \hline
-    \specialcell[t]{major axis $\geq$ 140 \\ minor axis $\textless$ 140} & Symmetric across one axis & 1  \\ \hline
-    \specialcell[t]{major axis \textless 140 \\ minor axis \textless 140} & Asymmetric & 2  \\ \hline
-
+    Evaluation & Score \\ \hline
+    Benign & \textless  3.20  \\ \hline
+    Suspicious & 3.20 to 3.7  \\ \hline
+    Malignant & \textgreater  3.7  \\ \hline
 
     \end{tabular}
 
-    \caption{TDS Evaluation\cite{Weigert_2012}}
-    \label{fig:tds_eval}
+    \caption{Adapted TDS Evaluation}
+    \label{fig:tds_mod_eval}
 
 \end{table}
 
 
+\section{Automatic Calculation of ABCD Values}
+
+The ABCD Rule is used by Dermatologists to differentiate benign from malignant melanocytic tumors. Because it is a clearly defined rule based on easily recognizable visual features it is easy to apply. Clinicians with limited dermoscopy experience achieve better results using the ABCD rule than other methods \cite{Weigert_2012}. The following sections detail methods to automate the calculation of the ABCD scores.
+
+\subsection{Asymmetry}
+\input{chapters/tds_algorithm/asymmetry}
+
 \subsection{Border}
+\input{chapters/tds_algorithm/border}
 
 \subsection{Color}
+\input{chapters/tds_algorithm/color}
 
 \subsection{Differential}
 
@@ -85,7 +83,7 @@ For each of the 360 radii $r_i$ a score is calculated by comparing the lengths o
 
 \subsection{False Example}
 
-ABCD Values were calculated but classification result was false.
+TDS Values were calculated but classification result was false.
 
 \section{Results of Algorithm}
 
