@@ -17,10 +17,29 @@ When the algorithm reaches the starting pixels it ends. The list of pixels now c
 
 For each pixel the distance and angle from the lesion's center of mass is calculated. If a lesion's border is irregular the measure of distance and angle from the center will be erratic, whereas is the border is relatively circular and smooth the measure of distance and the difference in angle will not change abruptly between neighboring pixels.
 
-The distance function is averaged around zero ( remove DC-offset ) and a gaussian lowpass filter is used to reduce noise and aliasing artifacts due to pixelization. A high pass butterworth filter is used to reduce low frequency variations in the distance function as these do not interest us here.
+The distance function is averaged around the distance of the start pixel (set to zero) in order to reduce discontinueities. A gaussian lowpass filter is used to reduce noise and aliasing artifacts due to pixelization.
 
 From the smoothed distance function the first derivative is calucalated. From the angle function the difference from neighboring pixels is calculated. The resulting two functions are split into 8 equal segments. Each segment is analysed for strong variations in distance and sign changes in the difference of the angles. A sign change would indicate a very strong change in direction of the border function. For each segment in which strong variations are detected a point in the B score is added.
 
 A lesion with strong variations in one segment, but otherwise smooth border function would have a B score of 1, whereas a lesion with variation is each of the 8 segments would have a B score of 8.
+
+\begin{figure}[H]
+    \includegraphics[height=6cm,keepaspectratio]{assets/border/examples/border_0/border.png}
+    \includegraphics[height=6cm,keepaspectratio]{assets/border/examples/border_0/figure_1.png}
+    \caption{Example of border score 0}
+    \label{fig:border_0}
+\end{figure}
+\begin{figure}[H]
+    \includegraphics[height=6cm,keepaspectratio]{assets/border/examples/border_4/border.png}
+    \includegraphics[height=6cm,keepaspectratio]{assets/border/examples/border_4/figure_1.png}
+    \caption{Example of border score 4}
+    \label{fig:border_4}
+\end{figure}
+\begin{figure}[H]
+    \includegraphics[height=6cm,keepaspectratio]{assets/border/examples/border_8/border.png}
+    \includegraphics[height=6cm,keepaspectratio]{assets/border/examples/border_8/figure_1.png}
+    \caption{Example of border score 8}
+    \label{fig:border_8}
+\end{figure}
 
 
