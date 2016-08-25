@@ -1,3 +1,24 @@
+In section 2.2.1 categories of medical smart phone apps were defined. Apps in the same categories might have a similar feature set and capabilities. An app in the Alert / First Response category might have a database that stores important contacts in the user’s area and a user interface that allows the user to quickly alert a contact in an emergency situation. An app in the Learning / Educational / Reference category might be modelled as a quiz app which presents the user with a question and several possible answers to choose from. Answers from several questions will can be evaluated and a score is presented to the user at the end of a session. The app would be implemented with a database of questions and weighted answers, as well as an interface that presents the questions to the user sequentially.
+
+One of the goals of this project is to define requirements for an app that provides a risk assessment of a lesion being benign or malignant. A high level description of the primary functionality of the app is the following:
+
+\begin{itemize}
+\item The smart phone app allows the user to capture and analyse an image of a skin lesion and provide a risk assessment to the user of the lesion being a malignant melanoma.
+
+\end{itemize}
+
+The user might also like to save the image and results in oder to be able to compare it with other assessments in the future, or to review the assessment with a dermatologist. For comparison it might be useful to save associated metadata, such as the date and location on the body of the lesion. For convenience it might be nice to send the assessment and image via email to a specialist for review.
+Secondary functionality can be described as follows:
+
+\begin{itemize}
+\item The app allows the user to save or archive the image and corresponding assessment for future comparison and review.
+
+\item The user can add, edit, and save metadata associated with the image of the lesion.
+\item The user can browse archived images, assessments, and associated metadata.
+\item The user can send a set of images with associated assessment and metadata via email.
+
+\end{itemize}
+
 \section{Use Cases}
 
 \begin{table}[H]
@@ -26,8 +47,12 @@
 \input{chapters/concept/use_cases/uc-5}
 \input{chapters/concept/use_cases/uc-6}
 
+\section{User Interface}
+\input{chapters/concept/gui}
+
 \section{Requirements}
 
+\input{chapters/concept/requirements/requirements_list}
 \input{chapters/concept/requirements/req-f-01}
 \input{chapters/concept/requirements/req-f-02}
 \input{chapters/concept/requirements/req-f-03}
