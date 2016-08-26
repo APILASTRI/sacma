@@ -19,33 +19,14 @@ Secondary functionality can be described as follows:
 
 \end{itemize}
 
+From this high level description some basic assumptions about the app’s architecture can already be made. The app will require access to a database that can store information about an image, results of the analysis, and metadata. The app will require a user interface that allows a user to browse and edit data associated with an image. The app requires access to the smart phone’s camera api in order to capture images.
+
+In order to formally elicit the requirements the hight level description will be broken down into structured use cases. A set of requirements will be extracted from the use cases.
+
 \section{Use Cases}
+\input{chapters/concept/use_cases}
 
-\begin{table}[H]
-    \begin{tabular}{ | >{\bfseries}l | p{9.5cm} |}
-    \hline
-    ID &  Short Identifier \\ \hline
-    Name & Descriptive Title \\ \hline
-    Description &  Use case in user story form\\ \hline
-    Dependencies & dependencies \\ \hline
-    Trigger & The event that starts the Use Case \\ \hline
-    Preconditions & The system state which must be active before the Use Case can occur \\ \hline
-    Normal Flow & Sequnce of events that occur during the use case. \\ \hline
-    Alternate Flow & Alternative sequence of events that might occur. \\ \hline
-    Results & triggers \\ \hline
-    Comments & Other infos \\ \hline
-    \end{tabular}
 
-    \caption{Use Case Template}
-    \label{fig:uc_template}
-\end{table}
-
-\input{chapters/concept/use_cases/uc-1}
-\input{chapters/concept/use_cases/uc-2}
-\input{chapters/concept/use_cases/uc-3}
-\input{chapters/concept/use_cases/uc-4}
-\input{chapters/concept/use_cases/uc-5}
-\input{chapters/concept/use_cases/uc-6}
 
 \section{User Interface}
 \input{chapters/concept/gui}
@@ -66,6 +47,8 @@ Secondary functionality can be described as follows:
 \input{chapters/concept/requirements/req-f-11}
 
 \section{Prioritisation}
+\input{chapters/concept/prioritisation/index}
+
 \section{Software Architecture}
 
 
