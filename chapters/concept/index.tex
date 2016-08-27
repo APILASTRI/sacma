@@ -50,5 +50,34 @@ In order to formally elicit the requirements the hight level description will be
 \input{chapters/concept/prioritisation/index}
 
 \section{Software Architecture}
-Since the 1970s the Model View Controller ( MVC ) pattern is the standard architectural design pattern for applications that present the user with a graphical user interface. It was developed out of a need for modularity, to encapsulate responsibility of specific concepts to separate program “modules”, or Separation of Concerns.
+\subsection{MVC}
+Since the 1970s the Model View Controller ( MVC ) pattern is the standard architectural design pattern for applications that present the user with a graphical user interface. It was developed out of a need for modularity, to encapsulate responsibility of specific concepts to separate program modules, or Separation of Concerns. MVC identifies three main components that program code should be grouped into, namely\cite{walther_2016}:
+
+\begin{itemize}[label={}]
+
+\item \textbf{Model}: The representation of some object of knowledge, encapsulates code managing the associated data and behaviour ( business-logic ).
+\item \textbf{View}: The visual representation of the model. The view can feature or hide aspects of the model and thus act as a presentation filter. The view observe the model for changes and update the presentation accordingly.
+\item \textbf{Controller}: The controller allows the user to interact with the model. It allows the user to trigger behaviours implemented in the Model.
+
+\end{itemize}
+
+In the classic MVC pattern the model does not "know" about the view or the controller. And the controller does not effect the view. Instead, both the view and controller monitor the model using an observer mechanism and synchronise themselves when updates to the model occur.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[height=3cm,keepaspectratio]{assets/concept/mvc_1.pdf}
+    \caption{Classic MVC}
+    \label{fig:mvc_1}
+\end{figure}
+
+\subsection{Modern MVC}
+
+Most modern web frameworks such as Ruby on Rails, Symfony or the IOS environment refer to themselves as MVC based frameworks. The modern MVC concept has changed slightly. The components definitions are basically the same, but some responsibilities have shifted. Modern MVC strictly separated the model from the view. These frameworks state that the view should have a little logic as possible. Any logic implemented in the view should only be relevant to presentation. The view components should not directly reference the model components\cite{apple_MVC}\cite{symfony_MVC}.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[height=3cm,keepaspectratio]{assets/concept/mvc_2.pdf}
+    \caption{Modern MVC}
+    \label{fig:mvc_2}
+\end{figure}
 
