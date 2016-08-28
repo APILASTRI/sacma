@@ -7,7 +7,7 @@
 <meta name="originator" content="TeX4ht (http://www.tug.org/tex4ht/)"> 
 <!-- html,word,fn-in --> 
 <meta name="src" content="main.tex"> 
-<meta name="date" content="2016-08-27 17:59:00"> 
+<meta name="date" content="2016-08-28 17:17:00"> 
 <link rel="stylesheet" type="text/css" href="main.css"> 
 </head><body 
 >
@@ -31,7 +31,7 @@ class="ptmr7t-x-x-120">Switzerland,</span>
 class="ptmr7t-x-x-120">alex</span><span 
 class="ptmr7t-x-x-120">_gustafson@yahoo.de</span></div><br />
 <div class="date" ><span 
-class="ptmr7t-x-x-120">August 27, 2016</span>
+class="ptmr7t-x-x-120">August 28, 2016</span>
 <span 
 class="ptmr7t-x-x-120">Dozent: Reto Knaack (knaa@zhaw.ch)</span>
 <span 
@@ -170,16 +170,22 @@ href="#x1-540008.6" id="QQ2-1-98">Software Architecture</a></span>
 href="#x1-550008.6.1" id="QQ2-1-99">MVC</a></span>
 <br />     <span class="subsectionToc" >8.6.2 <a 
 href="#x1-560008.6.2" id="QQ2-1-101">Modern MVC</a></span>
+<br />     <span class="subsectionToc" >8.6.3 <a 
+href="#x1-570008.6.3" id="QQ2-1-103">MVC Derivatives</a></span>
+<br />     <span class="subsectionToc" >8.6.4 <a 
+href="#x1-580008.6.4" id="QQ2-1-105">MVC and Smart Phone Applications</a></span>
+<br />     <span class="subsectionToc" >8.6.5 <a 
+href="#x1-590008.6.5" id="QQ2-1-106">VIPER</a></span>
 <br />   <span class="chapterToc" >9 <a 
-href="#x1-580009" id="QQ2-1-104">Appendix</a></span>
+href="#x1-610009" id="QQ2-1-109">Appendix</a></span>
 <br />    <span class="sectionToc" >9.1 <a 
-href="#x1-590009.1" id="QQ2-1-105">Optimizations</a></span>
+href="#x1-620009.1" id="QQ2-1-110">Optimizations</a></span>
 <br />     <span class="subsectionToc" >9.1.1 <a 
-href="#x1-600009.1.1" id="QQ2-1-106">Border Extraction</a></span>
+href="#x1-630009.1.1" id="QQ2-1-111">Border Extraction</a></span>
 <br />     <span class="subsectionToc" >9.1.2 <a 
-href="#x1-610009.1.2" id="QQ2-1-107">SFA Threshold</a></span>
+href="#x1-640009.1.2" id="QQ2-1-112">SFA Threshold</a></span>
 <br />     <span class="subsectionToc" >9.1.3 <a 
-href="#x1-620009.1.3" id="QQ2-1-108">TDS Evaluation</a></span>
+href="#x1-650009.1.3" id="QQ2-1-113">TDS Evaluation</a></span>
    </div>
                                                                   
 
@@ -982,7 +988,7 @@ which symmetry exists. The Border score is an integer value from 0 to 8 indicati
 presence of border irregularities in 8 regions. Color is an integer value from 1 to 6 indicating
 the presence of one to six specific colors. Similarly, the value for D indicates the presence of
 one to five distinct structures or textures. Alternatively, in some literature<span class="cite"> [<a 
-href="#XSiddiq_2015">7</a>]</span> D is defined as
+href="#XSiddiq_2015">10</a>]</span> D is defined as
 Diameter, where a diameter greater than 6mm results in a value of 5, otherwise
 1.
 <!--l. 9--><p class="indent" >   The final TDS Score is the weighted sum of the ABCD Values and is in the range 1.0 to
@@ -1049,7 +1055,7 @@ class="td11">          </td></tr></table></div>
 <br /><div class="caption" 
 ><span class="id">Table 5.1: </span><span  
 class="content">TDS Evaluation<span class="cite"> [<a 
-href="#XWeigert_2012">9</a>]</span></span></div><!--tex4ht:label?: x1-32002r1 -->
+href="#XWeigert_2012">12</a>]</span></span></div><!--tex4ht:label?: x1-32002r1 -->
                                                                   
 
                                                                   
@@ -1062,7 +1068,7 @@ class="ptmbi7t-">Dermoscopy </span>Score, is really only applicable to
 images captured using a dermatoscope. Especially the differential structures are
 only visible on dermatoscopic images where the subsurface structures are made
 visible<span class="cite"> [<a 
-href="#XFernandez_Alcon_2009">3</a>]</span>.
+href="#XFernandez_Alcon_2009">2</a>]</span>.
 <!--l. 39--><p class="indent" >   Since the D component is not applicable to images captured with a smart phone this
 project will use a modified TDS without the D component. The original TDS formula <a 
 href="#x1-32001r1">5.1<!--tex4ht:ref: eq:tds_formula --></a> can
@@ -1140,14 +1146,14 @@ class="content">Adapted TDS Evaluation</span></div><!--tex4ht:label?: x1-33002r2
 melanocytic tumors. It is a clearly defined rule based on easily recognizable visual features.
 Clinicians with limited dermoscopy experience achieve better results using the ABCD rule
 than other methods <span class="cite"> [<a 
-href="#XWeigert_2012">9</a>]</span>. The following sections detail methods to automate the calculation of
-the ABCD scores.
+href="#XWeigert_2012">12</a>]</span>. The following sections detail methods to automate the calculation
+of the ABCD scores.
 <!--l. 70--><p class="noindent" >
    <h4 class="subsectionHead"><span class="titlemark">5.2.1    </span> <a 
  id="x1-350005.2.1"></a>Asymmetry</h4>
 <!--l. 1--><p class="noindent" >The ”Center of mass” method of measuring asymmetry is relatively easy to calculate and is
 more accurate compared to other complex algorithms <span class="cite"> [<a 
-href="#XPremaladha_2014">6</a>]</span>.
+href="#XPremaladha_2014">8</a>]</span>.
 <!--l. 3--><p class="indent" >   This algorithm begins by calculating an array of radii from the lesion’s center of mass to
 border for each of 360 degrees. The coordinates for the center of mass are calculated from the
 sum of all x and y coordinates of pixels within the lesion’s border each divided by the sum of
@@ -1289,7 +1295,7 @@ class="td11">                                                                  <
 <br /><div class="caption" 
 ><span class="id">Table 5.3: </span><span  
 class="content">TDS Evaluation<span class="cite"> [<a 
-href="#XWeigert_2012">9</a>]</span></span></div><!--tex4ht:label?: x1-35002r3 -->
+href="#XWeigert_2012">12</a>]</span></span></div><!--tex4ht:label?: x1-35002r3 -->
                                                                   
 
                                                                   
@@ -1429,7 +1435,7 @@ class="content">Example of border score 8</span></div><!--tex4ht:label?: x1-3600
  id="x1-370005.2.3"></a>Color</h4>
 <!--l. 1--><p class="noindent" >In order to calculate the color score the <span 
 class="ptmri7t-">Quantification of Color</span><span class="cite"> [<a 
-href="#XFernandez_Alcon_2009">3</a>]</span> algorithm was
+href="#XFernandez_Alcon_2009">2</a>]</span> algorithm was
 implemented in which the distance of each pixel to a defined set of colors is evaluated.
 <!--l. 3--><p class="indent" >   The original image is first filtered using a low pass Gaussian filter in order to reduce
 noise. Then for for each pixel with the lesion area the euclidean distance from 6 RGB values
@@ -1529,7 +1535,7 @@ class="td11">           </td></tr></table></div>
 <br /><div class="caption" 
 ><span class="id">Table 5.4: </span><span  
 class="content">RGB values of the six possible TDS-relevent colors<span class="cite"> [<a 
-href="#XFernandez_Alcon_2009">3</a>]</span></span></div><!--tex4ht:label?: x1-37001r4 -->
+href="#XFernandez_Alcon_2009">2</a>]</span></span></div><!--tex4ht:label?: x1-37001r4 -->
                                                                   
 
                                                                   
@@ -1696,7 +1702,7 @@ cases.
  id="x1-490008.1"></a>Use Cases</h3>
 <!--l. 1--><p class="noindent" >In order to capture the formal use cases we will use a schema based on the one defined in
 Requirement Engineering Fundamentals <span class="cite"> [<a 
-href="#X9781937538774">5</a>]</span>.
+href="#X9781937538774">7</a>]</span>.
    <div class="table">
                                                                   
 
@@ -3463,7 +3469,7 @@ detriment, cost, and risk is an ad-hoc exercise. In a larger project with multip
 and active stakeholders the time and effort required for a prioritisation assessment according
 to Wiegers would be advisable.
 <!--l. 3--><p class="indent" >   The following are the prioritisation classes as defined in <span class="cite"> [<a 
-href="#X9781937538774">5</a>]</span>:
+href="#X9781937538774">7</a>]</span>:
      <ul class="itemize1">
      <li class="itemize"><span 
 class="ptmb7t-">Mandatory</span>:   A   mandatory   requirement   is   a   requirement   that   must   be
@@ -3481,15 +3487,15 @@ class="ptmb7t-">Nice-to-have</span>: Nice-to-have requirements are requirements 
 <!--l. 52--><p class="noindent" >
    <h3 class="sectionHead"><span class="titlemark">8.6    </span> <a 
  id="x1-540008.6"></a>Software Architecture</h3>
-<!--l. 53--><p class="noindent" >
+<!--l. 1--><p class="noindent" >
    <h4 class="subsectionHead"><span class="titlemark">8.6.1    </span> <a 
  id="x1-550008.6.1"></a>MVC</h4>
-<!--l. 54--><p class="noindent" >Since the 1970s the Model View Controller ( MVC ) pattern is the standard architectural
+<!--l. 2--><p class="noindent" >Since the 1970s the Model View Controller ( MVC ) pattern is the standard architectural
 design pattern for applications that present the user with a graphical user interface. It was
 developed out of a need for modularity, to encapsulate responsibility of specific concepts to
 separate program modules, or Separation of Concerns. MVC identifies three main
 components that program code should be grouped into, namely<span class="cite"> [<a 
-href="#Xwalther_2016">8</a>]</span>:
+href="#Xwalther_2016">11</a>]</span>:
      <ul class="itemize1">
      <li class="itemize"><span 
 class="ptmb7t-">Model</span>:  The  representation  of  some  object  of  knowledge,  encapsulates  code
@@ -3507,11 +3513,11 @@ class="ptmb7t-">View</span>:  The  visual  representation  of  the  model.  The 
 class="ptmb7t-">Controller</span>: The controller allows the user to interact with the model. It allows
      the user to trigger behaviours implemented in the Model.
      </li></ul>
-<!--l. 64--><p class="indent" >   In the classic MVC pattern the model does not ”know” about the view or the controller.
+<!--l. 12--><p class="indent" >   In the classic MVC pattern the model does not ”know” about the view or the controller.
 And the controller does not effect the view. Instead, both the view and controller monitor the
 model using an observer mechanism and synchronise themselves when updates to the model
 occur.
-<!--l. 66--><p class="indent" >   <hr class="figure"><div class="figure" 
+<!--l. 14--><p class="indent" >   <hr class="figure"><div class="figure" 
 >
                                                                   
 
@@ -3521,7 +3527,7 @@ occur.
                                                                   
 
                                                                   
-<!--l. 68--><p class="noindent" ><img 
+<!--l. 16--><p class="noindent" ><img 
 src="main10x.png" alt="PIC" class="graphics"><!--tex4ht:graphics  
 name="main10x.png" src="assets/concept/mvc_1.pdf"  
 -->
@@ -3531,19 +3537,24 @@ class="content">Classic MVC</span></div><!--tex4ht:label?: x1-55001r7 -->
                                                                   
 
                                                                   
-<!--l. 71--><p class="indent" >   </div><hr class="endfigure">
+<!--l. 19--><p class="indent" >   </div><hr class="endfigure">
    <h4 class="subsectionHead"><span class="titlemark">8.6.2    </span> <a 
  id="x1-560008.6.2"></a>Modern MVC</h4>
-<!--l. 75--><p class="noindent" >Most modern web frameworks such as Ruby on Rails, Symfony or the IOS environment refer
-to themselves as MVC based frameworks. The modern MVC concept has changed slightly.
-The components definitions are basically the same, but some responsibilities have shifted.
-Modern MVC strictly separated the model from the view. These frameworks state that the
-view should have a little logic as possible. Any logic implemented in the view should only be
-relevant to presentation. The view components should not directly reference the model
-components<span class="cite"> [<a 
-href="#Xapple_MVC">2</a>]</span><span class="cite"> [<a 
+<!--l. 23--><p class="noindent" >Modern MVC has evolved from being a software design pattern which handles components
+of an application to an architectural design pattern that defines the structure of an application
+itself. It has many similarities to the Layer Architecture. The responsibilities of each layer
+are slightly different to the typical presentation, business, and persistence layer
+definitions.
+<!--l. 25--><p class="indent" >   Most modern web frameworks such as Ruby on Rails, Symfony or the IOS environment
+refer to themselves as MVC based frameworks. The modern MVC concept has changed
+slightly. The component definitions are the same, but some responsibilities have shifted.
+Modern MVC strictly separates the model from the view. All modern frameworks state that
+the view should have as little logic as possible. Any logic implemented in the view should
+only be relevant to presentation. The view components should not directly reference the
+model components<span class="cite"> [<a 
+href="#Xapple_MVC">3</a>]</span><span class="cite"> [<a 
 href="#Xsymfony_MVC">1</a>]</span>.
-<!--l. 77--><p class="indent" >   <hr class="figure"><div class="figure" 
+<!--l. 27--><p class="indent" >   <hr class="figure"><div class="figure" 
 >
                                                                   
 
@@ -3553,103 +3564,244 @@ href="#Xsymfony_MVC">1</a>]</span>.
                                                                   
 
                                                                   
-<!--l. 79--><p class="noindent" ><img 
+<!--l. 29--><p class="noindent" ><img 
 src="main11x.png" alt="PIC" class="graphics"><!--tex4ht:graphics  
 name="main11x.png" src="assets/concept/mvc_2.pdf"  
 -->
 <br /> <div class="caption" 
 ><span class="id">Figure 8.8: </span><span  
-class="content">Modern MVC</span></div><!--tex4ht:label?: x1-56001r8 -->
+class="content">Modern MVC vs 3-Tier Layered Architecture</span></div><!--tex4ht:label?: x1-56001r8 -->
                                                                   
 
                                                                   
-<!--l. 82--><p class="indent" >   </div><hr class="endfigure">
+<!--l. 32--><p class="indent" >   </div><hr class="endfigure">
+<!--l. 34--><p class="indent" >   This division of responsibility has the added benefit of increased testability. GUIs are
+difficult to test, by removing as much logic as possible from the user interface there is less
+necessity to test it. The controller and model components can more easily be tested
+independently of one another using normal unit tests<span class="cite"> [<a 
+href="#Xmvp_testing">5</a>]</span>.
+   <h4 class="subsectionHead"><span class="titlemark">8.6.3    </span> <a 
+ id="x1-570008.6.3"></a>MVC Derivatives</h4>
+<!--l. 38--><p class="noindent" >Many MVC derivatives exist. The main differences are where the division of responsibility is
+made and how it is labeled. MVVM defines a view model instead of a controller. The view
+model acts as a facade around the model and introduces a data binder element that is
+responsible for keeping the view and view model synchronised. The MVT, calls the view a
+template and the controller a view. The slight difference is that the template is basically a
+static file, with no logic, and placeholders for the data. The Django web framework
+uses this model, but there is little difference to the other MVC derivatives such
+as MVP ( model view presenter ). The AngularJS web framework takes ends the
+discussion of which design to follow by labelling itself a MVW ( model view whatever )
+framework<span class="cite"> [<a 
+href="#Xmvw">6</a>]</span>.
+<!--l. 41--><p class="indent" >   <hr class="figure"><div class="figure" 
+>
+                                                                  
+
+                                                                  
+<a 
+ id="x1-57001r9"></a>
+                                                                  
+
+                                                                  
+<!--l. 43--><p class="noindent" ><img 
+src="main12x.png" alt="PIC" class="graphics"><!--tex4ht:graphics  
+name="main12x.png" src="assets/concept/mvc_3.pdf"  
+-->
+<br /> <div class="caption" 
+><span class="id">Figure 8.9: </span><span  
+class="content">MVC Derivatives Overview</span></div><!--tex4ht:label?: x1-57001r9 -->
+                                                                  
+
+                                                                  
+<!--l. 46--><p class="indent" >   </div><hr class="endfigure">
+   <h4 class="subsectionHead"><span class="titlemark">8.6.4    </span> <a 
+ id="x1-580008.6.4"></a>MVC and Smart Phone Applications</h4>
+<!--l. 50--><p class="noindent" >Although most frameworks and environments targeted toward mobile application
+development use concepts from MVC, it can be difficult to define strict devision of
+responsibility, especially in conjunction with services provided from an online server. Often
+the responsibilities of the controller are reimplemented server side, some model management
+might occur in the app. Server and application code are developed using different languages
+and often most likely different developers. One solution is is to develop the app as a thin
+client, where it basically becomes the view component of MVC and the controllers and
+model are implemented on the server. Taken to the extreme, the app runs in a standard web
+browser and server provides the view components that emulate a native mobile user
+interface. This is referred to as a web app. Any logic in the view is implemented using
+javascript. Hardware support is limited to what the mobile browser provides access to. In
+order to extend hardware support a hybrid approach can be used in which the app
+implements a custom browser view which is extended with native capabilities. Here is
+division or responsibilities as defined by MVC become fuzzy. A fully native app
+working in conjunction with a web server will not conform well to the definitions of
+MVC.
+<!--l. 52--><p class="noindent" >
+   <h4 class="subsectionHead"><span class="titlemark">8.6.5    </span> <a 
+ id="x1-590008.6.5"></a>VIPER</h4>
+<!--l. 54--><p class="noindent" >VIPER is a new software architecture pattern which extends MVC with some addition
+concepts that make it more adaptable to mobile applications, especially when they are
+extended with online server based services. The classic controller is split into a presenter and
+a controller, the model component is split into a central data manager communicating with
+many services and entities<span class="cite"> [<a 
+href="#Xviper">9</a>]</span>.
+<!--l. 56--><p class="indent" >   <hr class="figure"><div class="figure" 
+>
+                                                                  
+
+                                                                  
+<a 
+ id="x1-59001r10"></a>
+                                                                  
+
+                                                                  
+<!--l. 58--><p class="noindent" ><img 
+src="main13x.png" alt="PIC" class="graphics"><!--tex4ht:graphics  
+name="main13x.png" src="assets/concept/viper.pdf"  
+-->
+<br /> <div class="caption" 
+><span class="id">Figure 8.10: </span><span  
+class="content">VIPER Overview</span></div><!--tex4ht:label?: x1-59001r10 -->
+                                                                  
+
+                                                                  
+<!--l. 61--><p class="indent" >   </div><hr class="endfigure">
+     <ul class="itemize1">
+     <li class="itemize"><span 
+class="ptmb7t-">View</span>: The view corresponds to the view as defined in modern MVC definitions,
+     it is a slim component with as little logic as possible. It presents the current state
+     of the models and provides “widgets” with which the user can interact.
+     </li>
+     <li class="itemize"><span 
+class="ptmb7t-">Presenter</span>: The presenter passes data to the view and handles events from the
+     view. The presenter might perform some basic validation, in the case of a user
+     sign-up scenario, for example, the presenter might validate that a user’s email is
+     indeed formatted as a correct email, it will not validate if the email has already
+     been used by someone else.
+     </li>
+     <li class="itemize"><span 
+class="ptmb7t-">Interactor</span>: Business logic is handled by the interactor. Most a what the model
+     component in MVC was responsible for is handled here. The interactor however
+     does not know anything about data storage, databases, or persistence. It does not
+     know if data is local or accessible via a network.
+     </li>
+     <li class="itemize"><span 
+class="ptmb7t-">Data Manager</span>:
+     </li>
+     <li class="itemize"><span 
+class="ptmb7t-">Service</span>:
+     </li>
+     <li class="itemize"><span 
+class="ptmb7t-">Entity</span>:
+     </li>
+     <li class="itemize"><span 
+class="ptmb7t-">Wireframe / Router</span>:
+     </li></ul>
                                                                   
 
                                                                   
    <h2 class="likechapterHead"><a 
- id="x1-570008.6.2"></a>Bibliography</h2>
-   <div class="thebibliography">
-   <p class="bibitem" ><span class="biblabel">
- [1]<span class="bibsp">   </span></span><a 
- id="Xsymfony_MVC"></a>Chapter 2 - exploring symfony’s code, the mvc pattern, 2015.
-   </p>
-   <p class="bibitem" ><span class="biblabel">
- [2]<span class="bibsp">   </span></span><a 
- id="Xapple_MVC"></a>Model-view-controller, 2015.
-   </p>
-   <p class="bibitem" ><span class="biblabel">
- [3]<span class="bibsp">   </span></span><a 
- id="XFernandez_Alcon_2009"></a>Jose Fernandez  Alcon,  Calina  Ciuhu,  Warner  ten  Kate,  Adrienne  Heinrich,
-   Natallia  Uzunbajakava,  Gertruud  Krekels,  Denny  Siem,  and  Gerard  de Haan.
-   Automatic Imaging System With Decision Support for Inspection of Pigmented
-   Skin Lesions and Melanoma Diagnosis. <span 
+ id="x1-600008.6.5"></a>Bibliography</h2>
+    <div class="thebibliography">
+    <p class="bibitem" ><span class="biblabel">
+  [1]<span class="bibsp">   </span></span><a 
+ id="Xsymfony_MVC"></a>Symfony Book: Chapter 2 - Exploring Symfony’s Code, The MVC Pattern,
+    2015. [Online; accessed 2016-8-27], <a 
+href="http://symfony.com/legacy/doc/book/1_0/en/02-Exploring-Symfony-s-Code#chapter_02_the_mvc_pattern" >link</a>.
+    </p>
+    <p class="bibitem" ><span class="biblabel">
+  [2]<span class="bibsp">   </span></span><a 
+ id="XFernandez_Alcon_2009"></a>Jose Fernandez Alcon, Calina Ciuhu, Warner ten Kate, Adrienne Heinrich,
+    Natallia  Uzunbajakava,  Gertruud  Krekels,  Denny  Siem,  and  Gerard  de Haan.
+    Automatic Imaging System With Decision Support for Inspection of Pigmented
+    Skin Lesions and Melanoma Diagnosis. <span 
 class="ptmri7t-">IEEE</span>, 3(1):14—25, feb 2009.
-   </p>
-   <p class="bibitem" ><span class="biblabel">
- [4]<span class="bibsp">   </span></span><a 
+    </p>
+    <p class="bibitem" ><span class="biblabel">
+  [3]<span class="bibsp">   </span></span><a 
+ id="Xapple_MVC"></a>Apple. Model-View-Controller, 2015. [Online; accessed 2016-8-27], <a 
+href="https://developer.apple.com/library/ios/documentation/General/Conceptual/DevPedia-CocoaCore/MVC.html" >link</a>.
+    </p>
+    <p class="bibitem" ><span class="biblabel">
+  [4]<span class="bibsp">   </span></span><a 
  id="XBrewer_2013"></a>Ann Chang Brewer, Dawnielle C. Endly, Jill Henley, Mahsa Amir, Blake P.
-   Sampson, Jacqueline F. Moreau, and Robert P. Dellavalle.  Mobile Applications
-   in Dermatology. <span 
+    Sampson, Jacqueline F. Moreau, and Robert P. Dellavalle.  Mobile Applications
+    in Dermatology. <span 
 class="ptmri7t-">JAMA Dermatol</span>, 149(11):1300, nov 2013.
-   </p>
-   <p class="bibitem" ><span class="biblabel">
- [5]<span class="bibsp">   </span></span><a 
- id="X9781937538774"></a>Klaus  Pohl  and  Chris  Rupp.    <span 
+    </p>
+    <p class="bibitem" ><span class="biblabel">
+  [5]<span class="bibsp">   </span></span><a 
+ id="Xmvp_testing"></a>Martin Fowler.  GUI Architectures, Humble View, 2006.  [Online; accessed
+    2016-8-28], <a 
+href="http://martinfowler.com/eaaDev/uiArchs.html#HumbleView" >link</a>.
+    </p>
+    <p class="bibitem" ><span class="biblabel">
+  [6]<span class="bibsp">   </span></span><a 
+ id="Xmvw"></a>Igor Minar.  MVC vs MVVM vs MVP, 2012.  [Online; accessed 2016-8-28],
+    <a 
+href="https://plus.google.com/+IgorMinar/posts/DRUAkZmXjNV" >link</a>.
+    </p>
+    <p class="bibitem" ><span class="biblabel">
+  [7]<span class="bibsp">   </span></span><a 
+ id="X9781937538774"></a>Klaus  Pohl  and  Chris  Rupp.   <span 
 class="ptmri7t-">Requirements  Engineering  Fundamentals:  A</span>
-   <span 
+    <span 
 class="ptmri7t-">Study Guide for the Certified Professional for Requirements Engineering Exam -</span>
-   <span 
+    <span 
 class="ptmri7t-">Foundation Level - IREB compliant</span>. Rocky Nook, 2015.
-   </p>
-   <p class="bibitem" ><span class="biblabel">
- [6]<span class="bibsp">   </span></span><a 
- id="XPremaladha_2014"></a>J. Premaladha  and  K.S.  Ravichandr.     Asymmetry  Analysis  of  Malignant
-   Melanoma  Using  Image  Processing:  A  Survey.     <span 
-class="ptmri7t-">J.  of  Artificial  Intelligence</span>,
-   7(2):45—53, feb 2014.
-   </p>
                                                                   
 
                                                                   
-   <p class="bibitem" ><span class="biblabel">
- [7]<span class="bibsp">   </span></span><a 
- id="XSiddiq_2015"></a>Sophia.M                               Mallikarjun                               Mundas Vidya.R
-   Siddiq Iqbal, Divyashree.J.A. Implementation of Stolz’s Algorithm for Melanoma
-   Detection.  <span 
-class="ptmri7t-">International Advanced Research Journal in Science, Engineering and</span>
-   <span 
-class="ptmri7t-">Technology IARJSET</span>, 2(6), jun 2015.
-   </p>
-   <p class="bibitem" ><span class="biblabel">
- [8]<span class="bibsp">   </span></span><a 
- id="Xwalther_2016"></a>Stephen Walther. The evolution of mvc, 2016.
-   </p>
-   <p class="bibitem" ><span class="biblabel">
- [9]<span class="bibsp">   </span></span><a 
+    </p>
+    <p class="bibitem" ><span class="biblabel">
+  [8]<span class="bibsp">   </span></span><a 
+ id="XPremaladha_2014"></a>J. Premaladha  and  K.S.  Ravichandr.    Asymmetry  Analysis  of  Malignant
+    Melanoma  Using  Image  Processing:  A  Survey.    <span 
+class="ptmri7t-">J.  of  Artificial  Intelligence</span>,
+    7(2):45—53, feb 2014.
+    </p>
+    <p class="bibitem" ><span class="biblabel">
+  [9]<span class="bibsp">   </span></span><a 
+ id="Xviper"></a>Ryan Quan. Brigade’s Experience Using an MVC Alternative, 2014. [Online;
+    accessed 2016-8-28], <a 
+href="https://medium.com/brigade-engineering/brigades-experience-using-an-mvc-alternative-36ef1601a41f#.yw4bp1y48" >link</a>.
+    </p>
+    <p class="bibitem" ><span class="biblabel">
+ [10]<span class="bibsp">   </span></span><a 
+ id="XSiddiq_2015"></a>Sophia.M   Mallikarjun   Mundas Vidya.R   Siddiq Iqbal,   Divyashree.J.A.
+    Implementation  of  Stolz’s  Algorithm  for  Melanoma  Detection.    <span 
+class="ptmri7t-">International</span>
+    <span 
+class="ptmri7t-">Advanced Research Journal in Science, Engineering and Technology IARJSET</span>,
+    2(6), jun 2015.
+    </p>
+    <p class="bibitem" ><span class="biblabel">
+ [11]<span class="bibsp">   </span></span><a 
+ id="Xwalther_2016"></a>Stephen  Walther.      The  Evolution  of  MVC,  2016.      [Online;  accessed
+    2016-8-27], <a 
+href="http://stephenwalther.com/archive/2008/08/24/the-evolution-of-mvc" >link</a>.
+    </p>
+    <p class="bibitem" ><span class="biblabel">
+ [12]<span class="bibsp">   </span></span><a 
  id="XWeigert_2012"></a>Ulrike Weigert, Walter H.C. Burgdorf, and Wilhelm Stolz.  ABCD Rule.  In
-   <span 
+    <span 
 class="ptmri7t-">Atlas of Dermoscopy</span>, page 116. Informa Healthcare, aug 2012.
 </p>
-   </div>
+    </div>
                                                                   
 
                                                                   
    <h2 class="chapterHead"><span class="titlemark">Chapter 9</span><br /><a 
- id="x1-580009"></a>Appendix</h2>
+ id="x1-610009"></a>Appendix</h2>
    <h3 class="sectionHead"><span class="titlemark">9.1    </span> <a 
- id="x1-590009.1"></a>Optimizations</h3>
+ id="x1-620009.1"></a>Optimizations</h3>
 <!--l. 3--><p class="noindent" >
    <h4 class="subsectionHead"><span class="titlemark">9.1.1    </span> <a 
- id="x1-600009.1.1"></a>Border Extraction</h4>
+ id="x1-630009.1.1"></a>Border Extraction</h4>
 <!--l. 5--><p class="noindent" >
    <h4 class="subsectionHead"><span class="titlemark">9.1.2    </span> <a 
- id="x1-610009.1.2"></a>SFA Threshold</h4>
+ id="x1-640009.1.2"></a>SFA Threshold</h4>
 <!--l. 7--><p class="noindent" >
    <h4 class="subsectionHead"><span class="titlemark">9.1.3    </span> <a 
- id="x1-620009.1.3"></a>TDS Evaluation</h4>
+ id="x1-650009.1.3"></a>TDS Evaluation</h4>
 <a 
- id="x1-62001r1"></a>
+ id="x1-65001r1"></a>
    <!--l. 3--><div class="longtable"> <table id="TBL-31" class="longtable" 
 cellspacing="0" cellpadding="0" rules="groups" 
 ><colgroup id="TBL-31-1g"><col 
@@ -4900,12 +5052,12 @@ class="td11"> 2.0  </td><td  style="white-space:nowrap; text-align:left;" id="TB
 class="td11"> 1.00  </td>
 </tr><tr 
 class="hline"><td><hr></td><td><hr></td><td><hr></td><td><hr></td><td><hr></td><td><hr></td><td><hr></td></tr><tr  
- style="vertical-align:baseline;" id="TBL-31-141-"><td colspan="6" style="white-space:nowrap; text-align:left;" id="TBL-31-141-1"  
-class="td11"></td>     <div class="multicolumn"  style="white-space:nowrap; text-align:center;"><div class="caption" 
+ style="vertical-align:baseline;" id="TBL-31-141-"><td colspan="7" style="white-space:nowrap; text-align:center;" id="TBL-31-141-1"  
+class="td11">     <div class="multicolumn"  style="white-space:nowrap; text-align:center;"><div class="caption" 
 ><span class="id">Table 9.1: </span><span  
-class="content">Results of TDS calculation for Dermfit</span></div><!--tex4ht:label?: x1-62001r1 -->                                  </div>            <a 
- id="x1-62002"></a>
-</tr><tr  
+class="content">Results of TDS calculation for Dermfit</span></div><!--tex4ht:label?: x1-65001r1 -->                                  </div>            <a 
+ id="x1-65002"></a>
+</td></tr><tr  
  style="vertical-align:baseline;" id="TBL-31-142-"><td  style="white-space:nowrap; text-align:left;" id="TBL-31-142-1"  
 class="td11">         </td>
 </tr><tr  
@@ -4919,7 +5071,7 @@ class="td11">         </td>
 class="td11">         </td></tr>
    </table></div>
 <a 
- id="x1-62003r2"></a>
+ id="x1-65003r2"></a>
    <!--l. 143--><div class="longtable"><table id="TBL-32" class="longtable" 
 cellspacing="0" cellpadding="0" rules="groups" 
 ><colgroup id="TBL-32-1g"><col 
@@ -5372,12 +5524,12 @@ class="td11"> 4.0  </td><td  style="white-space:nowrap; text-align:left;" id="TB
 class="td11"> 3.90  </td>
 </tr><tr 
 class="hline"><td><hr></td><td><hr></td><td><hr></td><td><hr></td><td><hr></td><td><hr></td><td><hr></td></tr><tr  
- style="vertical-align:baseline;" id="TBL-32-50-"><td colspan="6" style="white-space:nowrap; text-align:left;" id="TBL-32-50-1"  
-class="td11"></td>        <div class="multicolumn"  style="white-space:nowrap; text-align:center;"><div class="caption" 
+ style="vertical-align:baseline;" id="TBL-32-50-"><td colspan="7" style="white-space:nowrap; text-align:center;" id="TBL-32-50-1"  
+class="td11">        <div class="multicolumn"  style="white-space:nowrap; text-align:center;"><div class="caption" 
 ><span class="id">Table 9.2: </span><span  
-class="content">Results of TDS calculation for DermQuest</span></div><!--tex4ht:label?: x1-62003r2 -->                            </div>                  <a 
- id="x1-62004"></a>
-</tr><tr  
+class="content">Results of TDS calculation for DermQuest</span></div><!--tex4ht:label?: x1-65003r2 -->                            </div>                  <a 
+ id="x1-65004"></a>
+</td></tr><tr  
  style="vertical-align:baseline;" id="TBL-32-51-"><td  style="white-space:nowrap; text-align:left;" id="TBL-32-51-1"  
 class="td11">             </td>
 </tr><tr  
@@ -5391,7 +5543,7 @@ class="td11">             </td>
 class="td11">             </td></tr>
    </table></div>
 <a 
- id="x1-62005r3"></a>
+ id="x1-65005r3"></a>
    <!--l. 196--><div class="longtable"><table id="TBL-33" class="longtable" 
 cellspacing="0" cellpadding="0" rules="groups" 
 ><colgroup id="TBL-33-1g"><col 
@@ -5808,12 +5960,12 @@ class="td11"> 3.0  </td><td  style="white-space:nowrap; text-align:left;" id="TB
 class="td11"> 4.50  </td>
 </tr><tr 
 class="hline"><td><hr></td><td><hr></td><td><hr></td><td><hr></td><td><hr></td><td><hr></td><td><hr></td></tr><tr  
- style="vertical-align:baseline;" id="TBL-33-46-"><td colspan="6" style="white-space:nowrap; text-align:left;" id="TBL-33-46-1"  
-class="td11"></td>       <div class="multicolumn"  style="white-space:nowrap; text-align:center;"><div class="caption" 
+ style="vertical-align:baseline;" id="TBL-33-46-"><td colspan="7" style="white-space:nowrap; text-align:center;" id="TBL-33-46-1"  
+class="td11">       <div class="multicolumn"  style="white-space:nowrap; text-align:center;"><div class="caption" 
 ><span class="id">Table 9.3: </span><span  
-class="content">Results of TDS calculation for PH2Dataset</span></div><!--tex4ht:label?: x1-62005r3 -->                            </div>                 <a 
- id="x1-62006"></a>
-</tr><tr  
+class="content">Results of TDS calculation for PH2Dataset</span></div><!--tex4ht:label?: x1-65005r3 -->                            </div>                 <a 
+ id="x1-65006"></a>
+</td></tr><tr  
  style="vertical-align:baseline;" id="TBL-33-47-"><td  style="white-space:nowrap; text-align:left;" id="TBL-33-47-1"  
 class="td11">           </td>
 </tr><tr  
