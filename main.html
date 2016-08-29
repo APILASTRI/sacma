@@ -7,7 +7,7 @@
 <meta name="originator" content="TeX4ht (http://www.tug.org/tex4ht/)"> 
 <!-- html,word,fn-in --> 
 <meta name="src" content="main.tex"> 
-<meta name="date" content="2016-08-28 18:33:00"> 
+<meta name="date" content="2016-08-29 19:20:00"> 
 <link rel="stylesheet" type="text/css" href="main.css"> 
 </head><body 
 >
@@ -31,7 +31,7 @@ class="ptmr7t-x-x-120">Switzerland,</span>
 class="ptmr7t-x-x-120">alex</span><span 
 class="ptmr7t-x-x-120">_gustafson@yahoo.de</span></div><br />
 <div class="date" ><span 
-class="ptmr7t-x-x-120">August 28, 2016</span>
+class="ptmr7t-x-x-120">August 29, 2016</span>
 <span 
 class="ptmr7t-x-x-120">Dozent: Reto Knaack (knaa@zhaw.ch)</span>
 <span 
@@ -178,16 +178,20 @@ href="#x1-580008.6.4" id="QQ2-1-105">MVC and Smart Phone Applications</a></span>
 href="#x1-590008.6.5" id="QQ2-1-106">Considerations</a></span>
 <br />     <span class="subsectionToc" >8.6.6 <a 
 href="#x1-600008.6.6" id="QQ2-1-107">VIPER</a></span>
+<br />    <span class="sectionToc" >8.7 <a 
+href="#x1-610008.7" id="QQ2-1-109">Mobile Development Strategies</a></span>
+<br />     <span class="subsectionToc" >8.7.1 <a 
+href="#x1-620008.7.1" id="QQ2-1-110">Pure Native vs Hybrid Native vs Hybrid vs Web Apps</a></span>
 <br />   <span class="chapterToc" >9 <a 
-href="#x1-620009" id="QQ2-1-110">Appendix</a></span>
+href="#x1-640009" id="QQ2-1-112">Appendix</a></span>
 <br />    <span class="sectionToc" >9.1 <a 
-href="#x1-630009.1" id="QQ2-1-111">Optimizations</a></span>
+href="#x1-650009.1" id="QQ2-1-113">Optimizations</a></span>
 <br />     <span class="subsectionToc" >9.1.1 <a 
-href="#x1-640009.1.1" id="QQ2-1-112">Border Extraction</a></span>
+href="#x1-660009.1.1" id="QQ2-1-114">Border Extraction</a></span>
 <br />     <span class="subsectionToc" >9.1.2 <a 
-href="#x1-650009.1.2" id="QQ2-1-113">SFA Threshold</a></span>
+href="#x1-670009.1.2" id="QQ2-1-115">SFA Threshold</a></span>
 <br />     <span class="subsectionToc" >9.1.3 <a 
-href="#x1-660009.1.3" id="QQ2-1-114">TDS Evaluation</a></span>
+href="#x1-680009.1.3" id="QQ2-1-116">TDS Evaluation</a></span>
    </div>
                                                                   
 
@@ -462,7 +466,7 @@ conditions are by nature visible. The initial diagnosis and follow up monitoring
 done visually. A mobile device with a camera can aid patients and practitioners in the
 diagnosis of a dermatological condition and tracking it’s development. The article Mobile
 Applications in Dermatology<span class="cite"> [<a 
-href="#XBrewer_2013">4</a>]</span> in 2013 identified 229 dermatology-related apps across 5
+href="#XBrewer_2013">5</a>]</span> in 2013 identified 229 dermatology-related apps across 5
 app platforms ( Android, Apple, Blackberry, Nokia, and Windows ). These were grouped into
 categories based on their primary functionality. The ”Self-surveillance/diagnosis” category
 was the second largest on the Android and Apple platforms, with 13 and 24 apps
@@ -990,7 +994,7 @@ which symmetry exists. The Border score is an integer value from 0 to 8 indicati
 presence of border irregularities in 8 regions. Color is an integer value from 1 to 6 indicating
 the presence of one to six specific colors. Similarly, the value for D indicates the presence of
 one to five distinct structures or textures. Alternatively, in some literature<span class="cite"> [<a 
-href="#XSiddiq_2015">10</a>]</span> D is defined as
+href="#XSiddiq_2015">11</a>]</span> D is defined as
 Diameter, where a diameter greater than 6mm results in a value of 5, otherwise
 1.
 <!--l. 9--><p class="indent" >   The final TDS Score is the weighted sum of the ABCD Values and is in the range 1.0 to
@@ -1057,7 +1061,7 @@ class="td11">          </td></tr></table></div>
 <br /><div class="caption" 
 ><span class="id">Table 5.1: </span><span  
 class="content">TDS Evaluation<span class="cite"> [<a 
-href="#XWeigert_2012">12</a>]</span></span></div><!--tex4ht:label?: x1-32002r1 -->
+href="#XWeigert_2012">13</a>]</span></span></div><!--tex4ht:label?: x1-32002r1 -->
                                                                   
 
                                                                   
@@ -1070,7 +1074,7 @@ class="ptmbi7t-">Dermoscopy </span>Score, is really only applicable to
 images captured using a dermatoscope. Especially the differential structures are
 only visible on dermatoscopic images where the subsurface structures are made
 visible<span class="cite"> [<a 
-href="#XFernandez_Alcon_2009">2</a>]</span>.
+href="#XFernandez_Alcon_2009">3</a>]</span>.
 <!--l. 39--><p class="indent" >   Since the D component is not applicable to images captured with a smart phone this
 project will use a modified TDS without the D component. The original TDS formula <a 
 href="#x1-32001r1">5.1<!--tex4ht:ref: eq:tds_formula --></a> can
@@ -1148,14 +1152,14 @@ class="content">Adapted TDS Evaluation</span></div><!--tex4ht:label?: x1-33002r2
 melanocytic tumors. It is a clearly defined rule based on easily recognizable visual features.
 Clinicians with limited dermoscopy experience achieve better results using the ABCD rule
 than other methods <span class="cite"> [<a 
-href="#XWeigert_2012">12</a>]</span>. The following sections detail methods to automate the calculation
+href="#XWeigert_2012">13</a>]</span>. The following sections detail methods to automate the calculation
 of the ABCD scores.
 <!--l. 70--><p class="noindent" >
    <h4 class="subsectionHead"><span class="titlemark">5.2.1    </span> <a 
  id="x1-350005.2.1"></a>Asymmetry</h4>
 <!--l. 1--><p class="noindent" >The ”Center of mass” method of measuring asymmetry is relatively easy to calculate and is
 more accurate compared to other complex algorithms <span class="cite"> [<a 
-href="#XPremaladha_2014">8</a>]</span>.
+href="#XPremaladha_2014">9</a>]</span>.
 <!--l. 3--><p class="indent" >   This algorithm begins by calculating an array of radii from the lesion’s center of mass to
 border for each of 360 degrees. The coordinates for the center of mass are calculated from the
 sum of all x and y coordinates of pixels within the lesion’s border each divided by the sum of
@@ -1297,7 +1301,7 @@ class="td11">                                                                  <
 <br /><div class="caption" 
 ><span class="id">Table 5.3: </span><span  
 class="content">TDS Evaluation<span class="cite"> [<a 
-href="#XWeigert_2012">12</a>]</span></span></div><!--tex4ht:label?: x1-35002r3 -->
+href="#XWeigert_2012">13</a>]</span></span></div><!--tex4ht:label?: x1-35002r3 -->
                                                                   
 
                                                                   
@@ -1437,7 +1441,7 @@ class="content">Example of border score 8</span></div><!--tex4ht:label?: x1-3600
  id="x1-370005.2.3"></a>Color</h4>
 <!--l. 1--><p class="noindent" >In order to calculate the color score the <span 
 class="ptmri7t-">Quantification of Color</span><span class="cite"> [<a 
-href="#XFernandez_Alcon_2009">2</a>]</span> algorithm was
+href="#XFernandez_Alcon_2009">3</a>]</span> algorithm was
 implemented in which the distance of each pixel to a defined set of colors is evaluated.
 <!--l. 3--><p class="indent" >   The original image is first filtered using a low pass Gaussian filter in order to reduce
 noise. Then for for each pixel with the lesion area the euclidean distance from 6 RGB values
@@ -1537,7 +1541,7 @@ class="td11">           </td></tr></table></div>
 <br /><div class="caption" 
 ><span class="id">Table 5.4: </span><span  
 class="content">RGB values of the six possible TDS-relevent colors<span class="cite"> [<a 
-href="#XFernandez_Alcon_2009">2</a>]</span></span></div><!--tex4ht:label?: x1-37001r4 -->
+href="#XFernandez_Alcon_2009">3</a>]</span></span></div><!--tex4ht:label?: x1-37001r4 -->
                                                                   
 
                                                                   
@@ -1704,7 +1708,7 @@ cases.
  id="x1-490008.1"></a>Use Cases</h3>
 <!--l. 1--><p class="noindent" >In order to capture the formal use cases we will use a schema based on the one defined in
 Requirement Engineering Fundamentals <span class="cite"> [<a 
-href="#X9781937538774">7</a>]</span>.
+href="#X9781937538774">8</a>]</span>.
    <div class="table">
                                                                   
 
@@ -3471,7 +3475,7 @@ detriment, cost, and risk is an ad-hoc exercise. In a larger project with multip
 and active stakeholders the time and effort required for a prioritisation assessment according
 to Wiegers would be advisable.
 <!--l. 3--><p class="indent" >   The following are the prioritisation classes as defined in <span class="cite"> [<a 
-href="#X9781937538774">7</a>]</span>:
+href="#X9781937538774">8</a>]</span>:
      <ul class="itemize1">
      <li class="itemize"><span 
 class="ptmb7t-">Mandatory</span>:   A   mandatory   requirement   is   a   requirement   that   must   be
@@ -3497,7 +3501,7 @@ design pattern for applications that present the user with a graphical user inte
 developed out of a need for modularity, to encapsulate responsibility of specific concepts to
 separate program modules, or Separation of Concerns. MVC identifies three main
 components that program code should be grouped into, namely<span class="cite"> [<a 
-href="#Xwalther_2016">11</a>]</span>:
+href="#Xwalther_2016">12</a>]</span>:
      <ul class="itemize1">
      <li class="itemize"><span 
 class="ptmb7t-">Model</span>:  The  representation  of  some  object  of  knowledge,  encapsulates  code
@@ -3554,7 +3558,7 @@ Modern MVC strictly separates the model from the view. All modern frameworks sta
 the view should have as little logic as possible. Any logic implemented in the view should
 only be relevant to presentation. The view components should not directly reference the
 model components<span class="cite"> [<a 
-href="#Xapple_MVC">3</a>]</span><span class="cite"> [<a 
+href="#Xapple_MVC">4</a>]</span><span class="cite"> [<a 
 href="#Xsymfony_MVC">1</a>]</span>.
 <!--l. 27--><p class="indent" >   <hr class="figure"><div class="figure" 
 >
@@ -3581,7 +3585,7 @@ class="content">Modern MVC vs 3-Tier Layered Architecture</span></div><!--tex4ht
 difficult to test, by removing as much logic as possible from the user interface there is less
 necessity to test it. The controller and model components can more easily be tested in
 isolation using normal unit tests<span class="cite"> [<a 
-href="#Xmvp_testing">5</a>]</span>.
+href="#Xmvp_testing">6</a>]</span>.
    <h4 class="subsectionHead"><span class="titlemark">8.6.3    </span> <a 
  id="x1-570008.6.3"></a>MVC Derivatives</h4>
 <!--l. 38--><p class="noindent" >Many MVC derivatives exist. The main differences are where the division of responsibility is
@@ -3594,7 +3598,7 @@ model, but there is little difference to the other MVC derivatives such as MVP (
 view presenter ). The AngularJS web framework attempts to end the discussion
 of which design to follow by labelling itself a MVW ( Model View Whatever )
 framework<span class="cite"> [<a 
-href="#Xmvw">6</a>]</span>.
+href="#Xmvw">7</a>]</span>.
 <!--l. 41--><p class="indent" >   <hr class="figure"><div class="figure" 
 >
                                                                   
@@ -3611,7 +3615,7 @@ name="main12x.png" src="assets/concept/mvc_3.pdf"
 -->
 <br /> <div class="caption" 
 ><span class="id">Figure 8.9: </span><span  
-class="content">MVC Derivatives Overview</span></div><!--tex4ht:label?: x1-57001r9 -->
+class="content">MVC Derivatives in relation to 3-Tier Layer</span></div><!--tex4ht:label?: x1-57001r9 -->
                                                                   
 
                                                                   
@@ -3630,8 +3634,8 @@ browser and server provides the view components that emulate a native mobile use
 interface. This is referred to as a web app. Any logic in the view is implemented using
 javascript. Hardware support is limited to what the mobile browser provides access to. In
 order to extend hardware support a hybrid approach can be used in which the app
-implements a custom browser view which is extended with native capabilities. Here is
-division or responsibilities as defined by MVC become fuzzy. A fully native app
+implements a custom browser view which is extended with native capabilities. Here the
+division of responsibilities as defined by MVC become fuzzy. A fully native app
 working in conjunction with a web server will not conform well to the definitions of
 MVC.
 <!--l. 52--><p class="noindent" >
@@ -3667,7 +3671,7 @@ concepts that make it more adaptable to mobile applications, especially when the
 extended with online server based services. The classic controller is split into a presenter and
 a controller, the model component is split into a central data manager communicating with
 many services and entities<span class="cite"> [<a 
-href="#Xviper">9</a>]</span>.
+href="#Xviper">10</a>]</span>.
 <!--l. 66--><p class="indent" >   <hr class="figure"><div class="figure" 
 >
                                                                   
@@ -3730,11 +3734,62 @@ class="ptmb7t-">Wireframe / Router</span>: The wireframe initialises all the oth
      “state” of the app and might implement a “history” allowing the user to transition
      back to a previous view with the associated other components and data.
      </li></ul>
+   <h3 class="sectionHead"><span class="titlemark">8.7    </span> <a 
+ id="x1-610008.7"></a>Mobile Development Strategies</h3>
+                                                                  
+
+                                                                  
+<!--l. 1--><p class="noindent" >
+   <h4 class="subsectionHead"><span class="titlemark">8.7.1    </span> <a 
+ id="x1-620008.7.1"></a>Pure Native vs Hybrid Native vs Hybrid vs Web Apps</h4>
+<!--l. 3--><p class="noindent" >The mobile app market is segmented into several platforms. Each platform has it’s own
+framework, API, and language specifications and requirements. Android apps are written in
+java and access the Android apis, iOS apps in Objective-C or Swift and interface
+with the iOS frameworks. Android and iOS cover about 94% of the worldwide
+mobile market <span class="cite"> [<a 
+href="#Xmobile_market">2</a>]</span>. A developer must de decide which platforms are priorities, and
+how might programming effort be consolidated across multiple platforms. Several
+strategies exist, and there are many tool kits and frameworks that can help accelerate
+development.
+     <ul class="itemize1">
+     <li class="itemize"><span 
+class="ptmb7t-">Web Apps</span>: The simplest development strategy is to develop an HTML based
+     web page that is disguised to appear and behave like a mobile app. The web app
+     runs in a normal browser, is deployed from a standard web server. Model mobile
+     web  browsers  offer  javascript  APIs  that  can  access  various  other  hardware
+     components of the smart phone such as the compass, GPS/geolocation services,
+     accelerometer, and the camera. Other services will remain inaccessible.
+     </li>
+     <li class="itemize"><span 
+class="ptmb7t-">Hybrid</span>: A similar strategy is to develop using javascript and html, but to package
+     these elements into a “hollow” native app that is little else than a native view
+     component with an embedded web browser. The web browser url is locked to
+     the internal html files and appears to the user as a mobile app. though the user
+     interface might slightly different that a pure native app. The advantage of a hybrid
+     strategy is that the app can be distributed via the standard app stores increasing
+     it’s  marketability.  It  can  also  be  extended  with  native  components  that  might
+     otherwise not be accessible to to a web app such as internal file storage and native
+     data storage mechanisms.
+     </li>
+     <li class="itemize"><span 
+class="ptmb7t-">Pure Native</span>: The developer uses the development environment as provided by
+     the phone manufacturer and has full access to all of the native hardware APIs,
+     development kits and tools. The performance and responsiveness of a pure native
+     app is much better compared to web and hybrid solutions. The user interface is
+     build with the standard UI tools allowing a better user experience because the
+     user is presented with familiar UI elements.
+     </li>
+     <li class="itemize"><span 
+class="ptmb7t-">Hybrid  Native</span>:  Recently  several  cross  platform  application  frameworks  and
+     emerged that allow the developer in a single language that can be compiled across
+     several platforms. Qt and Juce are examples of application frameworks that allow
+     cross platform development in C++, Xamarin uses C#.
+     </li></ul>
                                                                   
 
                                                                   
    <h2 class="likechapterHead"><a 
- id="x1-610008.6.6"></a>Bibliography</h2>
+ id="x1-630008.7.1"></a>Bibliography</h2>
     <div class="thebibliography">
     <p class="bibitem" ><span class="biblabel">
   [1]<span class="bibsp">   </span></span><a 
@@ -3744,6 +3799,12 @@ href="http://symfony.com/legacy/doc/book/1_0/en/02-Exploring-Symfony-s-Code#chap
     </p>
     <p class="bibitem" ><span class="biblabel">
   [2]<span class="bibsp">   </span></span><a 
+ id="Xmobile_market"></a>Mobile/Tablet  Operating  System  Market  Share,  2016.    [Online;  accessed
+    2016-8-28], <a 
+href="https://www.netmarketshare.com/operating-system-market-share.aspx?qprid=8&qpcustomd=1" >link</a>.
+    </p>
+    <p class="bibitem" ><span class="biblabel">
+  [3]<span class="bibsp">   </span></span><a 
  id="XFernandez_Alcon_2009"></a>Jose Fernandez Alcon, Calina Ciuhu, Warner ten Kate, Adrienne Heinrich,
     Natallia  Uzunbajakava,  Gertruud  Krekels,  Denny  Siem,  and  Gerard  de Haan.
     Automatic Imaging System With Decision Support for Inspection of Pigmented
@@ -3751,56 +3812,56 @@ href="http://symfony.com/legacy/doc/book/1_0/en/02-Exploring-Symfony-s-Code#chap
 class="ptmri7t-">IEEE</span>, 3(1):14—25, feb 2009.
     </p>
     <p class="bibitem" ><span class="biblabel">
-  [3]<span class="bibsp">   </span></span><a 
+  [4]<span class="bibsp">   </span></span><a 
  id="Xapple_MVC"></a>Apple. Model-View-Controller, 2015. [Online; accessed 2016-8-27], <a 
 href="https://developer.apple.com/library/ios/documentation/General/Conceptual/DevPedia-CocoaCore/MVC.html" >link</a>.
     </p>
     <p class="bibitem" ><span class="biblabel">
-  [4]<span class="bibsp">   </span></span><a 
+  [5]<span class="bibsp">   </span></span><a 
  id="XBrewer_2013"></a>Ann Chang Brewer, Dawnielle C. Endly, Jill Henley, Mahsa Amir, Blake P.
     Sampson, Jacqueline F. Moreau, and Robert P. Dellavalle.  Mobile Applications
     in Dermatology. <span 
 class="ptmri7t-">JAMA Dermatol</span>, 149(11):1300, nov 2013.
     </p>
     <p class="bibitem" ><span class="biblabel">
-  [5]<span class="bibsp">   </span></span><a 
+  [6]<span class="bibsp">   </span></span><a 
  id="Xmvp_testing"></a>Martin Fowler.  GUI Architectures, Humble View, 2006.  [Online; accessed
     2016-8-28], <a 
 href="http://martinfowler.com/eaaDev/uiArchs.html#HumbleView" >link</a>.
     </p>
     <p class="bibitem" ><span class="biblabel">
-  [6]<span class="bibsp">   </span></span><a 
+  [7]<span class="bibsp">   </span></span><a 
  id="Xmvw"></a>Igor Minar.  MVC vs MVVM vs MVP, 2012.  [Online; accessed 2016-8-28],
     <a 
 href="https://plus.google.com/+IgorMinar/posts/DRUAkZmXjNV" >link</a>.
-    </p>
-    <p class="bibitem" ><span class="biblabel">
-  [7]<span class="bibsp">   </span></span><a 
- id="X9781937538774"></a>Klaus  Pohl  and  Chris  Rupp.   <span 
-class="ptmri7t-">Requirements  Engineering  Fundamentals:  A</span>
-    <span 
-class="ptmri7t-">Study Guide for the Certified Professional for Requirements Engineering Exam -</span>
-    <span 
-class="ptmri7t-">Foundation Level - IREB compliant</span>. Rocky Nook, 2015.
                                                                   
 
                                                                   
     </p>
     <p class="bibitem" ><span class="biblabel">
   [8]<span class="bibsp">   </span></span><a 
+ id="X9781937538774"></a>Klaus  Pohl  and  Chris  Rupp.   <span 
+class="ptmri7t-">Requirements  Engineering  Fundamentals:  A</span>
+    <span 
+class="ptmri7t-">Study Guide for the Certified Professional for Requirements Engineering Exam -</span>
+    <span 
+class="ptmri7t-">Foundation Level - IREB compliant</span>. Rocky Nook, 2015.
+    </p>
+    <p class="bibitem" ><span class="biblabel">
+  [9]<span class="bibsp">   </span></span><a 
  id="XPremaladha_2014"></a>J. Premaladha  and  K.S.  Ravichandr.    Asymmetry  Analysis  of  Malignant
     Melanoma  Using  Image  Processing:  A  Survey.    <span 
 class="ptmri7t-">J.  of  Artificial  Intelligence</span>,
     7(2):45—53, feb 2014.
     </p>
     <p class="bibitem" ><span class="biblabel">
-  [9]<span class="bibsp">   </span></span><a 
+ [10]<span class="bibsp">   </span></span><a 
  id="Xviper"></a>Ryan Quan. Brigade’s Experience Using an MVC Alternative, 2014. [Online;
     accessed 2016-8-28], <a 
 href="https://medium.com/brigade-engineering/brigades-experience-using-an-mvc-alternative-36ef1601a41f#.yw4bp1y48" >link</a>.
     </p>
     <p class="bibitem" ><span class="biblabel">
- [10]<span class="bibsp">   </span></span><a 
+ [11]<span class="bibsp">   </span></span><a 
  id="XSiddiq_2015"></a>Sophia.M   Mallikarjun   Mundas Vidya.R   Siddiq Iqbal,   Divyashree.J.A.
     Implementation  of  Stolz’s  Algorithm  for  Melanoma  Detection.    <span 
 class="ptmri7t-">International</span>
@@ -3809,13 +3870,13 @@ class="ptmri7t-">Advanced Research Journal in Science, Engineering and Technolog
     2(6), jun 2015.
     </p>
     <p class="bibitem" ><span class="biblabel">
- [11]<span class="bibsp">   </span></span><a 
+ [12]<span class="bibsp">   </span></span><a 
  id="Xwalther_2016"></a>Stephen  Walther.      The  Evolution  of  MVC,  2016.      [Online;  accessed
     2016-8-27], <a 
 href="http://stephenwalther.com/archive/2008/08/24/the-evolution-of-mvc" >link</a>.
     </p>
     <p class="bibitem" ><span class="biblabel">
- [12]<span class="bibsp">   </span></span><a 
+ [13]<span class="bibsp">   </span></span><a 
  id="XWeigert_2012"></a>Ulrike Weigert, Walter H.C. Burgdorf, and Wilhelm Stolz.  ABCD Rule.  In
     <span 
 class="ptmri7t-">Atlas of Dermoscopy</span>, page 116. Informa Healthcare, aug 2012.
@@ -3825,20 +3886,20 @@ class="ptmri7t-">Atlas of Dermoscopy</span>, page 116. Informa Healthcare, aug 2
 
                                                                   
    <h2 class="chapterHead"><span class="titlemark">Chapter 9</span><br /><a 
- id="x1-620009"></a>Appendix</h2>
+ id="x1-640009"></a>Appendix</h2>
    <h3 class="sectionHead"><span class="titlemark">9.1    </span> <a 
- id="x1-630009.1"></a>Optimizations</h3>
+ id="x1-650009.1"></a>Optimizations</h3>
 <!--l. 3--><p class="noindent" >
    <h4 class="subsectionHead"><span class="titlemark">9.1.1    </span> <a 
- id="x1-640009.1.1"></a>Border Extraction</h4>
+ id="x1-660009.1.1"></a>Border Extraction</h4>
 <!--l. 5--><p class="noindent" >
    <h4 class="subsectionHead"><span class="titlemark">9.1.2    </span> <a 
- id="x1-650009.1.2"></a>SFA Threshold</h4>
+ id="x1-670009.1.2"></a>SFA Threshold</h4>
 <!--l. 7--><p class="noindent" >
    <h4 class="subsectionHead"><span class="titlemark">9.1.3    </span> <a 
- id="x1-660009.1.3"></a>TDS Evaluation</h4>
+ id="x1-680009.1.3"></a>TDS Evaluation</h4>
 <a 
- id="x1-66001r1"></a>
+ id="x1-68001r1"></a>
    <!--l. 3--><div class="longtable"> <table id="TBL-31" class="longtable" 
 cellspacing="0" cellpadding="0" rules="groups" 
 ><colgroup id="TBL-31-1g"><col 
@@ -5089,12 +5150,12 @@ class="td11"> 2.0  </td><td  style="white-space:nowrap; text-align:left;" id="TB
 class="td11"> 1.00  </td>
 </tr><tr 
 class="hline"><td><hr></td><td><hr></td><td><hr></td><td><hr></td><td><hr></td><td><hr></td><td><hr></td></tr><tr  
- style="vertical-align:baseline;" id="TBL-31-141-"><td colspan="6" style="white-space:nowrap; text-align:left;" id="TBL-31-141-1"  
-class="td11"></td>     <div class="multicolumn"  style="white-space:nowrap; text-align:center;"><div class="caption" 
+ style="vertical-align:baseline;" id="TBL-31-141-"><td colspan="7" style="white-space:nowrap; text-align:center;" id="TBL-31-141-1"  
+class="td11">     <div class="multicolumn"  style="white-space:nowrap; text-align:center;"><div class="caption" 
 ><span class="id">Table 9.1: </span><span  
-class="content">Results of TDS calculation for Dermfit</span></div><!--tex4ht:label?: x1-66001r1 -->                                  </div>            <a 
- id="x1-66002"></a>
-</tr><tr  
+class="content">Results of TDS calculation for Dermfit</span></div><!--tex4ht:label?: x1-68001r1 -->                                  </div>            <a 
+ id="x1-68002"></a>
+</td></tr><tr  
  style="vertical-align:baseline;" id="TBL-31-142-"><td  style="white-space:nowrap; text-align:left;" id="TBL-31-142-1"  
 class="td11">         </td>
 </tr><tr  
@@ -5108,7 +5169,7 @@ class="td11">         </td>
 class="td11">         </td></tr>
    </table></div>
 <a 
- id="x1-66003r2"></a>
+ id="x1-68003r2"></a>
    <!--l. 143--><div class="longtable"><table id="TBL-32" class="longtable" 
 cellspacing="0" cellpadding="0" rules="groups" 
 ><colgroup id="TBL-32-1g"><col 
@@ -5561,12 +5622,12 @@ class="td11"> 4.0  </td><td  style="white-space:nowrap; text-align:left;" id="TB
 class="td11"> 3.90  </td>
 </tr><tr 
 class="hline"><td><hr></td><td><hr></td><td><hr></td><td><hr></td><td><hr></td><td><hr></td><td><hr></td></tr><tr  
- style="vertical-align:baseline;" id="TBL-32-50-"><td colspan="6" style="white-space:nowrap; text-align:left;" id="TBL-32-50-1"  
-class="td11"></td>        <div class="multicolumn"  style="white-space:nowrap; text-align:center;"><div class="caption" 
+ style="vertical-align:baseline;" id="TBL-32-50-"><td colspan="7" style="white-space:nowrap; text-align:center;" id="TBL-32-50-1"  
+class="td11">        <div class="multicolumn"  style="white-space:nowrap; text-align:center;"><div class="caption" 
 ><span class="id">Table 9.2: </span><span  
-class="content">Results of TDS calculation for DermQuest</span></div><!--tex4ht:label?: x1-66003r2 -->                            </div>                  <a 
- id="x1-66004"></a>
-</tr><tr  
+class="content">Results of TDS calculation for DermQuest</span></div><!--tex4ht:label?: x1-68003r2 -->                            </div>                  <a 
+ id="x1-68004"></a>
+</td></tr><tr  
  style="vertical-align:baseline;" id="TBL-32-51-"><td  style="white-space:nowrap; text-align:left;" id="TBL-32-51-1"  
 class="td11">             </td>
 </tr><tr  
@@ -5580,7 +5641,7 @@ class="td11">             </td>
 class="td11">             </td></tr>
    </table></div>
 <a 
- id="x1-66005r3"></a>
+ id="x1-68005r3"></a>
    <!--l. 196--><div class="longtable"><table id="TBL-33" class="longtable" 
 cellspacing="0" cellpadding="0" rules="groups" 
 ><colgroup id="TBL-33-1g"><col 
@@ -5997,12 +6058,12 @@ class="td11"> 3.0  </td><td  style="white-space:nowrap; text-align:left;" id="TB
 class="td11"> 4.50  </td>
 </tr><tr 
 class="hline"><td><hr></td><td><hr></td><td><hr></td><td><hr></td><td><hr></td><td><hr></td><td><hr></td></tr><tr  
- style="vertical-align:baseline;" id="TBL-33-46-"><td colspan="6" style="white-space:nowrap; text-align:left;" id="TBL-33-46-1"  
-class="td11"></td>       <div class="multicolumn"  style="white-space:nowrap; text-align:center;"><div class="caption" 
+ style="vertical-align:baseline;" id="TBL-33-46-"><td colspan="7" style="white-space:nowrap; text-align:center;" id="TBL-33-46-1"  
+class="td11">       <div class="multicolumn"  style="white-space:nowrap; text-align:center;"><div class="caption" 
 ><span class="id">Table 9.3: </span><span  
-class="content">Results of TDS calculation for PH2Dataset</span></div><!--tex4ht:label?: x1-66005r3 -->                            </div>                 <a 
- id="x1-66006"></a>
-</tr><tr  
+class="content">Results of TDS calculation for PH2Dataset</span></div><!--tex4ht:label?: x1-68005r3 -->                            </div>                 <a 
+ id="x1-68006"></a>
+</td></tr><tr  
  style="vertical-align:baseline;" id="TBL-33-47-"><td  style="white-space:nowrap; text-align:left;" id="TBL-33-47-1"  
 class="td11">           </td>
 </tr><tr  
