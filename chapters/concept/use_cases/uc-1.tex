@@ -1,19 +1,25 @@
 \begin{table}[H]
-    \begin{tabular}[t]{ | >{\bfseries}l | p{9.5cm} |}
-    \hline
-    ID
-    &  UC-1 \\ \hline
-    Name
-    & Capture Image \\ \hline
-    Description
-    &  As a user I can capture an image of the skin lesion that I would like to have analysed. \\ \hline
-    Dependencies
-    & None \\ \hline
-    Trigger
-    & The user activated the application and selected the "image capture" navigation item. \\ \hline
-    Preconditions
-    & The system state which must be active before the Use Case can occur \\ \hline
-    Normal Flow
+    \begin{tabular}[t]{ | >{\bfseries}l | p{9.5cm} |} \hline
+
+    ID &
+        UC-1 \\ \hline
+    Name &
+        Capture Image \\ \hline
+    Priority &
+        \\ \hline
+    Description &
+        As a user I can capture an image of the skin lesion that I would like to have analysed. \\ \hline
+    Dependencies &
+        None \\ \hline
+    Trigger event &
+        The user activated the application and selected the "image capture" navigation item. \\ \hline
+    Preconditions &
+         \\ \hline
+    Postconditions &
+        \\ \hline
+    Result &
+        The captured image is saved and the system initiates the border calculation\\ \hline
+    Main scenario
     &
 
     \begin{description}[topsep=0cm,align=left]
@@ -25,13 +31,14 @@
     \end{description}
 
     \\ \hline
-    Alternate Flow & None \\ \hline
-    Results
-    & The captured images are placed by the system in a processing queue to calculate the lesion's border. \\ \hline
-    Comments
-    & It is important that a user can capture the image with just one hand. If a lesion is located on a user's hand or arm, it's not possible to use two hands. \\ \hline
-    \end{tabular}
 
-    \caption{Use Case 1}
-    \label{fig:uc_1}
+    Alternate scenarios &
+        None \\ \hline
+
+    Comments &
+        It is important that a user can capture the image with just one hand. If a lesion is located on a user's hand or arm, it's not possible to use two hands. UI should account for this if possible. \\ \hline
+
+    \end{tabular}
+  \caption{Use Case 1}
+  \label{fig:uc_1}
 \end{table}
