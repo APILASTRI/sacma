@@ -22,7 +22,8 @@ The criteria to compare these strategies are the following:
 
 \item \textbf{Code Portability}: How much of the code developed can be reused on each target platform without any extra effort.
 
-\item \textbf{Native API access}: Does a strategy allow access to all a device’s native API?
+\item \textbf{Camera Access}: Does a strategy allow access to all the device’s camera,? is the camera view customisable with guidelines and information that can help the user take a high quality picture?
+
 
 \item \textbf{Look and Feel}: Does a strategy offer pure native UI elements that conform with user expectations for a particular device?
 
@@ -41,8 +42,3 @@ For comparison we rank each criteria per strategy either 2 = benefit, 1 = no ben
     \label{fig:mob_strat}
 \end{figure}
 
-Native API access has been given a general score. However, if we know in advance which specific device API the application must be able to interface with then there are alternative outcomes. If we know that all mobile browsers offer an api to offer geolocation services for example, then Native API access becomes irrelevant and we can calculate to total without Native API access. If we know that all mobile browsers do not offer the same level of access, but that a plugin exists for the hybrid strategy, this will effect the hybrid decision positively in regards to development effort and api access. It will also render the Web App strategy non-viable.
-
-Access to the camera falls between the cracks. While it is possible to capture an image from a web page in safari, it does not allow any custom handling. The camera preview view is provided by the system, no customisation of that view is possible. However the basic functionality is provided.
-
-A safe strategy would be to begin development using the Web App strategy. If the camera access issue is found to be problematic, and custom handling is required, the transition from a pure web app to a hybrid app does not incur a high cost.
