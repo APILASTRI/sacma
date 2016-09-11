@@ -1,39 +1,136 @@
-In section 2.2.1 categories of medical smart phone apps were defined. Apps in the same categories might have a similar feature set and capabilities. An app in the \textit{Alert / First Response} category might have a database that stores important contacts in the user’s area and a user interface that allows the user to quickly alert a contact in an emergency situation. An app in the \textit{Learning / Educational / Reference} category might be modelled as a quiz app which presents the user with a question and several possible answers to choose from. Answers from several questions will can be evaluated and a score is presented to the user at the end of a session. The app would be implemented with a database of questions and weighted answers, as well as an interface that presents the questions to the user sequentially.
+This chapter will describe the requirements of the application as a whole. The structure of this chapter roughly follows the SRS Template suggested by [reference: Software Requirements, by Karl E Wiegers and Joy Beatty]
 
-One of the goals of this project is to define requirements for an app that provides a risk assessment of a lesion being benign or malignant. A high level description of the primary function of the app is the following:
+\section{Vision and Scope}
 
-\begin{itemize}[label={}]
-\item The smart phone app allows the user to capture and analyse an image of a skin lesion and provide a risk assessment to the user of the lesion being a malignant melanoma.
+    \subsection{Background}
 
-\end{itemize}
+        Melanoma is a type malignant skin tumour that develops from benign melanocytic nevi. Although less frequent than other skin cancer types, it causes more deaths [http://www.cancer.gov/types/skin], and it’s incidence is increasing dramatically, especially in the young white population [reference: Pattern Analysis in Dermoscopic Images , Aurora Sáez ]. Early diagnosis and treatment is vital.
 
-The user might also like to save the image and results in oder to be able to compare it with other assessments in the future, or to review the assessment with a dermatologist. For comparison it might be useful to save associated metadata, such as the date and location on the body of the lesion. For convenience it might be nice to send the assessment and image via email to a specialist for review.
-Secondary functionality can be described as follows:
+Several non-invasive techniques exist which dermatologist can employ to visually make a diagnosis. The most common are pattern analysis, the ABCD rule, the 7-point checklist and the Menzies method, among others [reference: An Atlas of Dermoscopy edited by Ashfaq A Marghoob, Josep Malvehy, Ralph P Braun, Alfred W. Kopf]. These methods generally use a combination of defined visual clues and indicators to assess the risk of a skin lesion. CAD ( Computer Aided Diagnosis ) systems exists that can assist a dermatologist, and even provide automatic diagnosis with an accuracy comparable to that of doctors trained in dermoscopic techniques. [reference : A Review of the Quantification and Classification of Pigmented Skin Lesions: From Dedicated to Hand-Held Devices , Mercedes Filho, Zhen Ma and João Manuel R. S. Tavares ]
 
-\begin{itemize}[label={}]
-\item The app allows the user to save or archive the image and corresponding assessment for future comparison and review.
-\item The user can add, edit, and save metadata associated with the image of the lesion.
-\item The user can browse archived images, assessments, and associated metadata.
-\item The user can send a set of images with associated assessment and metadata via email.
-\end{itemize}
+    \subsection{Business Case}
 
-From this high level description some basic assumptions about the app’s architecture can already be made. The app will require access to a database that can store information about an image, results of the analysis, and metadata. The app will require a user interface that allows a user to browse and edit data associated with an image. The app requires access to the smart phone’s camera api in order to capture images.
-Another consideration that will impact design decisions is the investment already made in developing the image processing and analysis algorithms. Choosing python as the basis for the numerical algorithms and leveraging python based scientific computing libraries has implications because python code is not easily portable to iOS or Android devices. In order to efficiently utilise the algorithms as they are, and to continue to update and improve them, the image processing and analysis algorithms should be implemented as online services.
+        A smart phone based assistant would provide a valuable service by making it easy, painless, inexpensive, and fast to get a preliminary risk assessment of a skin lesion. It is too easy to postpone making an appointment with a dermatologist to have a suspect lesion examined. Visiting an dermatologist is not on most people’s list of fun things to do in the spare time, it requires time and effort. By the time a lesion is visually compelling enough, it might be too late.
 
-\begin{itemize}[label={}]
-\item The image processing and risk assessment algorithms will be implemented as online services.
-\end{itemize}
+A smart phone based application that could make a preliminary diagnosis in near real time would be a great time save and offer compelling enough information to actually make the appointment with a dermatologist.
 
-In order to formally elicit the requirements the hight level description will be broken down into structured use cases. A set of requirements will be extracted from the use cases.
+    \subsection{Scope and Limitations}
+    \subsubsection{Major Features}
+        \noindent
+        \begin{itemize}[leftmargin=*]
+            \item[]  \textbf{FE-1} : The smart phone app allows the user to capture and analyse an image of a skin lesion and provide a risk assessment to the user of the lesion being a malignant melanoma.
 
-\section{Use Cases}
-\input{chapters/requirements/use_cases/index}
+            \item[] \textbf{FE-2} : The app allows the user to create, view, edit or delete metadata that is associated with an image and corresponding risk assessment.
 
-\section{Prioritisation}
-\input{chapters/requirements/prioritisation/index}
+            \item[] \textbf{FE-3} : The app allows the user to save or archive the image and corresponding assessment for future comparison and review.
 
-\section{Requirements}
-\input{chapters/requirements/requirements/index}
+            \item[] \textbf{FE-4} : The user can browse archived images, assessments, and associated metadata.
+
+            \item[] \textbf{FE-5} : The user can send a set of images with associated assessment and metadata via email.
+
+            \item[] \textbf{FE-6} : The app will run on all popular smart phone devices and systems.
+
+            \item[] \textbf{FE-7} : The analysis algorithms employed by the app should be easily updatable and extendable.
+        \end{itemize}
+
+        \begin{figure}[H]
+            \centering
+            \includegraphics[width=\textwidth]{assets/requirements/PartialFeatureTree.pdf}
+            \caption{Partial Feature Tree for the Melanoma Detection App}
+            \label{fig:partial_feature_tree}
+        \end{figure}
+
+
+    \subsubsection{Limitations and Exclusions}
+    \subsubsection{Business Context}
+    \subsection{Use Cases}
+
+        \begin{figure}[H]
+            \centering
+            \includegraphics[width=\textwidth]{assets/requirements/uc/usecase_01.pdf}
+            \caption{UC-1}
+            \label{fig:uc-1}
+        \end{figure}
+        \begin{figure}[H]
+            \centering
+            \includegraphics[width=\textwidth]{assets/requirements/uc/usecase_02.pdf}
+            \caption{UC-2}
+            \label{fig:uc-2}
+        \end{figure}
+        \begin{figure}[H]
+            \centering
+            \includegraphics[width=\textwidth]{assets/requirements/uc/usecase_03.pdf}
+            \caption{UC-3}
+            \label{fig:uc-3}
+        \end{figure}
+        \begin{figure}[H]
+            \centering
+            \includegraphics[width=\textwidth]{assets/requirements/uc/usecase_04.pdf}
+            \caption{UC-4}
+            \label{fig:uc-4}
+        \end{figure}
+        \begin{figure}[H]
+            \centering
+            \includegraphics[width=\textwidth]{assets/requirements/uc/usecase_05.pdf}
+            \caption{UC-5}
+            \label{fig:uc-5}
+        \end{figure}
+        \begin{figure}[H]
+            \centering
+            \includegraphics[width=\textwidth]{assets/requirements/uc/usecase_06.pdf}
+            \caption{UC-6}
+            \label{fig:uc-6}
+        \end{figure}
+        \begin{figure}[H]
+            \centering
+            \includegraphics[width=\textwidth]{assets/requirements/uc/usecase_07.pdf}
+            \caption{UC-7}
+            \label{fig:uc-7}
+        \end{figure}
+        \begin{figure}[H]
+            \centering
+            \includegraphics[width=\textwidth]{assets/requirements/uc/usecase_08.pdf}
+            \caption{UC-8}
+            \label{fig:uc-8}
+        \end{figure}
+
+\section{Software Requirements Specification}
+
+    \subsection{Introduction}
+
+    \subsection{Overall Description}
+
+        \subsubsection{Product Perspective}
+
+
+            \begin{figure}[H]
+                \centering
+                \includegraphics[width=\textwidth]{assets/requirements/ContextDiagram.pdf}
+                \caption{Context Diagram of the Melanoma Detection App}
+                \label{fig:partial_feature_tree}
+            \end{figure}
+
+
+        \subsubsection{User Classes and Characteristics}
+        \subsubsection{Operating Environment}
+        \subsubsection{Design and Implementation Constraints}
+        \subsubsection{Assumptions and Dependencies}
+
+    \subsection{System Features}
+
+        \subsubsection{Capture Image}
+            \paragraph{Description}
+            \paragraph{Functional Requirements}
+
+        \subsubsection{Calculate Border}
+            \paragraph{Description}
+            \paragraph{Functional Requirements}
+
+    \subsection{Data Requirements}
+        \subsubsection{Logical Data Model}
+        \subsubsection{Data Dictionary}
+        \subsubsection{Reports}
+
 
 
 
