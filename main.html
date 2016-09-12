@@ -7,7 +7,7 @@
 <meta name="originator" content="TeX4ht (http://www.tug.org/tex4ht/)"> 
 <!-- html,word,fn-in --> 
 <meta name="src" content="main.tex"> 
-<meta name="date" content="2016-09-11 14:24:00"> 
+<meta name="date" content="2016-09-12 15:28:00"> 
 <link rel="stylesheet" type="text/css" href="main.css"> 
 </head><body 
 >
@@ -31,7 +31,7 @@ class="ptmr7t-x-x-120">Switzerland,</span>
 class="ptmr7t-x-x-120">alex</span><span 
 class="ptmr7t-x-x-120">_gustafson@yahoo.de</span></div><br />
 <div class="date" ><span 
-class="ptmr7t-x-x-120">September 11, 2016</span>
+class="ptmr7t-x-x-120">September 12, 2016</span>
 <span 
 class="ptmr7t-x-x-120">Dozent: Reto Knaack (knaa@zhaw.ch)</span>
 <span 
@@ -507,7 +507,7 @@ conditions are by nature visible. The initial diagnosis and follow up monitoring
 done visually. A mobile device with a camera can aid patients and practitioners in the
 diagnosis of a dermatological condition and tracking it’s development. The article Mobile
 Applications in Dermatology<span class="cite"> [<a 
-href="#XBrewer_2013">5</a>]</span> in 2013 identified 229 dermatology-related apps across 5
+href="#XBrewer_2013">6</a>]</span> in 2013 identified 229 dermatology-related apps across 5
 app platforms ( Android, Apple, Blackberry, Nokia, and Windows ). These were grouped into
 categories based on their primary functionality. The ”Self-surveillance/diagnosis” category
 was the second largest on the Android and Apple platforms, with 13 and 24 apps
@@ -1035,7 +1035,7 @@ which symmetry exists. The Border score is an integer value from 0 to 8 indicati
 presence of border irregularities in 8 regions. Color is an integer value from 1 to 6 indicating
 the presence of one to six specific colors. Similarly, the value for D indicates the presence of
 one to five distinct structures or textures. Alternatively, in some literature<span class="cite"> [<a 
-href="#XSiddiq_2015">10</a>]</span> D is defined as
+href="#XSiddiq_2015">13</a>]</span> D is defined as
 Diameter, where a diameter greater than 6mm results in a value of 5, otherwise
 1.
 <!--l. 9--><p class="indent" >   The final TDS Score is the weighted sum of the ABCD Values and is in the range 1.0 to
@@ -1102,7 +1102,7 @@ class="td11">          </td></tr></table></div>
 <br /><div class="caption" 
 ><span class="id">Table 5.1: </span><span  
 class="content">TDS Evaluation<span class="cite"> [<a 
-href="#XWeigert_2012">12</a>]</span></span></div><!--tex4ht:label?: x1-32002r1 -->
+href="#XWeigert_2012">16</a>]</span></span></div><!--tex4ht:label?: x1-32002r1 -->
                                                                   
 
                                                                   
@@ -1115,7 +1115,7 @@ class="ptmbi7t-">Dermoscopy </span>Score, is really only applicable to
 images captured using a dermatoscope. Especially the differential structures are
 only visible on dermatoscopic images where the subsurface structures are made
 visible<span class="cite"> [<a 
-href="#XFernandez_Alcon_2009">3</a>]</span>.
+href="#XFernandez_Alcon_2009">4</a>]</span>.
 <!--l. 39--><p class="indent" >   Since the D component is not applicable to images captured with a smart phone this
 project will use a modified TDS without the D component. The original TDS formula <a 
 href="#x1-32001r1">5.1<!--tex4ht:ref: eq:tds_formula --></a> can
@@ -1193,14 +1193,14 @@ class="content">Adapted TDS Evaluation</span></div><!--tex4ht:label?: x1-33002r2
 melanocytic tumors. It is a clearly defined rule based on easily recognizable visual features.
 Clinicians with limited dermoscopy experience achieve better results using the ABCD rule
 than other methods <span class="cite"> [<a 
-href="#XWeigert_2012">12</a>]</span>. The following sections detail methods to automate the calculation
+href="#XWeigert_2012">16</a>]</span>. The following sections detail methods to automate the calculation
 of the ABCD scores.
 <!--l. 70--><p class="noindent" >
    <h4 class="subsectionHead"><span class="titlemark">5.2.1    </span> <a 
  id="x1-350005.2.1"></a>Asymmetry</h4>
 <!--l. 1--><p class="noindent" >The ”Center of mass” method of measuring asymmetry is relatively easy to calculate and is
 more accurate compared to other complex algorithms <span class="cite"> [<a 
-href="#XPremaladha_2014">8</a>]</span>.
+href="#XPremaladha_2014">11</a>]</span>.
 <!--l. 3--><p class="indent" >   This algorithm begins by calculating an array of radii from the lesion’s center of mass to
 border for each of 360 degrees. The coordinates for the center of mass are calculated from the
 sum of all x and y coordinates of pixels within the lesion’s border each divided by the sum of
@@ -1342,7 +1342,7 @@ class="td11">                                                                  <
 <br /><div class="caption" 
 ><span class="id">Table 5.3: </span><span  
 class="content">TDS Evaluation<span class="cite"> [<a 
-href="#XWeigert_2012">12</a>]</span></span></div><!--tex4ht:label?: x1-35002r3 -->
+href="#XWeigert_2012">16</a>]</span></span></div><!--tex4ht:label?: x1-35002r3 -->
                                                                   
 
                                                                   
@@ -1482,7 +1482,7 @@ class="content">Example of border score 8</span></div><!--tex4ht:label?: x1-3600
  id="x1-370005.2.3"></a>Color</h4>
 <!--l. 1--><p class="noindent" >In order to calculate the color score the <span 
 class="ptmri7t-">Quantification of Color</span><span class="cite"> [<a 
-href="#XFernandez_Alcon_2009">3</a>]</span> algorithm was
+href="#XFernandez_Alcon_2009">4</a>]</span> algorithm was
 implemented in which the distance of each pixel to a defined set of colors is evaluated.
 <!--l. 3--><p class="indent" >   The original image is first filtered using a low pass Gaussian filter in order to reduce
 noise. Then for for each pixel with the lesion area the euclidean distance from 6 RGB values
@@ -1582,7 +1582,7 @@ class="td11">           </td></tr></table></div>
 <br /><div class="caption" 
 ><span class="id">Table 5.4: </span><span  
 class="content">RGB values of the six possible TDS-relevent colors<span class="cite"> [<a 
-href="#XFernandez_Alcon_2009">3</a>]</span></span></div><!--tex4ht:label?: x1-37001r4 -->
+href="#XFernandez_Alcon_2009">4</a>]</span></span></div><!--tex4ht:label?: x1-37001r4 -->
                                                                   
 
                                                                   
@@ -1824,29 +1824,29 @@ class="td11"></td></tr>
    <h2 class="chapterHead"><span class="titlemark">Chapter 8</span><br /><a 
  id="x1-490008"></a>Mobile App Requirements</h2>
 <!--l. 1--><p class="noindent" >This chapter will describe the requirements of the application as a whole. The structure of this
-chapter roughly follows the SRS Template suggested by [reference: Software Requirements,
-by Karl E Wiegers and Joy Beatty]
+chapter roughly follows the SRS Template as proposed by Wiegers in Chapter 11 and
+Appendix D of <span class="cite"> [<a 
+href="#Xwiegers2013software">17</a>]</span>.
    <h3 class="sectionHead"><span class="titlemark">8.1    </span> <a 
  id="x1-500008.1"></a>Vision and Scope</h3>
 <!--l. 5--><p class="noindent" >
    <h4 class="subsectionHead"><span class="titlemark">8.1.1    </span> <a 
  id="x1-510008.1.1"></a>Background</h4>
-<!--l. 7--><p class="noindent" >Melanoma is a type malignant skin tumour that develops from benign melanocytic
-nevi. Although less frequent than other skin cancer types, it causes more deaths
-[http://www.cancer.gov/types/skin], and it’s incidence is increasing dramatically, especially in
-the young white population [reference: Pattern Analysis in Dermoscopic Images , Aurora
-S&#x00E1;ez ]. Early diagnosis and treatment is vital.
+<!--l. 7--><p class="noindent" >Melanoma is a type malignant skin tumour that develops from benign melanocytic nevi.
+Although less frequent than other skin cancer types, it causes more deaths <span class="cite"> [<a 
+href="#Xcancer_gov_skin">3</a>]</span>, and it’s
+incidence is increasing dramatically, especially in the young white population <span class="cite"> [<a 
+href="#XS_ez_2013">14</a>]</span>. Early
+diagnosis and treatment is vital.
 <!--l. 9--><p class="indent" >   Several non-invasive techniques exist which dermatologist can employ to visually make a
 diagnosis. The most common are pattern analysis, the ABCD rule, the 7-point checklist and
-the Menzies method, among others [reference: An Atlas of Dermoscopy edited by Ashfaq
-A Marghoob, Josep Malvehy, Ralph P Braun, Alfred W. Kopf]. These methods
-generally use a combination of defined visual clues and indicators to assess the risk of a
-skin lesion. CAD ( Computer Aided Diagnosis ) systems exists that can assist a
-dermatologist, and even provide automatic diagnosis with an accuracy comparable to
-that of doctors trained in dermoscopic techniques. [reference : A Review of the
-Quantification and Classification of Pigmented Skin Lesions: From Dedicated to
-Hand-Held Devices , Mercedes Filho, Zhen Ma and Jo&#x00E3;o Manuel R. S. Tavares
-]
+the Menzies method, among others <span class="cite"> [<a 
+href="#Xmarghoob2004atlas">9</a>]</span>. These methods generally use a combination of
+defined visual clues and indicators to assess the risk of a skin lesion. CAD ( Computer Aided
+Diagnosis ) systems exists that can assist a dermatologist, and even provide automatic
+diagnosis with an accuracy comparable to that of doctors trained in dermoscopic techniques.
+<span class="cite"> [<a 
+href="#XFilho2015">7</a>]</span>
 <!--l. 11--><p class="noindent" >
    <h4 class="subsectionHead"><span class="titlemark">8.1.2    </span> <a 
  id="x1-520008.1.2"></a>Business Case</h4>
@@ -1862,13 +1862,13 @@ the appointment with a dermatologist.
 <!--l. 17--><p class="noindent" >
    <h4 class="subsectionHead"><span class="titlemark">8.1.3    </span> <a 
  id="x1-530008.1.3"></a>Scope and Limitations</h4>
-                                                                  
-
-                                                                  
 <!--l. 18--><p class="noindent" >
    <h5 class="subsubsectionHead"><a 
  id="x1-540008.1.3"></a>Major Features</h5>
 <!--l. 19--><p class="noindent" >
+                                                                  
+
+                                                                  
   <ul class="itemize1">
   <li class="itemize"><span 
 class="ptmb7t-">FE-1 </span>: The smart phone app allows the user to capture and analyse an image of a
@@ -2402,7 +2402,7 @@ design pattern for applications that present the user with a graphical user inte
 developed out of a need for modularity, to encapsulate responsibility of specific concepts to
 separate program modules, or Separation of Concerns. MVC identifies three main
 components that program code should be grouped into, namely<span class="cite"> [<a 
-href="#Xwalther_2016">11</a>]</span>:
+href="#Xwalther_2016">15</a>]</span>:
      <ul class="itemize1">
      <li class="itemize"><span 
 class="ptmb7t-">Model</span>:  The  representation  of  some  object  of  knowledge,  encapsulates  code
@@ -2456,7 +2456,7 @@ Modern MVC strictly separates the model from the view. All modern frameworks sta
 the view should have as little logic as possible. Any logic implemented in the view should
 only be relevant to presentation. The view components should not directly reference the
 model components<span class="cite"> [<a 
-href="#Xapple_MVC">4</a>]</span><span class="cite"> [<a 
+href="#Xapple_MVC">5</a>]</span><span class="cite"> [<a 
 href="#Xsymfony_MVC">1</a>]</span>.
 <!--l. 27--><p class="indent" >   <hr class="figure"><div class="figure" 
 >
@@ -2483,7 +2483,7 @@ class="content">Modern MVC vs 3-Tier Layered Architecture</span></div><!--tex4ht
 difficult to test, by removing as much logic as possible from the user interface there is less
 necessity to test it. The controller and model components can more easily be tested in
 isolation using normal unit tests<span class="cite"> [<a 
-href="#Xmvp_testing">6</a>]</span>.
+href="#Xmvp_testing">8</a>]</span>.
    <h4 class="subsectionHead"><span class="titlemark">9.3.3    </span> <a 
  id="x1-850009.3.3"></a>MVC Derivatives</h4>
 <!--l. 38--><p class="noindent" >Many MVC derivatives exist. The main differences are where the division of responsibility is
@@ -2496,7 +2496,7 @@ model, but there is little difference to the other MVC derivatives such as MVP (
 view presenter ). The AngularJS web framework attempts to end the discussion
 of which design to follow by labelling itself a MVW ( Model View Whatever )
 framework<span class="cite"> [<a 
-href="#Xmvw">7</a>]</span>.
+href="#Xmvw">10</a>]</span>.
 <!--l. 41--><p class="indent" >   <hr class="figure"><div class="figure" 
 >
                                                                   
@@ -2569,7 +2569,7 @@ concepts that make it more adaptable to mobile applications, especially when the
 extended with online server based services. The classic controller is split into a presenter and
 a controller, the model component is split into a central data manager communicating with
 many services and entities<span class="cite"> [<a 
-href="#Xviper">9</a>]</span>.
+href="#Xviper">12</a>]</span>.
 <!--l. 66--><p class="indent" >   <hr class="figure"><div class="figure" 
 >
                                                                   
@@ -2786,6 +2786,12 @@ href="https://www.netmarketshare.com/operating-system-market-share.aspx?qprid=8&
     </p>
     <p class="bibitem" ><span class="biblabel">
   [3]<span class="bibsp">   </span></span><a 
+ id="Xcancer_gov_skin"></a>Skin Cancer Overview ˜ Patient Version, 2016. [Online; accessed 2016-9-2],
+    <a 
+href="http://www.cancer.gov/types/skin" >link</a>.
+    </p>
+    <p class="bibitem" ><span class="biblabel">
+  [4]<span class="bibsp">   </span></span><a 
  id="XFernandez_Alcon_2009"></a>Jose Fernandez Alcon, Calina Ciuhu, Warner ten Kate, Adrienne Heinrich,
     Natallia  Uzunbajakava,  Gertruud  Krekels,  Denny  Siem,  and  Gerard  de Haan.
     Automatic Imaging System With Decision Support for Inspection of Pigmented
@@ -2793,47 +2799,61 @@ href="https://www.netmarketshare.com/operating-system-market-share.aspx?qprid=8&
 class="ptmri7t-">IEEE</span>, 3(1):14—25, feb 2009.
     </p>
     <p class="bibitem" ><span class="biblabel">
-  [4]<span class="bibsp">   </span></span><a 
+  [5]<span class="bibsp">   </span></span><a 
  id="Xapple_MVC"></a>Apple. Model-View-Controller, 2015. [Online; accessed 2016-8-27], <a 
 href="https://developer.apple.com/library/ios/documentation/General/Conceptual/DevPedia-CocoaCore/MVC.html" >link</a>.
     </p>
     <p class="bibitem" ><span class="biblabel">
-  [5]<span class="bibsp">   </span></span><a 
+  [6]<span class="bibsp">   </span></span><a 
  id="XBrewer_2013"></a>Ann Chang Brewer, Dawnielle C. Endly, Jill Henley, Mahsa Amir, Blake P.
     Sampson, Jacqueline F. Moreau, and Robert P. Dellavalle.  Mobile Applications
     in Dermatology. <span 
 class="ptmri7t-">JAMA Dermatol</span>, 149(11):1300, nov 2013.
     </p>
     <p class="bibitem" ><span class="biblabel">
-  [6]<span class="bibsp">   </span></span><a 
- id="Xmvp_testing"></a>Martin Fowler.  GUI Architectures, Humble View, 2006.  [Online; accessed
-    2016-8-28], <a 
-href="http://martinfowler.com/eaaDev/uiArchs.html#HumbleView" >link</a>.
-    </p>
-    <p class="bibitem" ><span class="biblabel">
   [7]<span class="bibsp">   </span></span><a 
- id="Xmvw"></a>Igor Minar.  MVC vs MVVM vs MVP, 2012.  [Online; accessed 2016-8-28],
-    <a 
-href="https://plus.google.com/+IgorMinar/posts/DRUAkZmXjNV" >link</a>.
+ id="XFilho2015"></a>Mercedes  Filho,  Zhen  Ma,  and  Jo&#x00E3;o  Manuel  R. S.  Tavares.   A  review  of
+    the quantification and classification of pigmented skin lesions: From dedicated to
+    hand-held devices. <span 
+class="ptmri7t-">Journal of Medical Systems</span>, 39(11):1—12, 2015.
                                                                   
 
                                                                   
     </p>
     <p class="bibitem" ><span class="biblabel">
   [8]<span class="bibsp">   </span></span><a 
+ id="Xmvp_testing"></a>Martin Fowler.  GUI Architectures, Humble View, 2006.  [Online; accessed
+    2016-8-28], <a 
+href="http://martinfowler.com/eaaDev/uiArchs.html#HumbleView" >link</a>.
+    </p>
+    <p class="bibitem" ><span class="biblabel">
+  [9]<span class="bibsp">   </span></span><a 
+ id="Xmarghoob2004atlas"></a>A.A.  Marghoob,  J. Malvehy,  R.P.  Braun,  and  A.W.  Kopf.     <span 
+class="ptmri7t-">An  Atlas  of</span>
+    <span 
+class="ptmri7t-">Dermoscopy</span>. Encyclopedia of Visual Medicine. CRC Press, 2004.
+    </p>
+    <p class="bibitem" ><span class="biblabel">
+ [10]<span class="bibsp">   </span></span><a 
+ id="Xmvw"></a>Igor Minar.  MVC vs MVVM vs MVP, 2012.  [Online; accessed 2016-8-28],
+    <a 
+href="https://plus.google.com/+IgorMinar/posts/DRUAkZmXjNV" >link</a>.
+    </p>
+    <p class="bibitem" ><span class="biblabel">
+ [11]<span class="bibsp">   </span></span><a 
  id="XPremaladha_2014"></a>J. Premaladha  and  K.S.  Ravichandr.    Asymmetry  Analysis  of  Malignant
     Melanoma  Using  Image  Processing:  A  Survey.    <span 
 class="ptmri7t-">J.  of  Artificial  Intelligence</span>,
     7(2):45—53, feb 2014.
     </p>
     <p class="bibitem" ><span class="biblabel">
-  [9]<span class="bibsp">   </span></span><a 
+ [12]<span class="bibsp">   </span></span><a 
  id="Xviper"></a>Ryan Quan. Brigade’s Experience Using an MVC Alternative, 2014. [Online;
     accessed 2016-8-28], <a 
 href="https://medium.com/brigade-engineering/brigades-experience-using-an-mvc-alternative-36ef1601a41f#.yw4bp1y48" >link</a>.
     </p>
     <p class="bibitem" ><span class="biblabel">
- [10]<span class="bibsp">   </span></span><a 
+ [13]<span class="bibsp">   </span></span><a 
  id="XSiddiq_2015"></a>Sophia.M   Mallikarjun   Mundas Vidya.R   Siddiq Iqbal,   Divyashree.J.A.
     Implementation  of  Stolz’s  Algorithm  for  Melanoma  Detection.    <span 
 class="ptmri7t-">International</span>
@@ -2842,16 +2862,32 @@ class="ptmri7t-">Advanced Research Journal in Science, Engineering and Technolog
     2(6), jun 2015.
     </p>
     <p class="bibitem" ><span class="biblabel">
- [11]<span class="bibsp">   </span></span><a 
+ [14]<span class="bibsp">   </span></span><a 
+ id="XS_ez_2013"></a>Aurora  S&#x00E1;ez,  Bego&#x00F1;a  Acha,  and  Carmen  Serrano.     Pattern  Analysis  in
+    Dermoscopic  Images.     In  <span 
+class="ptmri7t-">Series  in  BioEngineering</span>,  pages  23—48.  Springer
+    Science &amp; Business Media, sep 2013.
+    </p>
+    <p class="bibitem" ><span class="biblabel">
+ [15]<span class="bibsp">   </span></span><a 
  id="Xwalther_2016"></a>Stephen  Walther.      The  Evolution  of  MVC,  2016.      [Online;  accessed
     2016-8-27], <a 
 href="http://stephenwalther.com/archive/2008/08/24/the-evolution-of-mvc" >link</a>.
     </p>
+                                                                  
+
+                                                                  
     <p class="bibitem" ><span class="biblabel">
- [12]<span class="bibsp">   </span></span><a 
+ [16]<span class="bibsp">   </span></span><a 
  id="XWeigert_2012"></a>Ulrike Weigert, Walter H.C. Burgdorf, and Wilhelm Stolz.  ABCD Rule.  In
     <span 
 class="ptmri7t-">Atlas of Dermoscopy</span>, page 116. Informa Healthcare, aug 2012.
+    </p>
+    <p class="bibitem" ><span class="biblabel">
+ [17]<span class="bibsp">   </span></span><a 
+ id="Xwiegers2013software"></a>Karl  Wiegers.   <span 
+class="ptmri7t-">Software  requirements</span>.   Microsoft,  Redmond,  Washington,
+    2013.
 </p>
     </div>
                                                                   
@@ -4122,12 +4158,12 @@ class="td11"> 2.0  </td><td  style="white-space:nowrap; text-align:left;" id="TB
 class="td11"> 1.00  </td>
 </tr><tr 
 class="hline"><td><hr></td><td><hr></td><td><hr></td><td><hr></td><td><hr></td><td><hr></td><td><hr></td></tr><tr  
- style="vertical-align:baseline;" id="TBL-14-141-"><td colspan="3" style="white-space:nowrap; text-align:left;" id="TBL-14-141-1"  
-class="td11"></td>     <div class="multicolumn"  style="white-space:nowrap; text-align:center;"><div class="caption" 
+ style="vertical-align:baseline;" id="TBL-14-141-"><td colspan="7" style="white-space:nowrap; text-align:center;" id="TBL-14-141-1"  
+class="td11">     <div class="multicolumn"  style="white-space:nowrap; text-align:center;"><div class="caption" 
 ><span class="id">Table 13.1: </span><span  
 class="content">Results of TDS calculation for Dermfit</span></div><!--tex4ht:label?: x1-104001r1 -->                                </div>            <a 
  id="x1-104002"></a>
-</tr><tr  
+</td></tr><tr  
  style="vertical-align:baseline;" id="TBL-14-142-"><td  style="white-space:nowrap; text-align:left;" id="TBL-14-142-1"  
 class="td11">         </td>
 </tr><tr  
@@ -4594,12 +4630,12 @@ class="td11"> 4.0  </td><td  style="white-space:nowrap; text-align:left;" id="TB
 class="td11"> 3.90  </td>
 </tr><tr 
 class="hline"><td><hr></td><td><hr></td><td><hr></td><td><hr></td><td><hr></td><td><hr></td><td><hr></td></tr><tr  
- style="vertical-align:baseline;" id="TBL-15-50-"><td colspan="3" style="white-space:nowrap; text-align:left;" id="TBL-15-50-1"  
-class="td11"></td>        <div class="multicolumn"  style="white-space:nowrap; text-align:center;"><div class="caption" 
+ style="vertical-align:baseline;" id="TBL-15-50-"><td colspan="7" style="white-space:nowrap; text-align:center;" id="TBL-15-50-1"  
+class="td11">        <div class="multicolumn"  style="white-space:nowrap; text-align:center;"><div class="caption" 
 ><span class="id">Table 13.2: </span><span  
 class="content">Results of TDS calculation for DermQuest</span></div><!--tex4ht:label?: x1-104003r2 -->                          </div>                  <a 
  id="x1-104004"></a>
-</tr><tr  
+</td></tr><tr  
  style="vertical-align:baseline;" id="TBL-15-51-"><td  style="white-space:nowrap; text-align:left;" id="TBL-15-51-1"  
 class="td11">             </td>
 </tr><tr  
@@ -5030,12 +5066,12 @@ class="td11"> 3.0  </td><td  style="white-space:nowrap; text-align:left;" id="TB
 class="td11"> 4.50  </td>
 </tr><tr 
 class="hline"><td><hr></td><td><hr></td><td><hr></td><td><hr></td><td><hr></td><td><hr></td><td><hr></td></tr><tr  
- style="vertical-align:baseline;" id="TBL-16-46-"><td colspan="3" style="white-space:nowrap; text-align:left;" id="TBL-16-46-1"  
-class="td11"></td>       <div class="multicolumn"  style="white-space:nowrap; text-align:center;"><div class="caption" 
+ style="vertical-align:baseline;" id="TBL-16-46-"><td colspan="7" style="white-space:nowrap; text-align:center;" id="TBL-16-46-1"  
+class="td11">       <div class="multicolumn"  style="white-space:nowrap; text-align:center;"><div class="caption" 
 ><span class="id">Table 13.3: </span><span  
 class="content">Results of TDS calculation for PH2Dataset</span></div><!--tex4ht:label?: x1-104005r3 -->                          </div>                 <a 
  id="x1-104006"></a>
-</tr><tr  
+</td></tr><tr  
  style="vertical-align:baseline;" id="TBL-16-47-"><td  style="white-space:nowrap; text-align:left;" id="TBL-16-47-1"  
 class="td11">           </td>
 </tr><tr  

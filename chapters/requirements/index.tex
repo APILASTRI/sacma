@@ -1,12 +1,12 @@
-This chapter will describe the requirements of the application as a whole. The structure of this chapter roughly follows the SRS Template suggested by [reference: Software Requirements, by Karl E Wiegers and Joy Beatty]
+This chapter will describe the requirements of the application as a whole. The structure of this chapter roughly follows the SRS Template as proposed by Wiegers in Chapter 11 and Appendix D of \cite{wiegers2013software}.
 
 \section{Vision and Scope}
 
     \subsection{Background}
 
-        Melanoma is a type malignant skin tumour that develops from benign melanocytic nevi. Although less frequent than other skin cancer types, it causes more deaths [http://www.cancer.gov/types/skin], and it’s incidence is increasing dramatically, especially in the young white population [reference: Pattern Analysis in Dermoscopic Images , Aurora Sáez ]. Early diagnosis and treatment is vital.
+        Melanoma is a type malignant skin tumour that develops from benign melanocytic nevi. Although less frequent than other skin cancer types, it causes more deaths \cite{cancer_gov_skin}, and it’s incidence is increasing dramatically, especially in the young white population \cite{S_ez_2013}. Early diagnosis and treatment is vital.
 
-Several non-invasive techniques exist which dermatologist can employ to visually make a diagnosis. The most common are pattern analysis, the ABCD rule, the 7-point checklist and the Menzies method, among others [reference: An Atlas of Dermoscopy edited by Ashfaq A Marghoob, Josep Malvehy, Ralph P Braun, Alfred W. Kopf]. These methods generally use a combination of defined visual clues and indicators to assess the risk of a skin lesion. CAD ( Computer Aided Diagnosis ) systems exists that can assist a dermatologist, and even provide automatic diagnosis with an accuracy comparable to that of doctors trained in dermoscopic techniques. [reference : A Review of the Quantification and Classification of Pigmented Skin Lesions: From Dedicated to Hand-Held Devices , Mercedes Filho, Zhen Ma and João Manuel R. S. Tavares ]
+Several non-invasive techniques exist which dermatologist can employ to visually make a diagnosis. The most common are pattern analysis, the ABCD rule, the 7-point checklist and the Menzies method, among others \cite{marghoob2004atlas}. These methods generally use a combination of defined visual clues and indicators to assess the risk of a skin lesion. CAD ( Computer Aided Diagnosis ) systems exists that can assist a dermatologist, and even provide automatic diagnosis with an accuracy comparable to that of doctors trained in dermoscopic techniques \cite{Filho2015}.
 
     \subsection{Business Case}
 
@@ -41,8 +41,11 @@ A smart phone based application that could make a preliminary diagnosis in near 
         \end{figure}
 
 
-    \subsubsection{Limitations and Exclusions}
-    \subsubsection{Business Context}
+    \subsubsection{Stakeholder Profile}
+
+
+
+
     \subsection{Use Cases}
 
         \begin{figure}[H]
@@ -98,9 +101,17 @@ A smart phone based application that could make a preliminary diagnosis in near 
 
     \subsection{Introduction}
 
+        \subsubsection{Purpose}
+
+            The Software Requirements Specification will describe the functional and nonfunctional requirements of the Melanoma Detection App. It is meant to be a guideline for developers who will be implementing the mobile application.
+
     \subsection{Overall Description}
 
         \subsubsection{Product Perspective}
+
+            The Melanoma Detect App will provide the user with a risk assessment of a skin lesion. The App will guide the user through the process of capturing an image and confirming the correct recognition of the boundary of the lesion. Once confirmed the App will analyse the visual features of the lesion based on dermatological rules and provide the user with an initial risk assessment.
+
+    The App should help motivate the user to make an appointment with a dermatologist when a significant risk has been detected. It is not meant to replace the need to visit a dermatologist though.
 
 
             \begin{figure}[H]
