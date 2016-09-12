@@ -123,19 +123,61 @@ A smart phone based application that could make a preliminary diagnosis in near 
 
 
         \subsubsection{User Classes and Characteristics}
+
+            The Melanoma Detection App only has one class of user, the Smartphone User. The Smartphone User has one or several skin lesions that she or he is worried about.
+The Smartphone User is not expected to have any technical or dermatological expertise.
+
         \subsubsection{Operating Environment}
+
+                    \noindent
+                    \begin{itemize}[leftmargin=*]
+                        \item[]  \textbf{OE-1} : The Mobile App shall operate on the following platforms: Android OS (v.5.2.2) and iOS (v. 9.3)
+
+                    \end{itemize}
+
+
         \subsubsection{Design and Implementation Constraints}
+
+                    \noindent
+                    \begin{itemize}[leftmargin=*]
+                        \item[]  \textbf{CO-1} : The Border Extraction and Risk Assessment Services shall be implemented on a server in oder to leverage the effort already made with python and python based libraries for image processing and scientific calculations. Wifi access is therefore a requirement for the app to run.
+                        \item[]  \textbf{CO-2} : The method for archiving images and risk assessment data will use whatever standard is the most accepted for the relevant platform. i.e. iCloud on iOS.
+
+
+                    \end{itemize}
+
+
         \subsubsection{Assumptions and Dependencies}
+
+                    \noindent
+                    \begin{itemize}[leftmargin=*]
+                        \item[]  \textbf{AS-1} : It is assumed that the user of the software is also the user of the mobile phone. The software might need to request permission from the user to access the camera or network.
+
+                    \end{itemize}
+
 
     \subsection{System Features}
 
-        \subsubsection{Capture Image}
-            \paragraph{Description}
-            \paragraph{Functional Requirements}
+        \subsubsection{Capture an Image of a Skin Lesion}
 
-        \subsubsection{Calculate Border}
-            \paragraph{Description}
-            \paragraph{Functional Requirements}
+                \begin{figure}[H]
+                    \centering
+                    \includegraphics[width=\textwidth]{assets/requirements/req/ImageCapture.pdf}
+                    \label{fig:image.capture}
+                \end{figure}
+
+        \subsubsection{Extract the Border of a Skin Lesion in an Image}
+
+                \begin{figure}[H]
+                    \centering
+                    \includegraphics[width=\textwidth]{assets/requirements/req/BorderExtract.pdf}
+                    \label{fig:image.capture}
+                \end{figure}
+
+        \subsubsection{Calculate the Risk Assessment of a Skin Lesion Image}
+        \subsubsection{Create, Modify, and Delete Skin Lesion Image Metadata}
+        \subsubsection{Save, View, Edit, and Delete Skin Lesion Archive}
+
 
     \subsection{Data Requirements}
         \subsubsection{Logical Data Model}
