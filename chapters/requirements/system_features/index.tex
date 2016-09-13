@@ -1,0 +1,109 @@
+
+        \subsubsection{Capture an Image of a Skin Lesion}
+            \paragraph{Description}
+
+            The MDApp allows the Smartphone User to capture an image of a skin lesion.
+
+            \paragraph{Functional Requirements}
+
+
+                {\renewcommand{\arraystretch}{1.8}%
+                \begin{longtable}[H]{ >{\bfseries}l >{\bfseries}l >{\bfseries}l p{9.5cm} l }
+
+                    \hline
+                    & \multicolumn{2}{>{\bfseries}l}
+                    {Image.Capture:} & \textbf{Capture image using camera}  \\
+
+                    & & .Preview: &  The App must provide the User with a realtime preview of the camera input. It will include some visual indicators that help the user capture an optimal image. \\
+
+                    & & .Trigger: & The User will trigger the capture when he or she decides the realtime preview is optimal. \\
+
+                    & & .Response: & The App must be able to capture a still image from the camera when the User pushed the capture button. The image will be saved in a standard image format on the phone’s file system. \\
+
+                    & & .Display: & The App will present the image to the user on the device’s screen. \\
+
+                    \hline
+                \end{longtable}
+
+
+        \subsubsection{Extract the Border of a Skin Lesion in an Image}
+
+            \paragraph{Description}
+
+            In oder to be able to properly analyse the skin lesion image, the MDApp must be able to distinguish pixels that belong to the lesion from pixels that belong to the healthy skin area surrounding the lesion.
+
+            \paragraph{Functional Requirements}
+
+                \begin{longtable}[H]{ >{\bfseries}l >{\bfseries}l >{\bfseries}l p{9.5cm} l }
+
+                    \hline
+                    & \multicolumn{2}{>{\bfseries}l}
+                    {Border.Extract:} & \textbf{Calculate border of skin lesion}  \\
+
+                    & & .Calculate: &
+                    The App sends a captured image as a request to the Border Extraction Service. When the service has completed the calculation the results of the border calculation are provided by the service to the App.
+                    \\
+
+                    & & .Display: &
+                    The App will present the results or the border calculation to the User on the device’s screen.
+                    \\
+
+                    & & .Promt: & The App will prompt the User to confirm that the border was precisely calculated. \\
+
+                    & & .Response: & The User can confirm or cancel the border. \\
+
+                    \hline
+                \end{longtable}
+
+
+        \subsubsection{Calculate the Risk Assessment of a Skin Lesion Image}
+
+            \paragraph{Description}
+
+            The MDApp sends the skin lesion image and border data as a request to the Risk Assessment Service.
+
+            \paragraph{Functional Requirements}
+                \begin{longtable}[H]{ >{\bfseries}l >{\bfseries}l >{\bfseries}l p{9.5cm} l }
+
+                    \hline
+                    & \multicolumn{2}{>{\bfseries}l}
+                    {Risk.Assessment:} & \textbf{Calculate risk assessment of lesion image}  \\
+
+                    & & .Calculate: &
+                    The App sends a captured image and border data as a request to the Risk Assessment Service. When the service has completed the calculation the results of the risk assessment are provided by the service to the App.
+                    \\
+
+                    & & .Display: &
+                    The App will present the results or the risk assessment calculation to the User on the device’s screen.
+                    \\
+                    \hline
+                \end{longtable}
+
+
+        \subsubsection{Create, Modify, and Delete Skin Lesion Image Metadata}
+
+            \paragraph{Description}
+
+            The Smartphone User can add metadata to a captured image. This can include the location on the body that the image was captured from, date of capture, and a text description. This metadata can be associated with an image so that it can be used at a later data for comparison and review.
+
+            \paragraph{Functional Requirements}
+                \begin{longtable}[H]{ >{\bfseries}l >{\bfseries}l >{\bfseries}l p{9.5cm} l }
+
+                    \hline
+
+                    & \multicolumn{2}{>{\bfseries}l}
+                    {Metadata.Location:} & \textbf{Specify location of lesion}  \\
+
+                    & & .Display: &
+                    The App sends a captured image and border data as a request to the Risk Assessment Service. When the service has completed the calculation the results of the risk assessment are provided by the service to the App.
+                    \\
+
+                    & & .Promt: &
+                    The App will present the results or the risk assessment calculation to the User on the device’s screen.
+                    \\
+                    \hline
+                \end{longtable}
+
+
+        \subsubsection{Save, View, Edit, and Delete Skin Lesion Archive}
+
