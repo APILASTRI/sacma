@@ -58,7 +58,19 @@
 
 
                     Body Location ID & id of a region on the body &
-                    integer & 2 & TBD \\ \hline
+                    integer & 2 &
+
+                        \specialcell[t]{
+                            1 : Head Front \\
+                            2 : Torso Front \\
+                            3 : Right Upper Arm \\
+                            4 : Left Upper Arm \\
+                            5 : Right Forearm \\
+                            6 : Left Forearm \\
+
+                        }
+
+                     \\ \hline
 
                     X Coordinate & x coordinate of the lesion in the region specified by the body location id &
                     integer & 128 &  \\ \hline
@@ -131,6 +143,8 @@
 
         \subsubsection{Data analysis}
             \paragraph{CRUD Matrix}
+
+                The CRUD ( Create, Read, Update, Delete ) matrix in figure \ref{fig:crud} illustrated which use cases interact with which entities and in which way.
 
                 \begin{figure}[H]
                     \centering
