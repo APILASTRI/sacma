@@ -26,7 +26,7 @@
                 \end{longtable}
 
 
-        \subsubsection{Extract the Border of a Skin Lesion in an Image}
+        \subsubsection{Extract the Border of a Skin Lesion}
 
             \paragraph{Description}
 
@@ -34,29 +34,35 @@
 
             \paragraph{Functional Requirements}
 
-                \begin{longtable}[H]{ >{\bfseries}l >{\bfseries}l >{\bfseries}l p{9.5cm} l }
+                \begin{longtable}[H]{ >{\bfseries}l >{\bfseries}l >{\bfseries}l >{\bfseries}l p{9.5cm} l }
 
                     \hline
-                    & \multicolumn{2}{>{\bfseries}l}
+                    & \multicolumn{3}{>{\bfseries}l}
                     {Border.Extract:} & \textbf{Calculate border of skin lesion}  \\
 
-                    & & .Calculate: &
+                    & & \multicolumn{2}{>{\bfseries}l}{.Calculate:} &
                     The App sends a captured image as a request to the Border Extraction Service. When the service has completed the calculation the results of the border calculation are provided by the service to the App.
                     \\
 
-                    & & .Display: &
+                    & & & .NA &
+                    \\
+
+                    & & & .Err &
+                    \\
+
+                    & & \multicolumn{2}{>{\bfseries}l}{.Display:} &
                     The App will present the results or the border calculation to the User on the device’s screen.
                     \\
 
-                    & & .Promt: & The App will prompt the User to confirm that the border was precisely calculated. \\
+                    & & \multicolumn{2}{>{\bfseries}l}{.Promt:} & The App will prompt the User to confirm that the border was precisely calculated. \\
 
-                    & & .Response: & The User can confirm or cancel the border. \\
+                    & & \multicolumn{2}{>{\bfseries}l}{.Response:} & The User can confirm or cancel the border. \\
 
                     \hline
                 \end{longtable}
 
 
-        \subsubsection{Calculate the Risk Assessment of a Skin Lesion Image}
+        \subsubsection{Calculate the Risk Assessment Skin Lesion}
 
             \paragraph{Description}
 
@@ -80,7 +86,7 @@
                 \end{longtable}
 
 
-        \subsubsection{Create, Modify, and Delete Skin Lesion Image Metadata}
+        \subsubsection{Create, Modify, and Delete Metadata}
 
             \paragraph{Description}
 
@@ -92,18 +98,35 @@
                     \hline
 
                     & \multicolumn{2}{>{\bfseries}l}
-                    {Metadata.Location:} & \textbf{Specify location of lesion}  \\
+                    {Metadata.Location:} & \textbf{Specify the lesion’s location on body}  \\
 
                     & & .Display: &
-                    The App sends a captured image and border data as a request to the Risk Assessment Service. When the service has completed the calculation the results of the risk assessment are provided by the service to the App.
+                    The MDApp will present an image of the human body to the Smartphone User.
                     \\
 
                     & & .Promt: &
-                    The App will present the results or the risk assessment calculation to the User on the device’s screen.
+                    The MDApp will prompt the Smartphone User to select or zoom in on a location on the image of the human body.
                     \\
+
+                    & & .Response: &
+                    The selected location will be stored as metadata associated with the image of the lesion.
+                    \\
+
+                    & \multicolumn{2}{>{\bfseries}l}
+                    {Metadata.Text:} & \textbf{Add metadata describing lesion}  \\
+
+                    & & .Display: &
+                    The MDApp will present a text field in which the Smartphone User may enter, edit, or delete text.
+                    \\
+
+
+                    & & .Response: &
+                    The entered text will be stored as metadata associated with the image of the lesion.
+                    \\
+
                     \hline
                 \end{longtable}
 
 
-        \subsubsection{Save, View, Edit, and Delete Skin Lesion Archive}
+        \subsubsection{Save, View, Edit, and Delete Archive}
 
