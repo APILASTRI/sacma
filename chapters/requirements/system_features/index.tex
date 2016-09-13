@@ -128,5 +128,49 @@
                 \end{longtable}
 
 
-        \subsubsection{Save, View, Edit, and Delete Archive}
+        \subsubsection{Save, View, Edit, Delete and Email Archive}
+
+
+            \paragraph{Description}
+
+            The Smartphone User can browse a list of previously analysed and saved images (archives). From the list, an image may be selected by the Smartphone User to view in more detail. When selected the MDApp will present the saved image, border, risk assessment, and associated metadata to the Smartphone User for review. An archive from the list may also be deleted or sent as an email.
+
+            \paragraph{Functional Requirements}
+                \begin{longtable}[H]{ >{\bfseries}l >{\bfseries}l >{\bfseries}l p{9.5cm} l }
+
+                    \hline
+
+                    & \multicolumn{2}{>{\bfseries}l}
+                    {Archive.Save:} & \textbf{Save image and metadata as archive}  \\
+
+                    & & .Display: &
+                    ---
+                    \\
+
+                    & \multicolumn{2}{>{\bfseries}l}
+                    {Archive.Browse:} & \textbf{Browse list of archived images}  \\
+
+                    & & .Display: &
+                    The MDApp will present the Smartphone User with a list of saved archive images.
+                    \\
+
+                    & \multicolumn{2}{>{\bfseries}l}
+                    {Archive.Select:} & \textbf{Select archived image to view or edit}  \\
+
+                    & & .Display: &
+                    The MDApp will present the Smartphone User with a detail view of the selected archived image and associated metadata.
+                    \\
+                    & & .Edit: &
+                    The MDApp will present a text field in which the Smartphone User may enter, edit, or delete text.
+                    \\
+                    & & .Delete: &
+                    The MDApp will present a text field in which the Smartphone User may enter, edit, or delete text.
+                    \\
+                    & & .Email: &
+                    The MDApp will present a text field in which the Smartphone User may enter, edit, or delete text.
+                    \\
+
+
+                    \hline
+                \end{longtable}
 

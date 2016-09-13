@@ -175,7 +175,101 @@ The Smartphone User is not expected to have any technical or dermatological expe
 
     \subsection{Data Requirements}
         \subsubsection{Logical Data Model}
+
+            \begin{figure}[H]
+                \centering
+                \includegraphics[width=\textwidth]{assets/requirements/EntRel.pdf}
+                \caption{Patial data model of the Melanoma Detection App}
+                \label{fig:partial_feature_tree}
+            \end{figure}
+
+
         \subsubsection{Data Dictionary}
+
+                \begin{longtable}[H]{ | l | p{3.0cm} | p{2.5cm} | p{1.0cm} | p{2.5cm} | }
+
+                    \hline
+                    \textbf{Data element} & \textbf{Description} & \textbf{Componsition or data type} & \textbf{Length} & \textbf{Values} \\ \hline
+
+                    Lesion Image & reference to the captured image &
+
+                        \specialcell[t]{Image ID
+                           \\ + File Path
+                           \\ + Creation DateTime
+                        }
+
+                     & & \\ \hline
+
+                    Image ID & unique identifier for an image &
+                    integer & 11 & system-generated sequential integer beginning with 1 \\ \hline
+
+                    File Path & location of a file on the file system &
+                    string & 255 &  \\ \hline
+
+                    Creation DateTime & date and time that a file was created &
+                    DDMMYYYYHHSS &  &  \\ \hline
+
+                    Metadata & information describing the lesion and it's location &
+
+                        \specialcell[t]{Lesion Image,
+                           \\ +Lesion Description,
+                           \\ +Lesion Location
+                        }
+
+                     & & \\ \hline
+
+                    Lesion Description & User defined text that describes the lesion &
+                    alphanumeric &  &  \\ \hline
+
+                    Lesion Location & information describing the lesion location on the body &
+
+                        \specialcell[t]{Image ID,
+                           \\ +Body Location ID,
+                           \\ +X Coordinate
+                           \\ +Y Coordinate
+                        }
+
+                     & & \\ \hline
+
+
+                    Body Location ID & id of a region on the body &
+                    integer & 2 &  \\ \hline
+
+                    X Coordinate & x coordinate of the lesion in the region specified by the body location id &
+                    integer & 128 &  \\ \hline
+
+                    Y Coordinate & y coordinate of the lesion in the region specified by the body location id &
+                    integer & 128 &  \\ \hline
+
+
+                    Border & data that defines the outline of the lesion area &
+
+                        \specialcell[t]{Image ID,
+                           \\ + File Path
+                           \\ + Creation DateTime
+                        }
+
+                     & & \\ \hline
+
+                    Risk Assessment &  &
+
+                        \specialcell[t]{Image ID,
+
+                        }
+
+                     & & \\ \hline
+
+                    Archive &  &
+
+                        \specialcell[t]{image id,
+
+                        }
+
+                     & & \\ \hline
+
+                \end{longtable}
+
+
         \subsubsection{Reports}
 
     \subsection{External Interface Requirements}
