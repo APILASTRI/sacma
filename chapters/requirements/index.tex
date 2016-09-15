@@ -1,18 +1,16 @@
-This chapter will describe the requirements of the application as a whole. The structure of this chapter roughly follows the SRS Template as proposed by Wiegers in Chapter 11 and Appendix D of \cite{wiegers2013software}.
+This chapter will describe the requirements of the application as a whole. The structure of this chapter follows the SRS Template as proposed by Wiegers in Chapter 11 and Appendix D of \cite{wiegers2013software}.
 
 \section{Vision and Scope}
 
-    \subsection{Background}
+    This section describes the high levels goal of the Melanoma Detection App and
 
-        Melanoma is a type malignant skin tumour that develops from benign melanocytic nevi. Although less frequent than other skin cancer types, it causes more deaths \cite{cancer_gov_skin}, and it’s incidence is increasing dramatically, especially in the young white population \cite{S_ez_2013}. Early diagnosis and treatment is vital.
 
-Several non-invasive techniques exist which dermatologist can employ to visually make a diagnosis. The most common are pattern analysis, the ABCD rule, the 7-point checklist and the Menzies method, among others \cite{marghoob2004atlas}. These methods generally use a combination of defined visual clues and indicators to assess the risk of a skin lesion. CAD ( Computer Aided Diagnosis ) systems exists that can assist a dermatologist, and even provide automatic diagnosis with an accuracy comparable to that of doctors trained in dermoscopic techniques \cite{Filho2015}.
 
     \subsection{Business Case}
 
-        A smart phone based assistant would provide a valuable service by making it easy, painless, inexpensive, and fast to get a preliminary risk assessment of a skin lesion. It is too easy to postpone making an appointment with a dermatologist to have a suspect lesion examined. Visiting an dermatologist is not on most people’s list of fun things to do in the spare time, it requires time and effort. By the time a lesion is visually compelling enough, it might be too late.
+        A smart phone based assistant would provide a valuable service by making it easy, painless, inexpensive, and fast to get a preliminary risk assessment of a skin lesion. It is too easy to postpone making an appointment with a dermatologist to have a suspect lesion examined. Visiting a dermatologist is not on most people’s list of fun things to do, it requires time and effort. By the time a lesion is visually compelling enough, it might be too late.
 
-A smart phone based application that could make a preliminary diagnosis in near real time would be a great time save and offer compelling enough information to actually make the appointment with a dermatologist.
+A smart phone based application that could make a preliminary diagnosis in near realtime would be a great time save and offer compelling enough information to actually make the appointment with a dermatologist.
 
     \subsection{Scope and Limitations}
     \subsubsection{Major Features}
@@ -40,9 +38,15 @@ A smart phone based application that could make a preliminary diagnosis in near 
             \label{fig:partial_feature_tree}
         \end{figure}
 
+    \subsubsection{Limitations and Exclusions}
+
+        \noindent
+        \begin{itemize}[leftmargin=*]
+            \item[]  \textbf{LI-1} : The Melanoma Detection App will use visual indicators to calculate the risk of a lesion being a dangerour melanoma. Other types of skin cancer such as basal call carcinoma or squanous cell carcinoma have different characteristics making them less easy to visually detect. The Melanoma Detection App will not take any other types of skin cancer or skin conditions into acount when calculating the risk assessment for melanoma.
+
+        \end{itemize}
 
     \subsubsection{Stakeholder Profile}
-
 
 
 
