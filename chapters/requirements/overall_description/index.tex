@@ -1,9 +1,11 @@
 
         \subsubsection{Product Perspective}
 
-            The Melanoma Detect App will provide the user with a risk assessment of a skin lesion. The App will guide the user through the process of capturing an image and confirming the correct recognition of the boundary of the lesion. Once confirmed the App will analyse the visual features of the lesion based on dermatological rules and provide the user with an initial risk assessment.
+            The Melanoma Detect App (MDApp) will provide the user with a risk assessment of a skin lesion. The App will guide the user through the process of capturing an image and confirming the correct recognition of the boundary of the lesion. Once confirmed the App will analyse the visual features of the lesion based on dermatological rules and provide the user with an initial risk assessment.
 
     The App should help motivate the user to make an appointment with a dermatologist when a significant risk has been detected. It is not meant to replace the need to visit a dermatologist though.
+
+    In order to provide these services the MDApp must be able to utilise the features and capabilities of the smart phone that it runs on. The Partial Context Diagram in figure ~\ref{fig:partial_feature_tree} shows the MDApp in relation to the external components that it must interface with. Email, camera, and file system are system components within the smart phone that the app must communicate with. The border extraction and risk assessment services are online services that the MDApp must send image data to in order to receive the border data and risk assessment. Finally, to make it all work together, the MDApp must provide an interface to the user that is clear and unobtrusive, guiding the user through all the necessary steps.
 
 
             \begin{figure}[H]
