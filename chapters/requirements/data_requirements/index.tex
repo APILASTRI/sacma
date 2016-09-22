@@ -1,17 +1,22 @@
     
         \subsubsection{Logical Data Model}
 
+        The entity-relationship diagram in figure \ref{fig:partial_data_model} is a high level view of the main groups of information and their interconnections. The figure uses the Peter Chen notation, where the diamonds represent the relationships between pairs of entities. Cardinality of the relationships is shown as numbers on the lines that connect the relationships to the entities. The entities are the boxes. The relationships  can be read for example as “Metadata describes the Lesion Image” (active voice) or “The Lesion Image is described by Metadata” (passive voice). The order of the entities in the diagram does not define the relationship, the object and subject must be inferred. For instance the relationship between Archive and Lesion Image is read “The Archive stores many Lesion Images” has the opposite positioning in the diagram compared with the relationship between Metadata and Lesion Image. The “direction” of the relationship is specified in the following data dictionary along with the entities attributes in detail.
+
             \begin{figure}[H]
                 \centering
                 \includegraphics[width=\textwidth]{assets/requirements/EntRel.pdf}
-                \caption{Patial data model of the Melanoma Detection App}
+                \caption{Patial entity relationship model of the Melanoma Detection App}
                 \label{fig:partial_data_model}
             \end{figure}
 
 
         \subsubsection{Data Dictionary}
 
-                \begin{longtable}[H]{ | l | p{3.0cm} | p{2.5cm} | p{1.0cm} | p{2.5cm} | }
+        The Data Dictionary \ref{fig:partial_data_model} lists the data entities in detail. Entities can be primitives or composites. Primitives are simple data elements like an integer, float, or string. Composites are collections of entities which can themselves be primitives or composites. The entities that are part of a composite are listed in the Composition or Data Type column separated by a “+” sign. Each entity in a composite will also be listed separately and described in the data dictionary below. If applicable the length and range of possible values will be described for primitiv entities.
+
+                {\small
+                \begin{longtable}[H]{ | p{2.5cm} | p{2.5cm} | p{2.5cm} | p{1.0cm} | p{2.5cm} | }
 
                     \hline
                     \textbf{Data element} & \textbf{Description} & \textbf{Componsition or data type} & \textbf{Length} & \textbf{Values} \\ \hline
@@ -32,7 +37,7 @@
                     string & 256 &  \\ \hline
 
                     Creation Date & date and time that a file was created &
-                    DDMMYYYYHHSS &  &  \\ \hline
+                    DDMMYYYY:HHSS &  &  \\ \hline
 
                     Metadata & information describing the lesion and it's location &
 
@@ -144,8 +149,9 @@
                         }
 
                      & & \\ \hline
-
-                \end{longtable}
+                    \caption{Partial data dictionary for the Melanoma Detection App}
+                    \label{fig:data_dictionary}
+                \end{longtable}}
 
 
         \subsubsection{Data analysis}

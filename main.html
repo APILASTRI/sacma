@@ -7,7 +7,7 @@
 <meta name="originator" content="TeX4ht (http://www.tug.org/tex4ht/)"> 
 <!-- html,word,fn-in --> 
 <meta name="src" content="main.tex"> 
-<meta name="date" content="2016-09-22 15:49:00"> 
+<meta name="date" content="2016-09-22 16:09:00"> 
 <link rel="stylesheet" type="text/css" href="main.css"> 
 </head><body 
 >
@@ -3823,7 +3823,7 @@ captured image of a skin lesion.
                                                                   
         <ul class="itemize1">
         <li class="itemize">The MDApp will upload a captured skin lesion image to a web-based Border
-        Extraction Service. The method for uploaded as part of a multipart/form-data
+        Extraction Service. The files will be uploaded as part of a multipart/form-data
         html POST method.
         </li>
         <li class="itemize">The MDApp will receive a confirmation from the service as JSON, including
@@ -3845,9 +3845,16 @@ class="ptmb7t-">Risk Assessment Service </span></span>
 communicate with for the purpose of evaluating the risk of a skin lesion being a
 melanoma.
         <ul class="itemize1">
-        <li class="itemize">The MDApp will upload a captured skin lesion image to a web-based Border
-        Extraction Service. The method for uploaded as part of a multipart/form-data
-        html POST method.
+        <li class="itemize">The MDApp will upload a captured skin lesion image and border image to a
+        web-based Risk Assessment Service. The files will be uploaded as part of a
+        multipart/form-data html POST method.
+        </li>
+        <li class="itemize">The MDApp shall receive a confirmation from the service as JSON, including
+        an id that will be used to poll the service for progress.
+        </li>
+        <li class="itemize">The MDApp will poll the online service regularly, the service will indicated
+        that the Risk Assessment processes is in progress or has finished, in which
+        case it will respond with the results of the assessment as JSON.
         </li></ul>
                                                                   
 
@@ -5705,7 +5712,7 @@ class="td11"> 2.0  </td><td  style="white-space:nowrap; text-align:left;" id="TB
 class="td11"> 1.00  </td>
 </tr><tr 
 class="hline"><td><hr></td><td><hr></td><td><hr></td><td><hr></td><td><hr></td><td><hr></td><td><hr></td></tr><tr  
- style="vertical-align:baseline;" id="TBL-28-141-"><td colspan="3" style="white-space:nowrap; text-align:left;" id="TBL-28-141-1"  
+ style="vertical-align:baseline;" id="TBL-28-141-"><td colspan="6" style="white-space:nowrap; text-align:left;" id="TBL-28-141-1"  
 class="td11"></td>     <div class="multicolumn"  style="white-space:nowrap; text-align:center;"><div class="caption" 
 ><span class="id">Table 13.1: </span><span  
 class="content">Results of TDS calculation for Dermfit</span></div><!--tex4ht:label?: x1-122001r1 -->                                </div>            <a 
@@ -6177,7 +6184,7 @@ class="td11"> 4.0  </td><td  style="white-space:nowrap; text-align:left;" id="TB
 class="td11"> 3.90  </td>
 </tr><tr 
 class="hline"><td><hr></td><td><hr></td><td><hr></td><td><hr></td><td><hr></td><td><hr></td><td><hr></td></tr><tr  
- style="vertical-align:baseline;" id="TBL-29-50-"><td colspan="3" style="white-space:nowrap; text-align:left;" id="TBL-29-50-1"  
+ style="vertical-align:baseline;" id="TBL-29-50-"><td colspan="6" style="white-space:nowrap; text-align:left;" id="TBL-29-50-1"  
 class="td11"></td>        <div class="multicolumn"  style="white-space:nowrap; text-align:center;"><div class="caption" 
 ><span class="id">Table 13.2: </span><span  
 class="content">Results of TDS calculation for DermQuest</span></div><!--tex4ht:label?: x1-122003r2 -->                          </div>                  <a 
@@ -6613,7 +6620,7 @@ class="td11"> 3.0  </td><td  style="white-space:nowrap; text-align:left;" id="TB
 class="td11"> 4.50  </td>
 </tr><tr 
 class="hline"><td><hr></td><td><hr></td><td><hr></td><td><hr></td><td><hr></td><td><hr></td><td><hr></td></tr><tr  
- style="vertical-align:baseline;" id="TBL-30-46-"><td colspan="3" style="white-space:nowrap; text-align:left;" id="TBL-30-46-1"  
+ style="vertical-align:baseline;" id="TBL-30-46-"><td colspan="6" style="white-space:nowrap; text-align:left;" id="TBL-30-46-1"  
 class="td11"></td>       <div class="multicolumn"  style="white-space:nowrap; text-align:center;"><div class="caption" 
 ><span class="id">Table 13.3: </span><span  
 class="content">Results of TDS calculation for PH2Dataset</span></div><!--tex4ht:label?: x1-122005r3 -->                          </div>                 <a 

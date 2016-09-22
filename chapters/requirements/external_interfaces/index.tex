@@ -47,7 +47,7 @@
         The Border Extraction Service is an online web based service that the MDApp can communicate with for the purpose of extracting the precise border information from a captured image of a skin lesion.
 
         \begin{itemize}[leftmargin=1.4cm]
-            \item[CI-1.1 :] The MDApp will upload a captured skin lesion image to a web-based Border Extraction Service. The method for uploaded as part of a multipart/form-data html POST method.
+            \item[CI-1.1 :] The MDApp will upload a captured skin lesion image to a web-based Border Extraction Service. The files will be uploaded as part of a multipart/form-data html POST method.
             \item[CI-1.2 :] The MDApp will receive a confirmation from the service as JSON, including an id that will be used to poll the service for progress.
             \item[CI-1.3 :] The MDApp will poll the online service regularly, the service will indicated that the Border Extraction processes is in progress or has finished, in which case it will also include the url where the border image can be downloaded.
             \item[CI-1.4 : ] The MDApp will download the border data image from the Border Extraction Service
@@ -59,6 +59,8 @@
         The Risk Assessment Service is an online web based service that the MDApp can communicate with for the purpose of evaluating the risk of a skin lesion being a melanoma.
 
         \begin{itemize}[leftmargin=1.4cm]
-            \item[CI-2 :] The MDApp will upload a captured skin lesion image to a web-based Border Extraction Service. The method for uploaded as part of a multipart/form-data html POST method.
+            \item[CI-2.1 :] The MDApp will upload a captured skin lesion image and border image to a web-based Risk Assessment Service. The files will be uploaded as part of a multipart/form-data html POST method.
+            \item[CI-2.2 :] The MDApp shall receive a confirmation from the service as JSON, including an id that will be used to poll the service for progress.
+            \item[CI-2.3 :] The MDApp will poll the online service regularly, the service will indicated that the Risk Assessment processes is in progress or has finished, in which case it will respond with the results of the assessment as JSON.
 
         \end{itemize}
