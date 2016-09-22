@@ -1,3 +1,4 @@
+{\renewcommand{\arraystretch}{1.8}%
 
         \subsubsection{Capture an Image of a Skin Lesion}
             \paragraph{Description}
@@ -7,8 +8,8 @@
             \paragraph{Functional Requirements}
 
 
-                {\renewcommand{\arraystretch}{1.8}%
-                \begin{longtable}[H]{ >{\bfseries}l >{\bfseries}l >{\bfseries}l p{9.5cm} l }
+
+                \begin{longtable}[H]{ >{\bfseries}l >{\bfseries}l >{\bfseries}l p{8.5cm} l }
 
                     \hline
                     & \multicolumn{2}{>{\bfseries}l}
@@ -34,7 +35,7 @@
 
             \paragraph{Functional Requirements}
 
-                \begin{longtable}[H]{ >{\bfseries}l >{\bfseries}l >{\bfseries}l >{\bfseries}l p{9.5cm} l }
+                \begin{longtable}[H]{ >{\bfseries}l >{\bfseries}l >{\bfseries}l >{\bfseries}l p{8.5cm} l }
 
                     \hline
                     & \multicolumn{3}{>{\bfseries}l}
@@ -44,10 +45,10 @@
                     The App sends a captured image as a request to the Border Extraction Service. When the service has completed the calculation the results of the border calculation are provided by the service to the App.
                     \\
 
-                    & & & .NA &
+                    & & & .NA & %TODO
                     \\
 
-                    & & & .Err &
+                    & & & .Err & %TODO
                     \\
 
                     & & \multicolumn{2}{>{\bfseries}l}{.Display:} &
@@ -69,7 +70,7 @@
             The MDApp sends the skin lesion image and border data as a request to the Risk Assessment Service.
 
             \paragraph{Functional Requirements}
-                \begin{longtable}[H]{ >{\bfseries}l >{\bfseries}l >{\bfseries}l p{9.5cm} l }
+                \begin{longtable}[H]{ >{\bfseries}l >{\bfseries}l >{\bfseries}l p{8.5cm} l }
 
                     \hline
                     & \multicolumn{2}{>{\bfseries}l}
@@ -93,7 +94,7 @@
             The Smartphone User can add metadata to a captured image. This can include the location on the body that the image was captured from, date of capture, and a text description. This metadata can be associated with an image so that it can be used at a later data for comparison and review.
 
             \paragraph{Functional Requirements}
-                \begin{longtable}[H]{ >{\bfseries}l >{\bfseries}l >{\bfseries}l p{9.5cm} l }
+                \begin{longtable}[H]{ >{\bfseries}l >{\bfseries}l >{\bfseries}l p{8.5cm} l }
 
                     \hline
 
@@ -137,7 +138,7 @@
             The Smartphone User can browse a list of previously analysed and saved images (archives). From the list, an image may be selected by the Smartphone User to view in more detail. When selected the MDApp will present the saved image, border, risk assessment, and associated metadata to the Smartphone User for review. An archive from the list may also be deleted or sent as an email.
 
             \paragraph{Functional Requirements}
-                \begin{longtable}[H]{ >{\bfseries}l >{\bfseries}l >{\bfseries}l p{9.5cm} l }
+                \begin{longtable}[H]{ >{\bfseries}l >{\bfseries}l >{\bfseries}l p{8.5cm} l }
 
                     \hline
 
@@ -174,4 +175,5 @@
 
                     \hline
                 \end{longtable}
+}
 
