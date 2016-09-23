@@ -1,5 +1,33 @@
 This chapter will describe the requirements of the application as a whole. The structure of this chapter follows the SRS Template as proposed by Wiegers in Chapter 11 and Appendix D of \cite{wiegers2013software}.
 
+Table \ref{tab:ids} describes the idendifiers used to reference the requirement attributes descri
+
+\begin{table}[H]
+    \small
+    \begin{tabular}[t]{ | l | p{3.5cm} | p{6.5cm} |} \hline
+
+        \textbf{ID} & \textbf{Attribute} & \textbf{Description} \\ \hline
+        FE-\# & Major Features & High level description of what the MDApp is expected to achieve. \\ \hline
+        LI-\# & Limitations and Exclusions & Things that should not be considered part of the scope of the application \\ \hline
+        UC-\# & Use Cases & Description of an activity that a user can perform. \\ \hline
+        OE-\# & Operating Environment & Description of the environment the application will operate in. \\ \hline
+        CO-\# & Design and Implementation Constraints & External technical factors that need to be taken account for. \\ \hline
+        AS-\# & Assumptions and Dependencies & Other external factors or limitations that need to be considered. \\ \hline
+        UI-\# & User Interfaces & Requirement that the user interface must fullfill. \\ \hline
+        SI-\# & Software Interfaces & External software interfaces that the app must communicate with. \\ \hline
+        CI-\# & Communication Interfaces & Description of communication interfaces. \\ \hline
+        PRI-\# & Privacy & Privacy requirements. \\ \hline
+        INS-\# & Installability & Installability requirements. \\ \hline
+        INT-\# & Integrity & Data integrity requirements. \\ \hline
+        USE-\# & Usability & Useability requirements. \\ \hline
+        POR-\# & Portability & Portability requirements. \\ \hline
+        TES-\# & Testability & Testability requirements. \\ \hline
+
+    \end{tabular}
+    \caption{List of attribute identifiers}
+    \label{tab:ids}
+\end{table}
+
 \section{Vision and Scope}
 
     This section describes the high levels goal of the Melanoma Detection App as well as to define boundaries that limit what can be expected of the App.
@@ -111,7 +139,7 @@ A smart phone based application that could make a preliminary diagnosis in near 
                     \item[INT-3 :] Data and state shall be persisted, so that no data is lost when the MDApp is updated.
                 \end{itemize}
 
-            \paragraph{Useability}
+            \paragraph{Usability}
 
                 \begin{itemize}[leftmargin=1.4cm]
                     \item[USE-1 :] Every function on the MDApp can be completed with one hand.
@@ -129,10 +157,20 @@ A smart phone based application that could make a preliminary diagnosis in near 
 
                 \begin{itemize}[leftmargin=1.4cm]
                     \item[TES-1 :] Individual components of the system must be testable in isolation from one another.
+                    \item[TES-2 :] Tests shall be implemented in a manner allowing compontents to be tested automatically and test converage to be tracked.
                 \end{itemize}
 
 
+        \subsubsection{Quality Attribute Prioritisation}
 
+            Depending on the domain of an application quality attributes might vary in importance. Prioritising the attributes will help in making descisions regarding the architecture and design of an application. Choosing a framework that targets achieving high performance may have a negative impact on portability, if portability has a high priority, then alternative frameworks should be considered. In figure \ref{fig:qa_prio} the quality attributes are compared pair-wise and tallied.
+
+            \begin{figure}[H]
+                \centering
+                \includegraphics[width=8cm]{assets/requirements/QualityPrio.pdf}
+                \caption{Prioritisation of Quality Attributes}
+                \label{fig:qa_prio}
+            \end{figure}
 
 
 
