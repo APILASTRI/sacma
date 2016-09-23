@@ -44,6 +44,7 @@ A smart phone based application that could make a preliminary diagnosis in near 
         \noindent
         \begin{itemize}[leftmargin=*]
             \item[]  \textbf{LI-1} : The Melanoma Detection App will use visual indicators to calculate the risk of a lesion being a dangerour melanoma. Other types of skin cancer such as basal call carcinoma or squanous cell carcinoma have different characteristics making them less easy to visually detect. The Melanoma Detection App will not take any other types of skin cancer or skin conditions into acount when calculating the risk assessment for melanoma.
+            \item[]  \textbf{LI-2} : Typical Smartphone camera's might not have the ability to capture images at close enough range needed to capture a skin lesion's details at high enough resolution. It might be necessary for the Smartphone User to additionaly purchase a readily available clip-on macro lens for smart phones.
 
         \end{itemize}
 
@@ -84,37 +85,51 @@ A smart phone based application that could make a preliminary diagnosis in near 
     \subsection{External Interface Requirements}
         \input{chapters/requirements/external_interfaces/index}
 
-    \subsection{Quality Attributes} % TODO
+    \subsection{Quality Attributes}
+
+        This section lists and describes the non-functional requirements.
+
         \subsubsection{External Quality Attributes}
+
+            \paragraph{Privacy}
+
+                \begin{itemize}[leftmargin=1.4cm]
+                    \item[PRI-1 :] No information about the user shall be transmitted to any external services with the exception of when the user sends the image and metadata via email.
+                \end{itemize}
 
             \paragraph{Installability}
 
-                INST-1 : Installing the MDApp shall not require any special instructions other than those a normal Smartphone User would expect.
-
+                \begin{itemize}[leftmargin=1.4cm]
+                    \item[INS-1 :] Installing the MDApp shall not require any special instructions other than those a normal Smartphone User would expect.
+                \end{itemize}
 
             \paragraph{Integrity}
 
-                INTE-1 : Any data created by the Smartphone User through use of the MDApp shall be backup-able through whatever native backup solutions the native platoform offers.
-
-                INTE-2 : Data and state shall be persisted, so that when reopened, the MDApp will have the same state as when it was last closed.
-                INTE-3 : Data and state shall be persisted, so that no data is lost when the MDApp is updated.
+                \begin{itemize}[leftmargin=1.4cm]
+                    \item[INT-1 :] Any data created by the Smartphone User through use of the MDApp shall be backup-able through whatever native backup solutions the native platoform offers.
+                    \item[INT-2 :] Data and state shall be persisted, so that when reopened, the MDApp will have the same state as when it was last closed.
+                    \item[INT-3 :] Data and state shall be persisted, so that no data is lost when the MDApp is updated.
+                \end{itemize}
 
             \paragraph{Useability}
 
+                \begin{itemize}[leftmargin=1.4cm]
+                    \item[USE-1 :] Every function on the MDApp can be completed with one hand.
+                \end{itemize}
+
         \subsubsection{Internal Quality Attributes}
-
-            \paragraph{Modifiability}
-
-                MODI-1
 
             \paragraph{Portability}
 
-                PORT-1 : The MDApp shall have an identical feature set accross all the device platforms it runs on.
+                \begin{itemize}[leftmargin=1.4cm]
+                    \item[POR-1 :] The MDApp's system features shall be implemented accross all the device platforms it runs on.
+                \end{itemize}
 
             \paragraph{Testability}
 
-                TEST-1 :
-
+                \begin{itemize}[leftmargin=1.4cm]
+                    \item[TES-1 :] Individual components of the system must be testable in isolation from one another.
+                \end{itemize}
 
 
 
