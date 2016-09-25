@@ -1,9 +1,16 @@
-A digital image is a matrix of pixels that contain color information, typically comprised of the 3 color channels red, green, and blue. A person can look at an image and quickly make statements about it's content. For instance, someone might look at an image of a street scene and be able to easily say "This is an image of a street in a town, there is one automobile, three people and a building in this scene". A person would easily be able to draw outlines around the objects and be able to differentiate between areas in each object.
+A digital image is a matrix of pixels that contain colour information, typically comprised of the three colour channels red, green, and blue. A person can look at an image and quickly make statements about it’s content. For instance, someone might look at an image of a street scene and be able to easily say “This is an image of a street in a town, there is one automobile, three people and a building in this scene”. A person would easily be able to draw outlines around the objects and be able to differentiate between areas in each object.
 
-For a computer to be able to "make statements" about the contents of an image it must use algorithms to group together and differentiate between objects in an image. The grouping together and differentiating of areas in an image is known as \textit{segmentation}. The statements that a computer can make about the content of an image are usually of statistical nature and are refered to as \textit{feature extraction}. Before segmentation an image is goes through a \textit{preprocessing} stage in order to remove or reduce irrelevant information or noise.
+For a computer to be able to “make statements” about the contents of an image it must use algorithms to group together and differentiate between objects in an image. The grouping together and differentiating of areas in an image is known as \textit{segmentation}. The statements that a computer can make about the content of an image are usually of statistical nature and are referred to as \textit{features}. Before segmentation an image goes through a \textit{preprocessing} stage in order to remove or reduce irrelevant information or noise.
 
-There are no universal algorithms for preprocessing, segmentation, or feature extraction. The algorithms employed depend on the context of the images to be analyed and the type of information that one is looking for.
+This project concerns itself with the assessing the risk of a skin lesion being a malignant melanoma based on images captured using a smartphone camera. This limits the context of the image feature extraction requirements to a specific domain. The end goal is to analyse the pixels of the skin lesion in order to make a statement about it’s characteristics. That is the feature extraction step. In order to do that though, the pixels that make up the skin lesion must be distinguishable from pixels that belong to the surrounding healthy skin; this is the segmentation step. Segmentation algorithms will be susceptible to noise and disturbances in the original image. The success rate of the segmentation algorithm can be increased if interference from noise and other disturbances can be reduced before segmentation.
 
+The steps described above are illustrated below in figure \ref{fig:steps}.
+
+\begin{figure}[H]
+    \includegraphics[width=\textwidth,keepaspectratio]{assets/image_processing/steps.pdf}
+    \caption{Image feature extraction steps}
+    \label{fig:steps}
+\end{figure}
 
 \input{chapters/image_feature_extraction/preprocessing}
 \input{chapters/image_feature_extraction/segmentation}
