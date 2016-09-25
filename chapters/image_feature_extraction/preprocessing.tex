@@ -39,10 +39,26 @@ Noise in a captured image is inevitable, it will be introduced by the circuitry 
 
 Noise in the image will make it more difficult for the segmentation algorithms to achieve good accurate. Other challenges though might be reflectivity of the skin’s surface, the texture of the skin, or surrounding or intersecting the skin lesion.
 
-Typical noise reduction techniques will analyse sections (often referred to as “windows” or “tiles”) or the image at a time and employ some sort of averaging function to the pixel values. Median or Gaussian filters are common noise reduction functions.
+Typical noise reduction techniques will analyse sections (often referred to as “windows” or “tiles”) or the image at a time and employ some sort of averaging function to the pixel values. The gaussian and median filters are common noise reduction functions.
 
-\subsubsection{Gaussian Blur}
+\subsubsection{Gaussian Filter}
 
+The Gaussian Filter is a low pass filter that reduces high frequency components of an image. It's main parameter is sigma which defines the width or distribution or the gaussian function. Higher sigma values cause pixels to be averaged with more of their neighbours. The visual result is a blurring of the image. The Gaussian Filter is good at removing noise but at the expense of also loosing detail.
+
+The following figures are example of Gaussian filtered images.
+
+\begin{figure}[H]
+    \includegraphics[width=\textwidth,keepaspectratio]{assets/image_processing/noise_reduction/gaussian/figure_01.png}
+    \caption{Gaussian Filter Example A}
+    \label{fig:med_A}
+\end{figure}
+\begin{figure}[H]
+    \includegraphics[width=\textwidth,keepaspectratio]{assets/image_processing/noise_reduction/gaussian/figure_02.png}
+    \caption{Gaussian Filter Example B}
+    \label{fig:med_B}
+\end{figure}
+
+In figure \ref{fig:med_B} there is a hair in the lower left side of the image. At higher sigma values the hair is still partially present, while the border of the lesion has already lost much detail. The tradeoff between noise reduction and loss of important detail is not optimal for the Gaussian filter.
 
 \subsubsection{Median Filter}
 
