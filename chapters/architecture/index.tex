@@ -1,31 +1,4 @@
-In section 2.2.1 categories of medical smart phone apps were defined. Apps in the same categories might have a similar feature set and capabilities. An app in the \textit{Alert / First Response} category might have a database that stores important contacts in the user’s area and a user interface that allows the user to quickly alert a contact in an emergency situation. An app in the \textit{Learning / Educational / Reference} category might be modelled as a quiz app which presents the user with a question and several possible answers to choose from. Answers from several questions will can be evaluated and a score is presented to the user at the end of a session. The app would be implemented with a database of questions and weighted answers, as well as an interface that presents the questions to the user sequentially.
-
-One of the goals of this project is to define requirements for an app that provides a risk assessment of a lesion being benign or malignant. A high level description of the primary function of the app is the following:
-
-\begin{itemize}[label={}]
-\item The smart phone app allows the user to capture and analyse an image of a skin lesion and provide a risk assessment to the user of the lesion being a malignant melanoma.
-
-\end{itemize}
-
-The user might also like to save the image and results in oder to be able to compare it with other assessments in the future, or to review the assessment with a dermatologist. For comparison it might be useful to save associated metadata, such as the date and location on the body of the lesion. For convenience it might be nice to send the assessment and image via email to a specialist for review.
-Secondary functionality can be described as follows:
-
-\begin{itemize}[label={}]
-\item The app allows the user to save or archive the image and corresponding assessment for future comparison and review.
-\item The user can add, edit, and save metadata associated with the image of the lesion.
-\item The user can browse archived images, assessments, and associated metadata.
-\item The user can send a set of images with associated assessment and metadata via email.
-\end{itemize}
-
-From this high level description some basic assumptions about the app’s architecture can already be made. The app will require access to a database that can store information about an image, results of the analysis, and metadata. The app will require a user interface that allows a user to browse and edit data associated with an image. The app requires access to the smart phone’s camera api in order to capture images.
-Another consideration that will impact design decisions is the investment already made in developing the image processing and analysis algorithms. Choosing python as the basis for the numerical algorithms and leveraging python based scientific computing libraries has implications because python code is not easily portable to iOS or Android devices. In order to efficiently utilise the algorithms as they are, and to continue to update and improve them, the image processing and analysis algorithms should be implemented as online services.
-
-\begin{itemize}[label={}]
-\item The image processing and risk assessment algorithms will be implemented as online services.
-\end{itemize}
-
-In order to formally elicit the requirements the hight level description will be broken down into structured use cases. A set of requirements will be extracted from the use cases.
-
+The following chapter describes the
 
 \section{Software Architecture}
 \input{chapters/architecture/architecture/index}
