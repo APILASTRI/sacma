@@ -136,7 +136,7 @@ A smart phone based application that could make a preliminary diagnosis in near 
             \paragraph{Integrity}
 
                 \begin{itemize}[leftmargin=1.4cm]
-                    \item[INT-1 :] Any data created by the Smartphone User through use of the MDApp shall be backup-able through whatever native backup solutions the native platoform offers.
+                    \item[INT-1 :] Any data created by the Smartphone User through use of the MDApp shall be backup-able through whatever native backup solutions the native platform offers.
                     \item[INT-2 :] Data and state shall be persisted, so that when reopened, the MDApp will have the same state as when it was last closed.
                     \item[INT-3 :] Data and state shall be persisted, so that no data is lost when the MDApp is updated.
                 \end{itemize}
@@ -152,14 +152,20 @@ A smart phone based application that could make a preliminary diagnosis in near 
             \paragraph{Portability}
 
                 \begin{itemize}[leftmargin=1.4cm]
-                    \item[POR-1 :] The MDApp's system features shall be implemented accross all the device platforms it runs on.
+                    \item[POR-1 :] All of MDApp's system features shall be implemented across all the device platforms it runs on.
                 \end{itemize}
 
             \paragraph{Testability}
 
                 \begin{itemize}[leftmargin=1.4cm]
                     \item[TES-1 :] Individual components of the system must be testable in isolation from one another.
-                    \item[TES-2 :] Tests shall be implemented in a manner allowing compontents to be tested automatically and test converage to be tracked.
+                \end{itemize}
+
+            \paragraph{Modifiability}
+
+                \begin{itemize}[leftmargin=1.4cm]
+                    \item[MOD-1 :] The code should be grouped into logical categories that are not too interdependent. This attribute is not easily quantifiable, but is influenced by the software architecture and development frameworks employed. A software architecture should be chosen that fits the responsibilities of the application, and frameworks that integrate data-binding, templates, and ui composition techniques can be leveraged to reduce lines of code.
+
                 \end{itemize}
 
 

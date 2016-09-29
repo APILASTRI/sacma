@@ -1,5 +1,7 @@
+Depending on the application domain distinct architectural patterns exist than define areas of responsibility that are used to group together software components. Choosing an architectural pattern that fits the application domain can help to organise code, reduce complexity and leverage the experience of developers that have solved similar problems in the past.
+
 \subsection{MVC}
-Since the 1970s the Model View Controller ( MVC ) pattern is the standard architectural design pattern for applications that present the user with a graphical user interface. It was developed out of a need for modularity, to encapsulate responsibility of specific concepts to separate program modules, or Separation of Concerns. MVC identifies three main components that program code should be grouped into, namely\cite{walther_2016}:
+Since the 1970s the Model View Controller (MVC) pattern is the standard software design pattern for applications that present the user with a graphical user interface. It was developed out of a need for modularity, to encapsulate responsibility of specific concepts to separate software modules. MVC identifies three main components that program code should be grouped into, namely\cite{walther_2016}:
 
 \begin{itemize}[label={}]
 
@@ -20,14 +22,15 @@ In the classic MVC pattern the model does not "know" about the view or the contr
 
 \subsection{Modern MVC}
 
-Modern MVC has evolved from being a software design pattern which handles components of an application to an architectural design pattern that defines the structure of an application itself. It has many similarities to the Layer Architecture. The responsibilities of each layer are slightly different to the typical presentation, business, and persistence layer definitions.
+Modern MVC has evolved from being a software design pattern which handles components of an application to an architectural design pattern that defines the structure of an application itself. It is similar to a Layer Architecture where each layer interacts directly only with the next layer directly above or below \cite{patterns}. The division of responsibilities is slightly different though to the typical presentation, domain, and data layer definitions.
 
-Most modern web frameworks such as Ruby on Rails, Symfony or the IOS environment refer to themselves as MVC based frameworks. The modern MVC concept has changed slightly. The component definitions are the same, but some responsibilities have shifted. Modern MVC strictly separates the model from the view. All modern frameworks state that the view should have as little logic as possible. Any logic implemented in the view should only be relevant to presentation. The view components should not directly reference the model components\cite{apple_MVC}\cite{symfony_MVC}.
+Most modern web frameworks such as Ruby on Rails, Symfony or the iOS environment refer to themselves as MVC based frameworks. The modern MVC concept has changed slightly. The component definitions are the same, but some responsibilities have shifted. Modern MVC strictly separates the model from the view. All modern frameworks state that the view should have as little logic as possible. Any logic implemented in the view should only be relevant to presentation. The view components should not directly reference the model components\cite{apple_MVC}\cite{symfony_MVC}.
+
 
 \begin{figure}[H]
     \centering
     \includegraphics[height=5cm,keepaspectratio]{assets/concept/mvc_2.pdf}
-    \caption{Modern MVC vs 3-Tier Layered Architecture}
+    \caption{Modern MVC vs 3-Layered Architecture}
     \label{fig:mvc_2}
 \end{figure}
 
@@ -35,8 +38,7 @@ This division of responsibility has the added benefit of increased testability. 
 
 \subsection{MVC Derivatives}
 
-Many MVC derivatives exist. The main differences are where the division of responsibility is made and how it is labeled. MVVM defines a view model instead of a controller. The view model acts as a facade around the model and introduces a data binder element that is responsible for keeping the view and view model synchronised. The MVT, calls the view a template and the controller a view. The slight difference is that the template is basically a static file, with no logic, and placeholders for the data. The Django web framework uses this model, but there is little difference to the other MVC derivatives such as MVP ( model view presenter ). The AngularJS web framework attempts to end the discussion of which design to follow by labelling itself a MVW ( Model View Whatever ) framework\cite{mvw}.
-
+Many MVC derivatives exist. The main differences are where the division of responsibility is made and how it is labeled. MVVM defines a view model instead of a controller. The view model acts as a facade around the model and introduces a data binder element that is responsible for keeping the view and view model synchronised. The MVT, calls the view a template and the controller a view. The slight difference is that the template is basically a static file, with no logic, and placeholders for the data. The Django web framework uses MVT terminology, but there is little difference to the other MVC derivatives such as MVP ( model view presenter ). The AngularJS web framework attempts to end the discussion of which design to follow by labelling itself a MVW ( Model View Whatever ) framework\cite{mvw}.
 
 \begin{figure}[H]
     \centering
@@ -45,44 +47,7 @@ Many MVC derivatives exist. The main differences are where the division of respo
     \label{fig:mvc_alt}
 \end{figure}
 
-\subsection{MVC and Smart Phone Applications}
-
-Although most frameworks and environments targeted toward mobile application development use concepts from MVC, it can be difficult to define strict devision of responsibility, especially in conjunction with services provided from an online server. Often the responsibilities of the controller are reimplemented server side, some model management might occur in the app. Server and application code are developed using different languages and often most likely different developers. One solution is is to develop the app as a thin client, where it basically becomes the view component of MVC and the controllers and model are implemented on the server. Taken to the extreme, the app runs in a standard web browser and server provides the view components that emulate a native mobile user interface. This is referred to as a web app. Any logic in the view is implemented using javascript. Hardware support is limited to what the mobile browser provides access to. In order to extend hardware support a hybrid approach can be used in which the app implements a custom browser view which is extended with native capabilities. Here the division of responsibilities as defined by MVC become fuzzy. A fully native app working in conjunction with a web server will not conform well to the definitions of MVC.
-
-\subsection{Considerations}
-
-From the prioritised requirements defined above two important issues have an impact on architectural design decisions. Cross platform integration and extendability. The image processing and risk assessment algorithms are a complex combination of existing python based libraries and custom code. The rational behind choosing python as the basis is explained in detail in previous chapters. The disadvantage of choosing python for the basis of a mobile application is that is it not easily deployable on mobile hardware. Regardless of the decision to use python, the complexity of these algorithms would make it difficult and costly to implement in a cross platform manner in any language.
-
-The solution is to offload the image processing and risk assessment algorithms to an online server running a python environment. The mobile application can interface with the online server in such a way that the process is transparent to the user.
-
-The requirement for extendability and maintenance ( updatability ) becomes much easier as well. Updating the complex algorithms in multiple languages on multiple platforms and deploying updates to all existing users via the iTunes and Android shop platforms is not necessary. Instead only the server code needs to be updated. In the best case the phone-side app will not have to be updated at all.
-
-Still the question remains, what architecture design pattern best covers the requirements of a mobile app with online server integration.
-
-\subsection{VIPER}
-
-VIPER is a new software architecture pattern which extends MVC with some addition concepts that make it more adaptable to mobile applications, especially when they are extended with online server based services. The classic controller is split into a presenter and a controller, the model component is split into a central data manager communicating with many services and entities\cite{viper}.
-
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=\textwidth,keepaspectratio]{assets/concept/viper.pdf}
-    \caption{VIPER Overview}
-    \label{fig:viper}
-\end{figure}
-
-\begin{itemize}[label={}]
-
-\item \textbf{View}: The view corresponds to the view as defined in modern MVC definitions, it is a slim component with as little logic as possible. It presents the current state of the models and provides “widgets” with which the user can interact.
-\item \textbf{Presenter}: The presenter passes data to the view and handles events from the view. The presenter might perform some basic validation, in the case of a user sign-up scenario, for example, the presenter might validate that a user’s email is indeed formatted as a correct email, it will not validate if the email has already been used by someone else.
-
-\item \textbf{Interactor}: Business logic is handled by the interactor. Most a what the model component in MVC was responsible for is handled here. The interactor however does not know anything about data storage, databases, or persistence. It does not know if data is local or accessible via a network.
-
-\item \textbf{Data Manager}: To the Interactor the data manager looks like a database, with the difference that the it knows how to notify the interactor when data is available. The data manager will receive requests from the interactor, check it’s local cache, perform external service requests if necessary, then pass data back to the interactor once available.
-\item \textbf{Service}: Services are encapsulated processes that can be online or local. The service knows how to fetch or store data, it might be a local sqlite database, or it can encapsulate the communication to an online database via a REST-API.
-
-\item \textbf{Entity}: The representation of the actual data. As the entity get passed through the system it might be in the form of a database entry, a json object, or data object.
-
-\item \textbf{Wireframe / Router}: The wireframe initialises all the other classes and handles the transitions to other views in the app. The wireframe handles the current “state” of the app and might implement a “history” allowing the user to transition back to a previous view with the associated other components and data.
 
 
-\end{itemize}
+
+
