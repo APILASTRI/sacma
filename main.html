@@ -7,7 +7,7 @@
 <meta name="originator" content="TeX4ht (http://www.tug.org/tex4ht/)"> 
 <!-- html,word,fn-in --> 
 <meta name="src" content="main.tex"> 
-<meta name="date" content="2016-09-29 11:23:00"> 
+<meta name="date" content="2016-09-29 18:13:00"> 
 <link rel="stylesheet" type="text/css" href="main.css"> 
 </head><body 
 >
@@ -317,37 +317,39 @@ href="#x1-1260004" id="QQ2-1-185">Models</a></span>
 href="#x1-1270005" id="QQ2-1-186">Local Services</a></span>
 <br />      <span class="subsubsectionToc" >9.4.1.6 <a 
 href="#x1-1280006" id="QQ2-1-187">Remote Services</a></span>
+<br />      <span class="subsubsectionToc" >9.4.1.7 <a 
+href="#x1-1290007" id="QQ2-1-188">Cordova Plugins</a></span>
 <br />     <span class="subsectionToc" >9.4.2 <a 
-href="#x1-1290002" id="QQ2-1-188">Classes</a></span>
-<br />   <span class="chapterToc" >10 <a 
-href="#x1-13000010" id="QQ2-1-189">Testing</a></span>
+href="#x1-1300002" id="QQ2-1-189">Classes</a></span>
                                                                   
 
                                                                   
+<br />   <span class="chapterToc" >10 <a 
+href="#x1-13100010" id="QQ2-1-190">Testing</a></span>
 <br />    <span class="sectionToc" >10.1 <a 
-href="#x1-1310001" id="QQ2-1-190">Section Title</a></span>
+href="#x1-1320001" id="QQ2-1-191">Section Title</a></span>
 <br />   <span class="chapterToc" >11 <a 
-href="#x1-13200011" id="QQ2-1-191">Application Implementation</a></span>
+href="#x1-13300011" id="QQ2-1-192">Application Implementation</a></span>
 <br />    <span class="sectionToc" >11.1 <a 
-href="#x1-1330001" id="QQ2-1-192">Language and Libraries</a></span>
+href="#x1-1340001" id="QQ2-1-193">Language and Libraries</a></span>
 <br />     <span class="subsectionToc" >11.1.1 <a 
-href="#x1-1340001" id="QQ2-1-193">Server</a></span>
+href="#x1-1350001" id="QQ2-1-194">Server</a></span>
 <br />     <span class="subsectionToc" >11.1.2 <a 
-href="#x1-1350002" id="QQ2-1-194">Mobile Client</a></span>
+href="#x1-1360002" id="QQ2-1-195">Mobile Client</a></span>
 <br />   <span class="chapterToc" >12 <a 
-href="#x1-13600012" id="QQ2-1-195">Conclusions</a></span>
+href="#x1-13700012" id="QQ2-1-196">Conclusions</a></span>
 <br />    <span class="sectionToc" >12.1 <a 
-href="#x1-1370001" id="QQ2-1-196">Section Title</a></span>
+href="#x1-1380001" id="QQ2-1-197">Section Title</a></span>
 <br />   <span class="chapterToc" >13 <a 
-href="#x1-13900013" id="QQ2-1-198">Appendix</a></span>
+href="#x1-14000013" id="QQ2-1-199">Appendix</a></span>
 <br />    <span class="sectionToc" >13.1 <a 
-href="#x1-1400001" id="QQ2-1-199">Optimizations</a></span>
+href="#x1-1410001" id="QQ2-1-200">Optimizations</a></span>
 <br />     <span class="subsectionToc" >13.1.1 <a 
-href="#x1-1410001" id="QQ2-1-200">Border Extraction</a></span>
+href="#x1-1420001" id="QQ2-1-201">Border Extraction</a></span>
 <br />     <span class="subsectionToc" >13.1.2 <a 
-href="#x1-1420002" id="QQ2-1-201">SFA Threshold</a></span>
+href="#x1-1430002" id="QQ2-1-202">SFA Threshold</a></span>
 <br />     <span class="subsectionToc" >13.1.3 <a 
-href="#x1-1430003" id="QQ2-1-202">TDS Evaluation</a></span>
+href="#x1-1440003" id="QQ2-1-203">TDS Evaluation</a></span>
    </div>
                                                                   
 
@@ -5041,9 +5043,7 @@ class="ptmb7t-">Unrestrictive   License:   </span>Some   frameworks   are   inte
 class="ptmb7t-">Advanced  MVC  Integration:  </span>Does  the  framework  offer  tools  that  assist  the
      developer  to  adhere  to  a  modern  MVC  architecture?  Integrated  data-binding
      functionality,  for  example,  allows  data  synchronisation  between  the  view  and
-     controller. ORM tools with integrated CRUD and database connectivity allows
-     the  developer  to  concentrate  on  the  domain  logic  instead  of  debugging  SQL
-     statements.
+     controller.
      <!--l. 58--><p class="noindent" >Enabler of: TES-1, MOD-1
      </li></ul>
 <!--l. 62--><p class="noindent" >Figure <a 
@@ -5144,58 +5144,71 @@ preview view.
  id="x1-125001r184"></a>
 <h5 class="subsubsectionHead"><span class="titlemark">9.4.1.4    </span> <a 
  id="x1-1260004"></a>Models</h5>
+<!--l. 26--><p class="noindent" >The Models
 <a 
  id="x1-126001r185"></a>
 <h5 class="subsubsectionHead"><span class="titlemark">9.4.1.5    </span> <a 
  id="x1-1270005"></a>Local Services</h5>
+<!--l. 30--><p class="noindent" >The local services classes are just wrappers around the Cordova plugins. Cordova plugins
+offer a ”raw” javascript api, the service classes will hide some of the complexity by making
+only the relevant functions available to the MDApp.
 <a 
  id="x1-127001r186"></a>
 <h5 class="subsubsectionHead"><span class="titlemark">9.4.1.6    </span> <a 
  id="x1-1280006"></a>Remote Services</h5>
+<!--l. 33--><p class="noindent" >The remote services leverage the angular $resource factory which provides easily
+configurable RESTful communication to online servers.
 <a 
- id="x1-128001r180"></a>
+ id="x1-128001r187"></a>
+<h5 class="subsubsectionHead"><span class="titlemark">9.4.1.7    </span> <a 
+ id="x1-1290007"></a>Cordova Plugins</h5>
+<a 
+ id="x1-129001r180"></a>
+                                                                  
+
+                                                                  
 <h4 class="subsectionHead"><span class="titlemark">9.4.2    </span> <a 
- id="x1-1290002"></a>Classes</h4>
+ id="x1-1300002"></a>Classes</h4>
                                                                   
 
                                                                   
    <h2 class="chapterHead"><span class="titlemark">Chapter 10</span><br /><a 
- id="x1-13000010"></a>Testing</h2>
+ id="x1-13100010"></a>Testing</h2>
 <a 
- id="x1-130001r179"></a>
+ id="x1-131001r179"></a>
 <h3 class="sectionHead"><span class="titlemark">10.1    </span> <a 
- id="x1-1310001"></a>Section Title</h3>
+ id="x1-1320001"></a>Section Title</h3>
                                                                   
 
                                                                   
    <h2 class="chapterHead"><span class="titlemark">Chapter 11</span><br /><a 
- id="x1-13200011"></a>Application Implementation</h2>
+ id="x1-13300011"></a>Application Implementation</h2>
 <a 
- id="x1-132001r190"></a>
+ id="x1-133001r191"></a>
 <h3 class="sectionHead"><span class="titlemark">11.1    </span> <a 
- id="x1-1330001"></a>Language and Libraries</h3>
+ id="x1-1340001"></a>Language and Libraries</h3>
 <a 
- id="x1-133001r188"></a>
+ id="x1-134001r189"></a>
 <h4 class="subsectionHead"><span class="titlemark">11.1.1    </span> <a 
- id="x1-1340001"></a>Server</h4>
+ id="x1-1350001"></a>Server</h4>
 <a 
- id="x1-134001r193"></a>
+ id="x1-135001r194"></a>
 <h4 class="subsectionHead"><span class="titlemark">11.1.2    </span> <a 
- id="x1-1350002"></a>Mobile Client</h4>
+ id="x1-1360002"></a>Mobile Client</h4>
                                                                   
 
                                                                   
    <h2 class="chapterHead"><span class="titlemark">Chapter 12</span><br /><a 
- id="x1-13600012"></a>Conclusions</h2>
+ id="x1-13700012"></a>Conclusions</h2>
 <a 
- id="x1-136001r192"></a>
+ id="x1-137001r193"></a>
 <h3 class="sectionHead"><span class="titlemark">12.1    </span> <a 
- id="x1-1370001"></a>Section Title</h3>
+ id="x1-1380001"></a>Section Title</h3>
                                                                   
 
                                                                   
    <h2 class="likechapterHead"><a 
- id="x1-1380001"></a>Bibliography</h2>
+ id="x1-1390001"></a>Bibliography</h2>
     <div class="thebibliography">
     <p class="bibitem" ><span class="biblabel">
   [1]<span class="bibsp">   </span></span><a 
@@ -5331,25 +5344,25 @@ class="ptmri7t-">Software  requirements</span>.   Microsoft,  Redmond,  Washingt
 
                                                                   
    <h2 class="chapterHead"><span class="titlemark">Chapter 13</span><br /><a 
- id="x1-13900013"></a>Appendix</h2>
+ id="x1-14000013"></a>Appendix</h2>
 <a 
- id="x1-139001r196"></a>
+ id="x1-140001r197"></a>
 <h3 class="sectionHead"><span class="titlemark">13.1    </span> <a 
- id="x1-1400001"></a>Optimizations</h3>
+ id="x1-1410001"></a>Optimizations</h3>
 <a 
- id="x1-140001r194"></a>
+ id="x1-141001r195"></a>
 <h4 class="subsectionHead"><span class="titlemark">13.1.1    </span> <a 
- id="x1-1410001"></a>Border Extraction</h4>
-<a 
- id="x1-141001r200"></a>
-<h4 class="subsectionHead"><span class="titlemark">13.1.2    </span> <a 
- id="x1-1420002"></a>SFA Threshold</h4>
+ id="x1-1420001"></a>Border Extraction</h4>
 <a 
  id="x1-142001r201"></a>
-<h4 class="subsectionHead"><span class="titlemark">13.1.3    </span> <a 
- id="x1-1430003"></a>TDS Evaluation</h4>
+<h4 class="subsectionHead"><span class="titlemark">13.1.2    </span> <a 
+ id="x1-1430002"></a>SFA Threshold</h4>
 <a 
- id="x1-143001r1"></a>
+ id="x1-143001r202"></a>
+<h4 class="subsectionHead"><span class="titlemark">13.1.3    </span> <a 
+ id="x1-1440003"></a>TDS Evaluation</h4>
+<a 
+ id="x1-144001r1"></a>
    <!--l. 3--><div class="longtable"> <table id="TBL-29" class="longtable" 
 cellspacing="0" cellpadding="0" rules="groups" 
 ><colgroup id="TBL-29-1g"><col 
@@ -6600,12 +6613,12 @@ class="td11"> 2.0  </td><td  style="white-space:nowrap; text-align:left;" id="TB
 class="td11"> 1.00  </td>
 </tr><tr 
 class="hline"><td><hr></td><td><hr></td><td><hr></td><td><hr></td><td><hr></td><td><hr></td><td><hr></td></tr><tr  
- style="vertical-align:baseline;" id="TBL-29-141-"><td colspan="7" style="white-space:nowrap; text-align:center;" id="TBL-29-141-1"  
-class="td11">     <div class="multicolumn"  style="white-space:nowrap; text-align:center;"><div class="caption" 
+ style="vertical-align:baseline;" id="TBL-29-141-"><td colspan="6" style="white-space:nowrap; text-align:left;" id="TBL-29-141-1"  
+class="td11"></td>     <div class="multicolumn"  style="white-space:nowrap; text-align:center;"><div class="caption" 
 ><span class="id">Table 13.1: </span><span  
-class="content">Results of TDS calculation for Dermfit</span></div><!--tex4ht:label?: x1-143001r1 -->                                </div>            <a 
- id="x1-143002"></a>
-</td></tr><tr  
+class="content">Results of TDS calculation for Dermfit</span></div><!--tex4ht:label?: x1-144001r1 -->                                </div>            <a 
+ id="x1-144002"></a>
+</tr><tr  
  style="vertical-align:baseline;" id="TBL-29-142-"><td  style="white-space:nowrap; text-align:left;" id="TBL-29-142-1"  
 class="td11">         </td>
 </tr><tr  
@@ -6619,7 +6632,7 @@ class="td11">         </td>
 class="td11">         </td></tr>
    </table></div>
 <a 
- id="x1-143003r2"></a>
+ id="x1-144003r2"></a>
    <!--l. 143--><div class="longtable"><table id="TBL-30" class="longtable" 
 cellspacing="0" cellpadding="0" rules="groups" 
 ><colgroup id="TBL-30-1g"><col 
@@ -7072,12 +7085,12 @@ class="td11"> 4.0  </td><td  style="white-space:nowrap; text-align:left;" id="TB
 class="td11"> 3.90  </td>
 </tr><tr 
 class="hline"><td><hr></td><td><hr></td><td><hr></td><td><hr></td><td><hr></td><td><hr></td><td><hr></td></tr><tr  
- style="vertical-align:baseline;" id="TBL-30-50-"><td colspan="7" style="white-space:nowrap; text-align:center;" id="TBL-30-50-1"  
-class="td11">        <div class="multicolumn"  style="white-space:nowrap; text-align:center;"><div class="caption" 
+ style="vertical-align:baseline;" id="TBL-30-50-"><td colspan="6" style="white-space:nowrap; text-align:left;" id="TBL-30-50-1"  
+class="td11"></td>        <div class="multicolumn"  style="white-space:nowrap; text-align:center;"><div class="caption" 
 ><span class="id">Table 13.2: </span><span  
-class="content">Results of TDS calculation for DermQuest</span></div><!--tex4ht:label?: x1-143003r2 -->                          </div>                  <a 
- id="x1-143004"></a>
-</td></tr><tr  
+class="content">Results of TDS calculation for DermQuest</span></div><!--tex4ht:label?: x1-144003r2 -->                          </div>                  <a 
+ id="x1-144004"></a>
+</tr><tr  
  style="vertical-align:baseline;" id="TBL-30-51-"><td  style="white-space:nowrap; text-align:left;" id="TBL-30-51-1"  
 class="td11">             </td>
 </tr><tr  
@@ -7091,7 +7104,7 @@ class="td11">             </td>
 class="td11">             </td></tr>
    </table></div>
 <a 
- id="x1-143005r3"></a>
+ id="x1-144005r3"></a>
    <!--l. 196--><div class="longtable"><table id="TBL-31" class="longtable" 
 cellspacing="0" cellpadding="0" rules="groups" 
 ><colgroup id="TBL-31-1g"><col 
@@ -7508,12 +7521,12 @@ class="td11"> 3.0  </td><td  style="white-space:nowrap; text-align:left;" id="TB
 class="td11"> 4.50  </td>
 </tr><tr 
 class="hline"><td><hr></td><td><hr></td><td><hr></td><td><hr></td><td><hr></td><td><hr></td><td><hr></td></tr><tr  
- style="vertical-align:baseline;" id="TBL-31-46-"><td colspan="7" style="white-space:nowrap; text-align:center;" id="TBL-31-46-1"  
-class="td11">       <div class="multicolumn"  style="white-space:nowrap; text-align:center;"><div class="caption" 
+ style="vertical-align:baseline;" id="TBL-31-46-"><td colspan="6" style="white-space:nowrap; text-align:left;" id="TBL-31-46-1"  
+class="td11"></td>       <div class="multicolumn"  style="white-space:nowrap; text-align:center;"><div class="caption" 
 ><span class="id">Table 13.3: </span><span  
-class="content">Results of TDS calculation for PH2Dataset</span></div><!--tex4ht:label?: x1-143005r3 -->                          </div>                 <a 
- id="x1-143006"></a>
-</td></tr><tr  
+class="content">Results of TDS calculation for PH2Dataset</span></div><!--tex4ht:label?: x1-144005r3 -->                          </div>                 <a 
+ id="x1-144006"></a>
+</tr><tr  
  style="vertical-align:baseline;" id="TBL-31-47-"><td  style="white-space:nowrap; text-align:left;" id="TBL-31-47-1"  
 class="td11">           </td>
 </tr><tr  

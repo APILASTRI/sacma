@@ -23,9 +23,15 @@ Except for the the Camera View all of the pages are created from HTML files that
 The Camera View is an exception in the MDApp. The CameraView is an HTML template that overlays a realtime preview of the camera’s input. The realtime preview is not part of the Cordova/Phonegap browser view, it is a platform native view element that is provided by a 3rd party plugin. The cordova-plugin-camera-preview is a crossplatofrm wrapper around native code that allows the browser based javascript to communicate and control the camera preview view.
 
 \subsubsection{Models}
+The Models
 
 
 \subsubsection{Local Services}
+The local services classes are just wrappers around the Cordova plugins. Cordova plugins offer a "raw" javascript api, the service classes will hide some of the complexity by making only the relevant functions available to the MDApp.
+
 \subsubsection{Remote Services}
+The remote services leverage the angular \$resource factory which provides easily configurable RESTful communication to online servers.
+
+\subsubsection{Cordova Plugins}
 
 \subsection{Classes}
