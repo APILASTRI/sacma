@@ -39,11 +39,22 @@ By measuring the size of the main region of interest at different threshold valu
 
 \subsection{Color Transformation and Analysis}
 
+The thresholding method above only takes the brightness of the image into account, ignoring any colour variations. This seems counter intuitive though, especially considering the domain where one of the qualities of melanocytic nevi and melanoma is the high concentration of melanin which is responsible for skin pigmentation. It would seem natural that other image qualities such as hue and colour intensity would be important as well.
+
+By transforming RGB images into HSV encoded image, other image qualities can be investigated more intuitively. HSV encoded images store colour information as hue ( colour spectrum ), saturation ( colour intensity ) and value ( brightness ).
+
+By mapping the HSV values of an image into a 3d coordinate system where the coordinates are hue, saturation, and value some insights about the pixel grouping can be investigated. Figure \ref{fig:hsv_place} shows an image of a skin lesion next to the 3d transformation of the pixels in HSV Space. Hue and colour are the horizontal axes, value is the vertical axis.
+
+Once can observe that the most of the pixels that make up the lesion area form a distinct clump that is connected to a larger clump that corresponds to the surrounding healthy skin.
+
+
 \begin{figure}[H]
     \includegraphics[width=\textwidth,keepaspectratio]{assets/image_processing/hsv/hsv_3dplot.png}
     \caption{HSV Space}
     \label{fig:hsv_place}
 \end{figure}
+
+In Figure \ref{fig:hsv_3d} the output of an application is displayed that highlights pixels in the original image that correspond to selected pixels in 3d HSV space.
 
 \begin{figure}[H]
     \includegraphics[width=\textwidth,keepaspectratio]{assets/image_processing/hsv/hsv_space.pdf}
@@ -51,6 +62,28 @@ By measuring the size of the main region of interest at different threshold valu
     \label{fig:hsv_3d}
 \end{figure}
 
+This application was implemented as a python script in the Blender 3d application. The script would allow an image to be loaded into memory. The pixels would be read pixel by pixel and a point corresponding to each pixel's HSV values would be positioned in a 3d coordinate system. Each point would hold a reference to it's corresponding pixel position in the original image.
+
+Selecting the points in the 3d view would highlight the corresponding pixel in the original image. It is clearly visible that the points lying between the 2 main clusters (1 and 2 in Figure \ref{fig:hsv_3d}) correspond strongly with the pixels on the border between the skin lesion and the healthy surround skin area.
+
+Some time was spent investigating methods of grouping pixels based on both their distance in HSV space and the distance in the image space but quickly put aside because of the time and effort considerations.
+
+The research did lead to the discovery of an already available method called Simple Linear Iterative Clustering.
+
+\subsection{SLIC Superpixels}
+
+SLIC is a segementaion algorithm that produces Superpixels, large groups of pixels with similar content. The edges of the Superpixel shoudld correspond to edges of objects in an image.
+
+The SLIC algorithm uses the 3 color and 2 dimensions to cluster pixels \cite{slic}. In an iterative and computationally efficient algorithm the image is first segmented into tiles. In each iteration the borders of the tiles are recalculated based on the similarity of the pixels in the surrounding area.
+
+Figure \ref{fig:slic} illustrates the first 6 iterations of the SLIC algorithm on a skin lesion image.
 
 
-\subsection{Super Pixels}
+\begin{figure}[H]
+    \includegraphics[width=\textwidth,keepaspectratio]{assets/image_processing/slic/slic_01.png}
+    \caption{SLIC superpixel segmentation}
+    \label{fig:slic}
+\end{figure}
+
+
+
