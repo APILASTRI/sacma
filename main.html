@@ -7,7 +7,7 @@
 <meta name="originator" content="TeX4ht (http://www.tug.org/tex4ht/)"> 
 <!-- html,word,fn-in --> 
 <meta name="src" content="main.tex"> 
-<meta name="date" content="2016-10-03 16:23:00"> 
+<meta name="date" content="2016-10-03 17:00:00"> 
 <link rel="stylesheet" type="text/css" href="main.css"> 
 </head><body 
 >
@@ -6712,17 +6712,15 @@ class="td11">
 class="ptmb7t-x-x-80">Description</span>           </td><td colspan="4" style="white-space:wrap; text-align:left;" id="TBL-35-2-2"  
 class="td11">
  <div class="multicolumn"  style="white-space:wrap; text-align:left;"> <span 
-class="ptmr7t-x-x-80">The  MDDataService  is  a  singelton  class  that  encapsulates  all  the  database</span>
+class="ptmr7t-x-x-80">The MDBorderService is a singelton class that encapsulates communiation with the</span>
   <span 
-class="ptmr7t-x-x-80">access  and  management  functions.  MDDataService  wraps  two  external  services,</span>
+class="ptmr7t-x-x-80">remote border extraction service. The MDBorderService encapsulates communcation</span>
   <span 
-class="ptmr7t-x-x-80">the  Cordova-sqlite-storage  plugins  and  the  persistence.js  javascript  library.  The</span>
+class="ptmr7t-x-x-80">to  the  cordova-plugin-file-transfer  plugin.  Results  from  the  plugin  are  wrapped</span>
   <span 
-class="ptmr7t-x-x-80">Cordova-sqlite-storage  plugin  manages  connectivity  to  the  sqlite  database  file.</span>
+class="ptmr7t-x-x-80">into an angular defered promise allowing other angular components to more easily</span>
   <span 
-class="ptmr7t-x-x-80">Persistence.js  is  an  ORM  library  that  hides  away  any  messy  sequel  development</span>
-  <span 
-class="ptmr7t-x-x-80">behind a nice object oriented api. </span></div>
+class="ptmr7t-x-x-80">integrate the file transfer services. </span></div>
 </td></tr><tr 
 class="hline"><td><hr></td><td><hr></td><td><hr></td><td><hr></td><td><hr></td></tr><tr  
  style="vertical-align:baseline;" id="TBL-35-3-"><td  style="white-space:wrap; text-align:left;" id="TBL-35-3-1"  
@@ -6784,20 +6782,37 @@ class="td11">
 class="ptmr7t-x-x-80">void</span>                </td><td  style="white-space:wrap; text-align:left;" id="TBL-35-7-4"  
 class="td11">
  <!--l. 28--><p class="noindent" ><span 
-class="ptmr7t-x-x-80">promise(results)</span> </td><td  style="white-space:wrap; text-align:left;" id="TBL-35-7-5"  
+class="ptmr7t-x-x-80">promise</span>
+  <span 
+class="ptmr7t-x-x-80">(results)</span>          </td><td  style="white-space:wrap; text-align:left;" id="TBL-35-7-5"  
 class="td11">
- <!--l. 30--><p class="noindent" >                         </td>
+ <!--l. 29--><p class="noindent" ><span 
+class="ptmr7t-x-x-80">This   function   prepares   the   file</span>
+  <span 
+class="ptmr7t-x-x-80">upload                         configuration</span>
+  <span 
+class="ptmr7t-x-x-80">parameters and initiates the upload.</span>
+  <span 
+class="ptmr7t-x-x-80">The success and error callbacks are</span>
+  <span 
+class="ptmr7t-x-x-80">wrapped in an angular $q promise</span>
+  <span 
+class="ptmr7t-x-x-80">that is retured to the caller and can</span>
+  <span 
+class="ptmr7t-x-x-80">be evaluated in a local anonymous</span>
+  <span 
+class="ptmr7t-x-x-80">function when it resolves.</span>                  </td>
 </tr><tr 
 class="hline"><td><hr></td><td><hr></td><td><hr></td><td><hr></td><td><hr></td></tr><tr  
- style="vertical-align:baseline;" id="TBL-35-8-"><td colspan="3" style="white-space:wrap; text-align:left;" id="TBL-35-8-1"  
-class="td11"></td>           <div class="multicolumn"  style="white-space:nowrap; text-align:center;"><div class="caption" 
+ style="vertical-align:baseline;" id="TBL-35-8-"><td colspan="5" style="white-space:nowrap; text-align:center;" id="TBL-35-8-1"  
+class="td11">           <div class="multicolumn"  style="white-space:nowrap; text-align:center;"><div class="caption" 
 ><span class="id"><span 
 class="ptmr7t-x-x-80">Table</span><span 
 class="ptmr7t-x-x-80"> 9.7: </span></span><span  
 class="content"><span 
 class="ptmr7t-x-x-80">MDBorderService Specification</span></span></div><!--tex4ht:label?: x1-142001r7 -->                                                                          </div>                          <a 
  id="x1-142002"></a>
-</tr><tr  
+</td></tr><tr  
  style="vertical-align:baseline;" id="TBL-35-9-"><td  style="white-space:wrap; text-align:left;" id="TBL-35-9-1"  
 class="td11">              </td>
 </tr><tr  
@@ -6841,7 +6856,7 @@ class="td11">
  <!--l. 5--><p class="noindent" ><span 
 class="ptmb7t-x-x-80">Name</span>                    </td><td colspan="4" style="white-space:nowrap; text-align:left;" id="TBL-36-1-2"  
 class="td11"> <div class="multicolumn"  style="white-space:nowrap; text-align:left;"><span 
-class="ptmr7t-x-x-80">ArchiveDetailViewController</span></div>
+class="ptmr7t-x-x-80">MDAnalysisService</span></div>
 </td></tr><tr 
 class="hline"><td><hr></td><td><hr></td><td><hr></td><td><hr></td><td><hr></td></tr><tr  
  style="vertical-align:baseline;" id="TBL-36-2-"><td  style="white-space:wrap; text-align:left;" id="TBL-36-2-1"  
@@ -6850,15 +6865,13 @@ class="td11">
 class="ptmb7t-x-x-80">Description</span>           </td><td colspan="4" style="white-space:wrap; text-align:left;" id="TBL-36-2-2"  
 class="td11">
  <div class="multicolumn"  style="white-space:wrap; text-align:left;"> <span 
-class="ptmr7t-x-x-80">Controller for the archive detail view. The id of the selected LesionImage is passed to</span>
+class="ptmr7t-x-x-80">The MDAnalysisService is a singelton class that encapsulates communiation with</span>
   <span 
-class="ptmr7t-x-x-80">this controller when loaded. The controller prepares the data of the selected archived</span>
+class="ptmr7t-x-x-80">the remote image analysis service. Analysis of a previoulsy upload image may be</span>
   <span 
-class="ptmr7t-x-x-80">image to be presented to the use in the archive detail view. This controllers methods</span>
+class="ptmr7t-x-x-80">triggered via an online rest API. Results from the analysis are wrapped into an angular</span>
   <span 
-class="ptmr7t-x-x-80">are responsible for saving edited metadata back to the archive or sending images and</span>
-  <span 
-class="ptmr7t-x-x-80">data via email. </span></div>
+class="ptmr7t-x-x-80">defered promise. </span></div>
 </td></tr><tr 
 class="hline"><td><hr></td><td><hr></td><td><hr></td><td><hr></td><td><hr></td></tr><tr  
  style="vertical-align:baseline;" id="TBL-36-3-"><td  style="white-space:wrap; text-align:left;" id="TBL-36-3-1"  
@@ -6893,159 +6906,76 @@ class="ptmr7t-x-x-80">Description</span></div>
 class="hline"><td><hr></td><td><hr></td><td><hr></td><td><hr></td><td><hr></td></tr><tr  
  style="vertical-align:baseline;" id="TBL-36-6-"><td  style="white-space:wrap; text-align:left;" id="TBL-36-6-1"  
 class="td11">
- <!--l. 24--><p class="noindent" >             </td><td  style="white-space:wrap; text-align:left;" id="TBL-36-6-2"  
+ <!--l. 25--><p class="noindent" ><span 
+class="ptmb7t-x-x-80">Methods</span>                </td><td  style="white-space:wrap; text-align:left;" id="TBL-36-6-2"  
 class="td11">
- <!--l. 24--><p class="noindent" ><span 
-class="ptmr7t-x-x-80">MDLesionImage</span>      </td><td  style="white-space:wrap; text-align:left;" id="TBL-36-6-3"  
+ <!--l. 26--><p class="noindent" ><span 
+class="ptmr7t-x-x-80">Name</span>                        </td><td  style="white-space:wrap; text-align:left;" id="TBL-36-6-3"  
 class="td11">
- <!--l. 24--><p class="noindent" ><span 
-class="ptmr7t-x-x-80">class</span>                </td><td colspan="2" style="white-space:wrap; text-align:left;" id="TBL-36-6-4"  
+ <!--l. 26--><p class="noindent" ><span 
+class="ptmr7t-x-x-80">Parameter</span>       </td><td  style="white-space:wrap; text-align:left;" id="TBL-36-6-4"  
 class="td11">
- <div class="multicolumn"  style="white-space:wrap; text-align:left;"> <span 
-class="ptmr7t-x-x-80">MDLesionImage provides the controller with an</span>
-  <span 
-class="ptmr7t-x-x-80">instance of an MDLesionImage. </span></div>
-</td></tr><tr 
+ <!--l. 26--><p class="noindent" ><span 
+class="ptmr7t-x-x-80">Return Type</span>    </td><td  style="white-space:wrap; text-align:left;" id="TBL-36-6-5"  
+class="td11">
+ <!--l. 26--><p class="noindent" ><span 
+class="ptmr7t-x-x-80">Description</span>                                        </td>
+</tr><tr 
 class="hline"><td><hr></td><td><hr></td><td><hr></td><td><hr></td><td><hr></td></tr><tr  
  style="vertical-align:baseline;" id="TBL-36-7-"><td  style="white-space:wrap; text-align:left;" id="TBL-36-7-1"  
 class="td11">
  <!--l. 28--><p class="noindent" >             </td><td  style="white-space:wrap; text-align:left;" id="TBL-36-7-2"  
 class="td11">
  <!--l. 28--><p class="noindent" ><span 
-class="ptmr7t-x-x-80">MDMetadata</span>            </td><td  style="white-space:wrap; text-align:left;" id="TBL-36-7-3"  
+class="ptmr7t-x-x-80">getAnalysis</span>              </td><td  style="white-space:wrap; text-align:left;" id="TBL-36-7-3"  
 class="td11">
  <!--l. 28--><p class="noindent" ><span 
-class="ptmr7t-x-x-80">class</span>                </td><td colspan="2" style="white-space:wrap; text-align:left;" id="TBL-36-7-4"  
+class="ptmr7t-x-x-80">imageKey</span>       </td><td  style="white-space:wrap; text-align:left;" id="TBL-36-7-4"  
 class="td11">
- <div class="multicolumn"  style="white-space:wrap; text-align:left;">                        <span 
-class="ptmr7t-x-x-80">MDMetadata</span>
+ <!--l. 28--><p class="noindent" ><span 
+class="ptmr7t-x-x-80">promise</span>
   <span 
-class="ptmr7t-x-x-80">provides the controller with metadata associated</span>
+class="ptmr7t-x-x-80">(results)</span>          </td><td  style="white-space:wrap; text-align:left;" id="TBL-36-7-5"  
+class="td11">
+ <!--l. 29--><p class="noindent" ><span 
+class="ptmr7t-x-x-80">This  function  sends  a  request  to</span>
   <span 
-class="ptmr7t-x-x-80">with an instance of MDLesionImage </span></div>
-</td></tr><tr 
-class="hline"><td><hr></td><td><hr></td><td><hr></td><td><hr></td><td><hr></td></tr><tr  
- style="vertical-align:baseline;" id="TBL-36-8-"><td  style="white-space:wrap; text-align:left;" id="TBL-36-8-1"  
-class="td11">
- <!--l. 32--><p class="noindent" >             </td><td  style="white-space:wrap; text-align:left;" id="TBL-36-8-2"  
-class="td11">
- <!--l. 32--><p class="noindent" ><span 
-class="ptmr7t-x-x-80">activeImage</span>              </td><td  style="white-space:wrap; text-align:left;" id="TBL-36-8-3"  
-class="td11">
- <!--l. 32--><p class="noindent" ><span 
-class="ptmr7t-x-x-80">instance     of</span>
+class="ptmr7t-x-x-80">the  online  analysis  service  via  a</span>
   <span 
-class="ptmr7t-x-x-80">MDLesionImage</span> </td><td colspan="2" style="white-space:wrap; text-align:left;" id="TBL-36-8-4"  
-class="td11">
- <div class="multicolumn"  style="white-space:wrap; text-align:left;"> <span 
-class="ptmr7t-x-x-80">This is the selected instance of MDLesionImage</span>
+class="ptmr7t-x-x-80">rest  api  and  wraps  the  response</span>
   <span 
-class="ptmr7t-x-x-80">to be presented to the user in the detail view. </span></div>
-</td></tr><tr 
-class="hline"><td><hr></td><td><hr></td><td><hr></td><td><hr></td><td><hr></td></tr><tr  
- style="vertical-align:baseline;" id="TBL-36-9-"><td  style="white-space:wrap; text-align:left;" id="TBL-36-9-1"  
-class="td11">
- <!--l. 36--><p class="noindent" >             </td><td  style="white-space:wrap; text-align:left;" id="TBL-36-9-2"  
-class="td11">
- <!--l. 36--><p class="noindent" ><span 
-class="ptmr7t-x-x-80">activeMetadata</span>         </td><td  style="white-space:wrap; text-align:left;" id="TBL-36-9-3"  
-class="td11">
- <!--l. 36--><p class="noindent" ><span 
-class="ptmr7t-x-x-80">instance     of</span>
+class="ptmr7t-x-x-80">into an angular promise that can be</span>
   <span 
-class="ptmr7t-x-x-80">MDMetadata</span>  </td><td colspan="2" style="white-space:wrap; text-align:left;" id="TBL-36-9-4"  
-class="td11">
- <div class="multicolumn"  style="white-space:wrap; text-align:left;"> <span 
-class="ptmr7t-x-x-80">This is an instance of the metadata assciated with</span>
+class="ptmr7t-x-x-80">resolved  by  the  calling  class  in  a</span>
   <span 
-class="ptmr7t-x-x-80">the selected MDLesionImage instance. </span></div>
-</td></tr><tr 
-class="hline"><td><hr></td><td><hr></td><td><hr></td><td><hr></td><td><hr></td></tr><tr  
- style="vertical-align:baseline;" id="TBL-36-10-"><td  style="white-space:wrap; text-align:left;" id="TBL-36-10-1"  
-class="td11">
- <!--l. 40--><p class="noindent" ><span 
-class="ptmb7t-x-x-80">Methods</span>                </td><td  style="white-space:wrap; text-align:left;" id="TBL-36-10-2"  
-class="td11">
- <!--l. 41--><p class="noindent" ><span 
-class="ptmr7t-x-x-80">Name</span>                        </td><td  style="white-space:wrap; text-align:left;" id="TBL-36-10-3"  
-class="td11">
- <!--l. 41--><p class="noindent" ><span 
-class="ptmr7t-x-x-80">Parameter</span>       </td><td  style="white-space:wrap; text-align:left;" id="TBL-36-10-4"  
-class="td11">
- <!--l. 41--><p class="noindent" ><span 
-class="ptmr7t-x-x-80">Return Type</span>    </td><td  style="white-space:wrap; text-align:left;" id="TBL-36-10-5"  
-class="td11">
- <!--l. 41--><p class="noindent" ><span 
-class="ptmr7t-x-x-80">Description</span>                                        </td>
+class="ptmr7t-x-x-80">local function asynchronously.</span>          </td>
 </tr><tr 
 class="hline"><td><hr></td><td><hr></td><td><hr></td><td><hr></td><td><hr></td></tr><tr  
- style="vertical-align:baseline;" id="TBL-36-11-"><td  style="white-space:wrap; text-align:left;" id="TBL-36-11-1"  
-class="td11">
- <!--l. 43--><p class="noindent" >             </td><td  style="white-space:wrap; text-align:left;" id="TBL-36-11-2"  
-class="td11">
- <!--l. 43--><p class="noindent" ><span 
-class="ptmr7t-x-x-80">emailDetail</span>               </td><td  style="white-space:wrap; text-align:left;" id="TBL-36-11-3"  
-class="td11">
- <!--l. 43--><p class="noindent" ><span 
-class="ptmr7t-x-x-80">key</span>                  </td><td  style="white-space:wrap; text-align:left;" id="TBL-36-11-4"  
-class="td11">
- <!--l. 43--><p class="noindent" ><span 
-class="ptmr7t-x-x-80">void</span>                </td><td  style="white-space:wrap; text-align:left;" id="TBL-36-11-5"  
-class="td11">
- <!--l. 44--><p class="noindent" ><span 
-class="ptmr7t-x-x-80">the  data  from  the  activeImage  and</span>
-  <span 
-class="ptmr7t-x-x-80">activeMetadata  is  flattended  to  an</span>
-  <span 
-class="ptmr7t-x-x-80">html  template  and  passed  to  the</span>
-  <span 
-class="ptmr7t-x-x-80">email service.</span>                                     </td>
-</tr><tr 
-class="hline"><td><hr></td><td><hr></td><td><hr></td><td><hr></td><td><hr></td></tr><tr  
- style="vertical-align:baseline;" id="TBL-36-12-"><td  style="white-space:wrap; text-align:left;" id="TBL-36-12-1"  
-class="td11">
- <!--l. 47--><p class="noindent" >             </td><td  style="white-space:wrap; text-align:left;" id="TBL-36-12-2"  
-class="td11">
- <!--l. 47--><p class="noindent" ><span 
-class="ptmr7t-x-x-80">saveData</span>                   </td><td  style="white-space:wrap; text-align:left;" id="TBL-36-12-3"  
-class="td11">
- <!--l. 47--><p class="noindent" ><span 
-class="ptmr7t-x-x-80">void</span>                </td><td  style="white-space:wrap; text-align:left;" id="TBL-36-12-4"  
-class="td11">
- <!--l. 47--><p class="noindent" ><span 
-class="ptmr7t-x-x-80">void</span>                </td><td  style="white-space:wrap; text-align:left;" id="TBL-36-12-5"  
-class="td11">
- <!--l. 48--><p class="noindent" ><span 
-class="ptmr7t-x-x-80">Any user edits to the metadata will</span>
-  <span 
-class="ptmr7t-x-x-80">be saved.</span>                                            </td>
-</tr><tr 
-class="hline"><td><hr></td><td><hr></td><td><hr></td><td><hr></td><td><hr></td></tr><tr  
- style="vertical-align:baseline;" id="TBL-36-13-"><td colspan="5" style="white-space:nowrap; text-align:center;" id="TBL-36-13-1"  
-class="td11">           <div class="multicolumn"  style="white-space:nowrap; text-align:center;"><div class="caption" 
+ style="vertical-align:baseline;" id="TBL-36-8-"><td colspan="3" style="white-space:wrap; text-align:left;" id="TBL-36-8-1"  
+class="td11"></td>           <div class="multicolumn"  style="white-space:nowrap; text-align:center;"><div class="caption" 
 ><span class="id"><span 
 class="ptmr7t-x-x-80">Table</span><span 
 class="ptmr7t-x-x-80"> 9.8: </span></span><span  
 class="content"><span 
-class="ptmr7t-x-x-80">ArchiveDetailViewController Specification</span></span></div><!--tex4ht:label?: x1-143001r8 -->                                                        </div>                          <a 
+class="ptmr7t-x-x-80">MDAnalysisService Specification</span></span></div><!--tex4ht:label?: x1-143001r8 -->                                                                       </div>                          <a 
  id="x1-143002"></a>
-</td></tr><tr  
- style="vertical-align:baseline;" id="TBL-36-14-"><td  style="white-space:wrap; text-align:left;" id="TBL-36-14-1"  
+</tr><tr  
+ style="vertical-align:baseline;" id="TBL-36-9-"><td  style="white-space:wrap; text-align:left;" id="TBL-36-9-1"  
 class="td11">              </td>
 </tr><tr  
- style="vertical-align:baseline;" id="TBL-36-15-"><td  style="white-space:wrap; text-align:left;" id="TBL-36-15-1"  
+ style="vertical-align:baseline;" id="TBL-36-10-"><td  style="white-space:wrap; text-align:left;" id="TBL-36-10-1"  
 class="td11">
- <!--l. 53--><p class="noindent" >             </td>
+ <!--l. 35--><p class="noindent" >             </td>
 </tr><tr  
- style="vertical-align:baseline;" id="TBL-36-16-"><td  style="white-space:wrap; text-align:left;" id="TBL-36-16-1"  
+ style="vertical-align:baseline;" id="TBL-36-11-"><td  style="white-space:wrap; text-align:left;" id="TBL-36-11-1"  
 class="td11">
- <!--l. 53--><p class="noindent" >             </td>
+ <!--l. 35--><p class="noindent" >             </td>
 </tr><tr  
- style="vertical-align:baseline;" id="TBL-36-17-"><td  style="white-space:wrap; text-align:left;" id="TBL-36-17-1"  
-class="td11">            </td><td  style="white-space:wrap; text-align:left;" id="TBL-36-17-2"  
-class="td11">             </td><td  style="white-space:wrap; text-align:left;" id="TBL-36-17-3"  
-class="td11">          </td><td  style="white-space:wrap; text-align:left;" id="TBL-36-17-4"  
-class="td11">          </td><td  style="white-space:wrap; text-align:left;" id="TBL-36-17-5"  
+ style="vertical-align:baseline;" id="TBL-36-12-"><td  style="white-space:wrap; text-align:left;" id="TBL-36-12-1"  
+class="td11">            </td><td  style="white-space:wrap; text-align:left;" id="TBL-36-12-2"  
+class="td11">             </td><td  style="white-space:wrap; text-align:left;" id="TBL-36-12-3"  
+class="td11">          </td><td  style="white-space:wrap; text-align:left;" id="TBL-36-12-4"  
+class="td11">          </td><td  style="white-space:wrap; text-align:left;" id="TBL-36-12-5"  
 class="td11"></td></tr>
    </table></div>
 <a 

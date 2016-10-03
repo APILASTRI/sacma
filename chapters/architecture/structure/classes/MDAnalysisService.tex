@@ -3,11 +3,11 @@
 \begin{longtable}[H]{  | >{\bfseries}p{2cm} | p{2.2cm} | p{1.5cm} | p{1.5cm} | p{4cm} | } \hline
 
     Name
-    & \multicolumn{4}{l |}{ArchiveDetailViewController} \\ \hline
+    & \multicolumn{4}{l |}{MDAnalysisService} \\ \hline
 
     Description
     & \multicolumn{4}{p{9.5cm} |}{
-    Controller for the archive detail view. The id of the selected LesionImage is passed to this controller when loaded. The controller prepares the data of the selected archived image to be presented to the use in the archive detail view. This controllers methods are responsible for saving edited metadata back to the archive or sending images and data via email.
+    The MDAnalysisService is a singelton class that encapsulates communiation with the remote image analysis service. Analysis of a previoulsy upload image may be triggered via an online rest API. Results from the analysis are wrapped into an angular defered promise.
     } \\ \hline
 
     Type
@@ -21,34 +21,16 @@
     Attributes
     & Name & Type & \multicolumn{2}{l |}{Description} \\ \hline
 
-        & MDLesionImage & class & \multicolumn{2}{p{5.5cm} |}{
-        MDLesionImage provides the controller with an instance of an MDLesionImage.
-        } \\ \hline
-
-        & MDMetadata & class & \multicolumn{2}{p{5.5cm} |}{
-        MDMetadata provides the controller with metadata associated with an instance of MDLesionImage
-        } \\ \hline
-
-        & activeImage & instance of MDLesionImage & \multicolumn{2}{p{5.5cm} |}{
-        This is the selected instance of MDLesionImage to be presented to the user in the detail view.
-        } \\ \hline
-
-        & activeMetadata & instance of MDMetadata & \multicolumn{2}{p{5.5cm} |}{
-        This is an instance of the metadata assciated with the selected MDLesionImage instance.
-        } \\ \hline
 
     Methods
     & Name & Parameter & Return Type & Description \\ \hline
 
-        & emailDetail & key & void
-        & the data from the activeImage and activeMetadata is flattended to an html template and passed to the email service.
+        & getAnalysis & imageKey & promise (results)
+        & This function sends a request to the online analysis service via a rest api and wraps the response into an angular promise that can be resolved by the calling class in a local function asynchronously.
         \\ \hline
 
-        & saveData & void & void
-        & Any user edits to the metadata will be saved.
-        \\ \hline
 
-    \caption{ArchiveDetailViewController Specification}
-    \label{fig:archivedetail_controller}
+    \caption{MDAnalysisService Specification}
+    \label{fig:analysis_service}
 \end{longtable}
 }
