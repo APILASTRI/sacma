@@ -1,0 +1,42 @@
+\setlength{\tabcolsep}{0.5em}
+\footnotesize{
+\begin{longtable}[H]{  | >{\bfseries}p{2cm} | p{2.2cm} | p{1.5cm} | p{1.5cm} | p{4cm} | } \hline
+
+    Name
+    & \multicolumn{4}{l |}{MDCameraService} \\ \hline
+
+    Description
+    & \multicolumn{4}{p{9.5cm} |}{
+        This Service encapsulats communication to the cordova-plugin-camera-preview plugin. It wraps asyncronous methods and callbacks in angular.js promises that allow other classes to integrate this service in an angular-like fashion.
+    } \\ \hline
+
+    Type
+    & \multicolumn{4}{l |}{Class}
+    \\ \hline
+
+    Implemented In
+    & \multicolumn{4}{l |}{services/device.js}
+    \\ \hline
+
+    Attributes
+    & Name & Type & \multicolumn{2}{l |}{Description} \\ \hline
+
+
+    Methods
+    & Name & Parameter & Return Type & Description \\ \hline
+
+        & startCamera & void & void
+        &   This method starts the camera and activates the camera preview view.
+        \\ \hline
+        & captureImage & void & promise (results)
+        &   Initiates the capture method in the cordova plugin and passes a promise to the caller that can be resolved locally.
+        \\ \hline
+        & stopCamera & void & promise (results)
+        &   Hides the camera preview view and stops the camera.
+        \\ \hline
+
+
+    \caption{MDCameraService Specification}
+    \label{fig:camera_service}
+\end{longtable}
+}
