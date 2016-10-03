@@ -1,0 +1,62 @@
+\footnotesize{
+\begin{longtable}[H]{  | >{\bfseries}l | p{1.5cm} | p{1.5cm} | p{1.5cm} | p{4cm} | } \hline
+
+    Name
+    & \multicolumn{4}{l |}{AnalysisViewController} \\ \hline
+
+    Description
+    & \multicolumn{4}{p{8.5cm} |}{
+    The AnalysisViewController manages the analysis view and provides the functions that let the user confirm the border calculation and edit metadata associated with a captured image.
+
+    } \\ \hline
+
+    Type
+    & \multicolumn{4}{l |}{Class}
+    \\ \hline
+
+    Implemented In
+    & \multicolumn{4}{l |}{controllers/camera.js}
+    \\ \hline
+
+    Attributes
+    & Name & Type & \multicolumn{2}{l |}{Description} \\ \hline
+
+        & MDAppState & class & \multicolumn{2}{p{5.5cm} |}{
+        When a new image is captured, the CameraViewController notifies the MDAppState that a new image is the active image.
+        } \\ \hline
+
+        & MDLesionImage & class & \multicolumn{2}{p{5.5cm} |}{
+        When a new image is captured the CameraViewController notifies the MDLesionImage class which creates a new MDLesionImage instance.
+        } \\ \hline
+
+        & MDMetadata & class & \multicolumn{2}{p{5.5cm} |}{
+        When a new image is captured the CameraViewController notifies the MDLesionImage class which creates a new MDLesionImage instance.
+        } \\ \hline
+
+        & activeImage & instance of MDLesionImage & \multicolumn{2}{p{5.5cm} |}{
+        When a new image is captured the CameraViewController notifies the MDLesionImage class which creates a new MDLesionImage instance.
+        } \\ \hline
+
+        & activeMetadata & instance of MDMetadata & \multicolumn{2}{p{5.5cm} |}{
+        When a new image is captured the CameraViewController notifies the MDLesionImage class which creates a new MDLesionImage instance.
+        } \\ \hline
+
+
+    Methods
+    & Name & Parameter & Return Type & Description \\ \hline
+
+        & confirmBorder & confirm : boolean & void
+        & This method is triggered by the user and passed from the view to the view controller. The event is passed on to the MDCameraService along with a reference to the captureImageCallback which is called when an image has been saved.
+        \\ \hline
+        & tdsAnalysisCallback & results & void
+        & The MDCameraService notifies the CameraViewController that an image is availble via this callback. The results parameter is a javascript object that contains a path to the captured image file and a preview image file.
+        \\ \hline
+        & saveData & void & void
+        & When the camera view is loaded this method is called by the angular ui-router. The CameraViewController maked selected background UI components transparent in order to allow the camera preivew view to become visible.
+        \\ \hline
+
+
+    \caption{AnalysisViewController Specification}
+    \label{fig:analysis_controller}
+\end{longtable}
+}

@@ -1,0 +1,55 @@
+\footnotesize{
+\begin{longtable}[H]{  | >{\bfseries}l | p{1.5cm} | p{1.5cm} | p{1.5cm} | p{4cm} | } \hline
+
+    Name
+    & \multicolumn{4}{l |}{CameraViewController} \\ \hline
+
+    Description
+    & \multicolumn{4}{p{8.5cm} |}{
+    The CameraViewController manages the camera preview user interface. It received a user “tap” event from the view and triggers the image capture process. Because the actual camera view ui element is a native view element outside of and behind the Cordova browser view, specific ui components must be made transparent to let the camera view become visible. The CameraViewController activates this transparency when it is loaded and deactivates it when unloaded.
+
+    } \\ \hline
+
+    Type
+    & \multicolumn{4}{l |}{Class}
+    \\ \hline
+
+    Implemented In
+    & \multicolumn{4}{l |}{controllers/camera.js}
+    \\ \hline
+
+    Attributes
+    & Name & Type & \multicolumn{2}{l |}{Description} \\ \hline
+
+        & MDCameraService & class & \multicolumn{2}{p{5.5cm} |}{
+        The CameraViewController passes the capture request from the user to the MDCameraService. The MDCameraService is also responsible for starting and stopping the camera preview.
+        } \\ \hline
+        & MDLesionImage & class & \multicolumn{2}{p{5.5cm} |}{
+        When a new image is captured the CameraViewController notifies the MDLesionImage class which creates a new MDLesionImage instance.
+        } \\ \hline
+        & MDAppState & class & \multicolumn{2}{p{5.5cm} |}{
+        When a new image is captured, the CameraViewController notifies the MDAppState that a new image is the active image.
+        } \\ \hline
+
+
+    Methods
+    & Name & Parameter & Return Type & Description \\ \hline
+
+        & captureImage & void & void
+        & This method is triggered by the user and passed from the view to the view controller. The event is passed on to the MDCameraService along with a reference to the captureImageCallback which is called when an image has been saved.
+        \\ \hline
+        & captureImageCallback & results & void
+        & The MDCameraService notifies the CameraViewController that an image is availble via this callback. The results parameter is a javascript object that contains a path to the captured image file and a preview image file.
+        \\ \hline
+        & afterEnter & void & void
+        & When the camera view is loaded this method is called by the angular ui-router. The CameraViewController maked selected background UI components transparent in order to allow the camera preivew view to become visible.
+        \\ \hline
+        & afterLeave & void & void
+        & The angular ui-router notifies the CameraViewController via this method that the user has moved to another view. The CameraViewController cleans up the transparent UI compontent, making them opaque.
+        \\ \hline
+
+
+    \caption{CameraViewController Specification}
+    \label{fig:camera_controller}
+\end{longtable}
+}
