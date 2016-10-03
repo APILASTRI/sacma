@@ -14,8 +14,7 @@ Figure \ref{fig:comp_dia} shows a high level view of the logical layout of the c
 Each view controller class is responsible for a specific view or partial view of the MDApp. In larger applications there might be multiple view controllers per “page” in a nested hierarchy. The MDApp will only require one controller per page, these are the HomeController, CameraController, AnalysisController and the ArchiveController. Each controller is responsible for preparing the data that will be displayed in the view as well as capturing and processing user events.
 
 \subsubsection{Application Controller}
-The application controller is a global controller that can manage the state of the app. It makes sure that the state is persevered when the MDApp is closed and restarted.
-
+The application controller is a global controller that can manage the state of the app. It makes sure that the state is persevered when the MDApp is closed and restarted. It can also switch the user automatically from one view to another when appropriate or enable or disable the user interface when some activity is in progress.
 
 \subsubsection{Templates, Directives and Camera View}
 Except for the the Camera View all of the pages are created from HTML files that have prepared placeholders called directives. Directives are special markers in the HTML that the Angular framework uses to inject data and specific behaviour into the HTML element. Directives bundle together often used patterns into easily configurable markers that can be embedded into an HTML file.
@@ -23,8 +22,7 @@ Except for the the Camera View all of the pages are created from HTML files that
 The Camera View is an exception in the MDApp. The CameraView is an HTML template that overlays a realtime preview of the camera’s input. The realtime preview is not part of the Cordova/Phonegap browser view, it is a platform native view element that is provided by a 3rd party plugin. The cordova-plugin-camera-preview is a crossplatofrm wrapper around native code that allows the browser based javascript to communicate and control the camera preview view.
 
 \subsubsection{Models}
-The Models
-
+The Models are relatively simple data classes. The MDApp does not require much buisiness logic for the data. The Models encapsulate some communication with some of the services so that the controllers can remain as simple as possible.
 
 \subsubsection{Local Services}
 The local services classes are just wrappers around the Cordova plugins. Cordova plugins offer a "raw" javascript api, the service classes will hide some of the complexity by making only the relevant functions available to the MDApp.
@@ -34,4 +32,25 @@ The remote services leverage the angular \$resource factory which provides easil
 
 \subsubsection{Cordova Plugins}
 
+In a hybrid architecture most of the logic is programmed in javascript, just like a normal web page. Communication with native system components and hardware APIs that a normal browser based environment does not have access can be enabled through plugins. Ideally these plugins unify the native APIs across all platforms. The MDApp uses the following cordova plugins:
+
+   \paragraph{cordova-plugin-camera-preview}
+   \paragraph{cordova-plugin-file-transfer}
+   \paragraph{Cordova-sqlite-storage}
+
 \subsection{Classes}
+
+The class diagram in figure \ref{fig:class_dia} shows the structure and connections between the main classes of the MDApp. The service layer classes are singletons that encapsulate the functionality of some plugin into an easy to manage form. Static class level methods and attributes are underlined. The other methods and attributes have object level scope.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=\textwidth,keepaspectratio]{assets/architecture/class_diagram.pdf}
+    \caption{Component diagram of the MDApp}
+    \label{fig:class_dia}
+\end{figure}
+
+    \subsubsection{Application Layer}
+        \paragraph{AppController}
+            \input{chapters/architecture/structure/classes/appcontroller}
+
+
