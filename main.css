@@ -6,7 +6,9 @@
 .ptmr7t-{font-family: monospace;}
 .ptmr7t-{font-family: monospace;}
 .ptmr7t-{font-family: monospace;}
+.ptmr7t-{font-family: monospace;}
 .ptmr7t-x-x-172{font-size:172%;font-family: monospace;}
+.ptmr7t-x-x-172{font-family: monospace;}
 .ptmr7t-x-x-172{font-family: monospace;}
 .ptmr7t-x-x-172{font-family: monospace;}
 .ptmr7t-x-x-172{font-family: monospace;}
@@ -14,10 +16,13 @@
 .ptmr7t-x-x-120{font-family: monospace;}
 .ptmr7t-x-x-120{font-family: monospace;}
 .ptmr7t-x-x-120{font-family: monospace;}
+.ptmr7t-x-x-120{font-family: monospace;}
 .pcrr7t-{font-family: monospace;}
 .ptmb7t-{ font-weight: bold;}
 .ptmb7t-{ font-weight: bold;}
+.ptmb7t-{ font-weight: bold;}
 .ptmr7t-x-x-90{font-size:90%;font-family: monospace;}
+.ptmr7t-x-x-90{font-family: monospace;}
 .ptmr7t-x-x-90{font-family: monospace;}
 .ptmr7t-x-x-90{font-family: monospace;}
 .ptmr7t-x-x-90{font-family: monospace;}
@@ -28,6 +33,17 @@
 .ptmbi7t-{  font-style: italic; font-weight: bold;}
 .ptmb7t-x-x-90{font-size:90%; font-weight: bold;}
 .ptmb7t-x-x-90{ font-weight: bold;}
+.ptmb7t-x-x-90{ font-weight: bold;}
+.ptmr7t-x-x-80{font-size:80%;font-family: monospace;}
+.ptmr7t-x-x-80{font-family: monospace;}
+.ptmr7t-x-x-80{font-family: monospace;}
+.ptmr7t-x-x-80{font-family: monospace;}
+.ptmr7t-x-x-80{font-family: monospace;}
+.pcrr7t-x-x-80{font-size:80%;font-family: monospace;}
+.ptmb7t-x-x-80{font-size:80%; font-weight: bold;}
+.ptmb7t-x-x-80{ font-weight: bold;}
+.ptmb7t-x-x-80{ font-weight: bold;}
+.ptmri7t-x-x-80{font-size:80%;font-style: italic;}
 p.noindent { text-indent: 0em }
 td p.noindent { text-indent: 0em; margin-top:0em; }
 p.nopar { text-indent: 0em; }
