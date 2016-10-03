@@ -1,0 +1,40 @@
+\setlength{\tabcolsep}{0.5em}
+\footnotesize{
+\begin{longtable}[H]{  | >{\bfseries}p{2cm} | p{2.2cm} | p{1.5cm} | p{1.5cm} | p{4cm} | } \hline
+
+    Name
+    & \multicolumn{4}{l |}{ArchiveViewController} \\ \hline
+
+    Description
+    & \multicolumn{4}{p{9.5cm} |}{
+    Controller for the archive list view. This Controller reads data from the MDLesionImage and MDMetadata services which is presented to the user as a list in the archive view. The user can select an item from the list and will be transitioned to the archive detail view. The selection and transition logic is managed by the angular ui-router service directly in the view.
+    } \\ \hline
+
+    Type
+    & \multicolumn{4}{l |}{Class}
+    \\ \hline
+
+    Implemented In
+    & \multicolumn{4}{l |}{controllers/archive.js}
+    \\ \hline
+
+    Attributes
+    & Name & Type & \multicolumn{2}{l |}{Description} \\ \hline
+
+        & MDLesionImage & class & \multicolumn{2}{p{5.5cm} |}{
+        The MDLesionImage service provides a list of previously captured images and results which can be reviewed.
+        } \\ \hline
+
+        & MDMetadata & class & \multicolumn{2}{p{5.5cm} |}{
+        THe MDMetadata service provides associated metadata to be attached to the image list in the view.
+        } \\ \hline
+
+
+    Methods
+    & Name & Parameter & Return Type & Description \\ \hline
+
+
+    \caption{ArchiveViewController Specification}
+    \label{fig:archive_controller}
+\end{longtable}
+}

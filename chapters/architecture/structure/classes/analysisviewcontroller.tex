@@ -1,5 +1,6 @@
+\setlength{\tabcolsep}{0.5em}
 \footnotesize{
-\begin{longtable}[H]{  | >{\bfseries}l | p{1.5cm} | p{1.5cm} | p{1.5cm} | p{4cm} | } \hline
+\begin{longtable}[H]{  | >{\bfseries}p{2cm} | p{2.2cm} | p{1.5cm} | p{1.5cm} | p{4cm} | } \hline
 
     Name
     & \multicolumn{4}{l |}{AnalysisViewController} \\ \hline
@@ -15,30 +16,30 @@
     \\ \hline
 
     Implemented In
-    & \multicolumn{4}{l |}{controllers/camera.js}
+    & \multicolumn{4}{l |}{controllers/analysis.js}
     \\ \hline
 
     Attributes
     & Name & Type & \multicolumn{2}{l |}{Description} \\ \hline
 
         & MDAppState & class & \multicolumn{2}{p{5.5cm} |}{
-        When a new image is captured, the CameraViewController notifies the MDAppState that a new image is the active image.
+        The AnalysisViewController gets the id of the currently active image from the MDAppState service.
         } \\ \hline
 
         & MDLesionImage & class & \multicolumn{2}{p{5.5cm} |}{
-        When a new image is captured the CameraViewController notifies the MDLesionImage class which creates a new MDLesionImage instance.
+        The AnalysisViewController gets the instance of the currently active image from the MDLesionImage service.
         } \\ \hline
 
         & MDMetadata & class & \multicolumn{2}{p{5.5cm} |}{
-        When a new image is captured the CameraViewController notifies the MDLesionImage class which creates a new MDLesionImage instance.
+        The AnalysisViewController gets the instance of the MDMetadata associated with the currently active image.
         } \\ \hline
 
         & activeImage & instance of MDLesionImage & \multicolumn{2}{p{5.5cm} |}{
-        When a new image is captured the CameraViewController notifies the MDLesionImage class which creates a new MDLesionImage instance.
+        The MDLesionImage instance currently presented to the user.
         } \\ \hline
 
         & activeMetadata & instance of MDMetadata & \multicolumn{2}{p{5.5cm} |}{
-        When a new image is captured the CameraViewController notifies the MDLesionImage class which creates a new MDLesionImage instance.
+        The MDMetadata instance currently presented to the user.
         } \\ \hline
 
 
@@ -46,13 +47,13 @@
     & Name & Parameter & Return Type & Description \\ \hline
 
         & confirmBorder & confirm : boolean & void
-        & This method is triggered by the user and passed from the view to the view controller. The event is passed on to the MDCameraService along with a reference to the captureImageCallback which is called when an image has been saved.
+        & This method is triggered by the user and passed from the view to the view controller. The event is passed on to the MDImageService along with a reference to the tdsAnalysisCallback function which is called when an tds analysis has completed.
         \\ \hline
         & tdsAnalysisCallback & results & void
-        & The MDCameraService notifies the CameraViewController that an image is availble via this callback. The results parameter is a javascript object that contains a path to the captured image file and a preview image file.
+        & The MDImageService notifies the AnalysisViewController that the analysis is complete via this callback. The results parameter is a javascript object that contains the tds analysis information.
         \\ \hline
         & saveData & void & void
-        & When the camera view is loaded this method is called by the angular ui-router. The CameraViewController maked selected background UI components transparent in order to allow the camera preivew view to become visible.
+        & This method saves the results of the tds analysis, border information and any metadata associated with the lesion image.
         \\ \hline
 
 

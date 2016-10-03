@@ -1,0 +1,36 @@
+\setlength{\tabcolsep}{0.5em}
+\footnotesize{
+\begin{longtable}[H]{  | >{\bfseries}p{2cm} | p{2.2cm} | p{1.5cm} | p{1.5cm} | p{4cm} | } \hline
+
+    Name
+    & \multicolumn{4}{l |}{MDBorderService} \\ \hline
+
+    Description
+    & \multicolumn{4}{p{9.5cm} |}{
+    The MDBorderService is a singelton class that encapsulates communiation with the remote border extraction service. The MDBorderService encapsulates communcation to the cordova-plugin-file-transfer plugin. Results from the plugin are wrapped into an angular defered promise allowing other angular components to more easily integrate the file transfer services.
+    } \\ \hline
+
+    Type
+    & \multicolumn{4}{l |}{Class}
+    \\ \hline
+
+    Implemented In
+    & \multicolumn{4}{l |}{services/remote.js}
+    \\ \hline
+
+    Attributes
+    & Name & Type & \multicolumn{2}{l |}{Description} \\ \hline
+
+
+    Methods
+    & Name & Parameter & Return Type & Description \\ \hline
+
+        & getBorder & void & promise (results)
+        & This function prepares the file upload configuration parameters and initiates the upload. The success and error callbacks are wrapped in an angular \$q promise that is retured to the caller and can be evaluated in a local anonymous function when it resolves.
+        \\ \hline
+
+
+    \caption{MDBorderService Specification}
+    \label{fig:border_service}
+\end{longtable}
+}
