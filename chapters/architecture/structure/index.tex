@@ -25,7 +25,7 @@ The Camera View is an exception in the MDApp. The CameraView is an HTML template
 The Models are relatively simple data classes. The MDApp does not require much buisiness logic for the data. The Models encapsulate some communication with some of the services so that the controllers can remain as simple as possible.
 
 \subsubsection{Local Services}
-The local services classes are just wrappers around the Cordova plugins. Cordova plugins offer a "raw" javascript api, the service classes will hide some of the complexity by making only the relevant functions available to the MDApp.
+The local services classes are just wrappers around the Cordova plugins. Cordova plugins offer a "raw" javascript API. The service classes will hide some of the complexity by making only the relevant functions available to the MDApp.
 
 \subsubsection{Remote Services}
 The remote services leverage the angular \$resource factory which provides easily configurable RESTful communication to online servers.
@@ -35,8 +35,16 @@ The remote services leverage the angular \$resource factory which provides easil
 In a hybrid architecture most of the logic is programmed in javascript, just like a normal web page. Communication with native system components and hardware APIs that a normal browser based environment does not have access can be enabled through plugins. Ideally these plugins unify the native APIs across all platforms. The MDApp uses the following cordova plugins:
 
    \paragraph{cordova-plugin-camera-preview}
+   Several camera plugins exist for Cordova, however none of them allow a live camera preview to be embedded in the UI directly. Most pass the user to a native camera view. This makes it impossible for any UI components to be superimposed over the camera view. The cordova-plugin-camera-preview makes this possible by creating a native view component that can be positioned over or under the Cordova browser view. In order to overlay and components in the Cordova browser over the camera, the Cordova browser background must be made transparent. This can be done by setting the background of the html, body and some ionic components transparent.
+
    \paragraph{cordova-plugin-file-transfer}
+
+   This plugin allows javascript running in the Cordova browser context to interface with a collection of native classes that manage file downloads and uploads.
+
    \paragraph{Cordova-sqlite-storage}
+
+This plugin creates and manages connectivity to a local sqlite database file that is not subject to the limitations of a browser based file storage. Queries are faster, the storage capacity is much larger, and most importantly data will survive an application restart and update. A backup of the sqlite database file can be made using standard native backup strategies. This is not possible using the built in Cordova browser based data storage
+
 
 \subsection{Classes}
 
@@ -81,7 +89,11 @@ The class diagram in figure \ref{fig:class_dia} shows the structure and connecti
         \paragraph{MDMetadata}
             \input{chapters/architecture/structure/classes/MDMetadata}
 
+    \normalsize
+
     \subsubsection{Partial Sequence Diagram }
+
+        Figure \ref{fig:seq_dia} shows show the sequence of events responsible for capturing an image and initiating the border calculation. This covers all of use case UC-1 and the first step of the flow in UC-2. The steps corresponding to the numbers in the figure are descibed below.
 
         \begin{figure}[H]
             \centering
@@ -89,3 +101,39 @@ The class diagram in figure \ref{fig:class_dia} shows the structure and connecti
             \caption{Partial Sequence Diagram}
             \label{fig:seq_dia}
         \end{figure}
+
+\begin{itemize}[label={}]
+    \item \textbf{1:} By clicking on a a menu element or a tab element the user signals to the angular ui-router service that the camera view should be activated. The ui-router loads the CameraViewController and the corresponding ui elements, then send the \$ionicView.afterEnter signal to the CameraViewController.
+
+    \item \textbf{2:} The CameraViewController calls the startCamera method on the MDCameraService class. This class in turn takes calls the necessary methods on the plugin that managed the camera preview and ui view element.
+
+    \item \textbf{3:} The CameraViewController selects specific application ui elements and makes their background colour transparent in order to let the camera view element become visible in the background. The user can now position the camera while observing the preview until the optimal position is found.
+
+    \item \textbf{4:} By tapping a finger on the camera preview view an event is created in the view that calls the captureImage method in the CameraViewController.
+
+    \item \textbf{5:} Before initiating the image capture process, the ui is disabled to that no other event will interrupt the following processes. This is important because another accidental tap on the display could trigger another image capture process before the first one has been reviewed.
+
+    \item \textbf{6:} The image capture process can take some time and is implemented by the plugin as an asynchronous function that notifies the caller via a callback. The MDCameraService class wraps the function and callback in an angular.js process that the CameraViewController can resolve locally in a typical angular manner. Figure \ref{fig:MDCameraService} is an example of the MDCameraService captureImage() implementation. Figure \ref{fig:CameraViewController} illustrates how it can be called and resolved locally in the CameraViewController.
+
+        \begin{figure}[H]
+            \centering
+            \includegraphics[width=10cm,keepaspectratio]{assets/architecture/MDCameraService.pdf}
+            \caption{MDCameraService captureImage() implementation}
+            \label{fig:MDCameraService}
+        \end{figure}
+
+        \begin{figure}[H]
+            \centering
+            \includegraphics[width=10cm,keepaspectratio]{assets/architecture/CameraViewController.pdf}
+            \caption{CameraViewController captureImage() implementation}
+            \label{fig:CameraViewController}
+        \end{figure}
+
+    \item \textbf{7:} The implementation of these interactions can also be seen in figure \ref{fig:CameraViewController}. The MDBorderService.getBorder() function is resolved in the returned promise's then() method. The CameraViewController gets the data from MDBorderService and attaches it to the \$rootScope element which is accessible globally. The changes to the activeImage element are saved to the database. Then the Controller cleans up the UI and signals to the AppController that the border data is available for review.
+
+    \item \textbf{8:} The ApplicationController calls the ui-router (not shown in figure \ref{fig:seq_dia}) that the user should be transferred to the Analysis View. This unloads the camera view and triggers the \$ionicView.afterLeave method in the CameraViewController. The CameraViewController can now safely close the camera preview view and clean up the ui before unloading.
+
+\end{itemize}
+
+
+

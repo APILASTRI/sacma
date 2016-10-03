@@ -1,4 +1,4 @@
-Depending on the application domain distinct architectural patterns exist than define areas of responsibility that are used to group together software components. Choosing an architectural pattern that fits the application domain can help to organise code, reduce complexity and leverage the experience of developers that have solved similar problems in the past.
+Depending on the application domain, distinct architectural patterns exist that define areas of responsibility that are used to group together software components. Choosing an architectural pattern that fits the application domain can help to organise code, reduce complexity and leverage the experience of developers that have solved similar problems in the past.
 
 \subsection{MVC}
 Since the 1970s the Model View Controller (MVC) pattern is the standard software design pattern for applications that present the user with a graphical user interface. It was developed out of a need for modularity, to encapsulate responsibility of specific concepts to separate software modules. MVC identifies three main components that program code should be grouped into, namely\cite{walther_2016}:
@@ -6,7 +6,7 @@ Since the 1970s the Model View Controller (MVC) pattern is the standard software
 \begin{itemize}[label={}]
 
 \item \textbf{Model}: The representation of some object of knowledge, encapsulates code managing the associated data and behaviour ( business-logic ).
-\item \textbf{View}: The visual representation of the model. The view can feature or hide aspects of the model and thus act as a presentation filter. The view observe the model for changes and update the presentation accordingly.
+\item \textbf{View}: The visual representation of the model. The view can feature or hide aspects of the model and thus act as a presentation filter. The view observes the model for changes and updates the presentation accordingly.
 \item \textbf{Controller}: The controller allows the user to interact with the model. It allows the user to trigger behaviours implemented in the Model.
 
 \end{itemize}
@@ -22,7 +22,7 @@ In the classic MVC pattern the model does not "know" about the view or the contr
 
 \subsection{Modern MVC}
 
-Modern MVC has evolved from being a software design pattern which handles components of an application to an architectural design pattern that defines the structure of an application itself. It is similar to a Layer Architecture where each layer interacts directly only with the next layer directly above or below \cite{patterns}. The division of responsibilities is slightly different though to the typical presentation, domain, and data layer definitions.
+Modern MVC has evolved from being a software design pattern which handles components of an application to an architectural design pattern that defines the structure of an application itself. It is similar to a Layer Architecture where each layer interacts directly only with the next layer directly above or below \cite{patterns}. The division of responsibilities is slightly different from the typical presentation,, domain, and data layer definitions.
 
 Most modern web frameworks such as Ruby on Rails, Symfony or the iOS environment refer to themselves as MVC based frameworks. The modern MVC concept has changed slightly. The component definitions are the same, but some responsibilities have shifted. Modern MVC strictly separates the model from the view. All modern frameworks state that the view should have as little logic as possible. Any logic implemented in the view should only be relevant to presentation. The view components should not directly reference the model components\cite{apple_MVC}\cite{symfony_MVC}.
 
