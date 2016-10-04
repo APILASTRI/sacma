@@ -1,0 +1,20 @@
+The goals of this project have mostly been completed. Some topics were more complex than originally estimated and some compromises were made regarding the details of each topic. This project can be regarded as a high level overview of the components necessary to build a smart phone based melanoma detection application. Several topics could probably become the basis of further dedicated projects and expanded on. Each goal is reviewed in more detail below.
+
+\noindent
+\begin{itemize}
+\item[1] The current state of the available medical mobile apps was explored. The apps were grouped into categories and compared. While the overall majority of apps were providing an educational service, many diagnostic apps were identified. In comparison with other research from 2013 it could be shown that the availability of apps that provide a diagnostic function is increasing.
+
+\item[2] A large part of the effort that went into this project was dedicated to researching and becoming familiar with image processing and analysis algorithms. During the exploration and experimentation of methods to automatically identify the skin lesion some novel insights were gained.
+
+\item[3] Much research exists regarding automatic risk assessment of melanoma in images captured with a dermatoscope, less so for images captured with a smart phone camera. The difficulty this introduces became apparent. It remains unclear after this project how much the methods for dermatoscopic image risk assessment are actually applicable to images captured with a smart phone.
+
+\item[4] One of the stated goals was to choose a specific algorithm and data with which to proceed. The choice of algorithm became limited by the time available for research and prototyping. Basically what worked in the experimentation phase was chosen. The time it would have taken to implement and compare several algorithms was not available.
+
+\item[5] Putting the research together into a working algorithm was not difficult as far as programming was concerned. The python based prototypes form the experimentation phase could be reused easily in the final algorithm. The most effort was spent in actually reviewing results and trying to achieve and overview of how well the different components actually worked on all the sample image sets. A lot of development time went into building tools that accelerated the review and comparison effort. Even with the tools though it was not possible to do much comparing and optimisation because the review process still took several days to complete. So, although an algorithm was implemented that could identify and assess a skin lesion image, it’s performance has not been adequately reviewed and optimised.
+
+\item[6] A concept was created for a mobile medical app that would provide the user with a risk assessment based on the algorithms implemented. The amount of effort required for this was initially underestimated due to an unfamiliarity with requirements engineering principals. After several iterations and time spent learning the concepts a relatively complete concept was created. It became clear that requirements engineering is not a static process but requires several iterations where insights gained in later steps must flow back into the requirements definitions. This will be a valuable takeaway from this project.
+
+\item[7] A proof of concept app was developed in tandem with the requirements engineering process. The proof of concept evolved from a static mockup into an actual app and was used to evaluated and refine the requirement definitions. Although the proof of concept itself is not described in this document, the concepts described in the requirements and design chapters flow from the evolution of the prototype.
+
+\end{itemize}
+
