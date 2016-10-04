@@ -12,3 +12,5 @@ changes since 03.10.2016
 * Removed emtpy sections in appendix
 
 * Removed incomplete sentence at beginning of Architecture Design
+
+* Removed empty section Stakeholder Profile from chapter Mobile App Requirements
